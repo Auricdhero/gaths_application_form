@@ -149,5 +149,8 @@ export default {
 }
 </script>
 <style>
-
+#app{
+  background: url('~/static/bgLoop.gif') no-repeat center fixed;
+  background-size: cover;
+}
 </style>
