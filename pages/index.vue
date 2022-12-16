@@ -1,109 +1,91 @@
 <template>
-  <v-paralax height="900" :src="bgloop">
-    <v-img :src="logo" height="200" width="200" style=" position: relative; left: 43%;"></v-img>
-    <br>
-    <h1 class="form-heading text-uppercase text-center">register to be a member</h1>
-    <v-card dense class="justify-center"
-      style="background:linear-gradient(351deg, rgba(190,195,34,0.5144432773109244) 0%, rgba(253,45,156,1) 100%); border-radius: 5%; width: 100%; padding: 1%;">
-      <br>
-      <v-form method="POST" action="https://api.apispreadsheets.com/data/OqsuUiv6hJ1Nqbo8/" class="pa-2" @submit.prevent="submit">
-        <v-container>
-          <v-row>
-            <v-col cols="12" sm="6" md="4">
-              <v-text-field label="First Name" name="fName" solo dense></v-text-field>
-            </v-col>
-            <v-col cols="12" sm="6" md="4">
-              <v-text-field label="Last Name" name="lName" solo dense></v-text-field>
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col cols="12" sm="6" md="4">
-              <v-text-field label="Email" name="email" solo dense></v-text-field>
-            </v-col>
-            <v-col cols="12" sm="6" md="4">
-              <v-select solo dense
-              :items="idType"
-              :rules="rules.idType"
-              color="pink"
-              name="idCard"
-              label="ID Card Type"
-              required
-            ></v-select>
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col cols="12" sm="6" md="4">
-              <v-text-field label="ID Number" name="idNum" solo dense></v-text-field>
-            </v-col>
-            <v-col cols="12" sm="6" md="4">
-              <v-text-field label="Telephone" name="tel" solo dense></v-text-field>
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col cols="12" sm="6" md="8">
-              <v-menu
-        ref="menu"
-        v-model="menu"
-        :close-on-content-click="false"
-        :return-value.sync="date"
-        transition="scale-transition"
-        offset-y
-        min-width="auto"
-      >
-        <template v-slot:activator="{ on, attrs }">
-          <v-text-field
-            v-model="date"
-            label="Date of Birth"
-            name="dob"
-            readonly
-            solo
-            v-bind="attrs"
-            v-on="on"
-          ></v-text-field>
-        </template>
-        <v-date-picker
-          v-model="date"
-          no-title
-          scrollable
-        >
-          <v-spacer></v-spacer>
-          <v-btn
-            text
-            color="primary"
-            @click="menu = false"
-          >
-            Cancel
-          </v-btn>
-          <v-btn
-            text
-            color="primary"
-            @click="$refs.menu.save(date)"
-          >
-            OK
-          </v-btn>
-        </v-date-picker>
-      </v-menu>
-            </v-col>
-          </v-row>
-            <v-container class="pl-16 ml-16">
-              <v-btn class="mb-10"
-              @click="SubForm()"
-              type="submit"
-              >Submit</v-btn>
-            </v-container>
-        </v-container>
-      </v-form>
-    </v-card>
-  </v-paralax>
+  <div>
+    <div class="light x1"></div>
+    <div class="light x2"></div>
+    <div class="light x3"></div>
+    <div class="light x4"></div>
+    <div class="light x5"></div>
+    <div class="light x6"></div>
+    <div class="light x7"></div>
+    <div class="light x8"></div>
+    <div class="light x9"></div>
+    
+    
+    <v-img class="logo" :src="logo" height="200" width="200"></v-img>
+   
+    <h1 class="text-center">GATHS REGISTRATION FORM</h1>
+    <v-form method="POST" action="https://api.apispreadsheets.com/data/EbczUz2z4KkpBUES/" @submit.prevent="submit" v-model="valid">
+      <v-container>
+        <v-row>
+          <v-col>
+            <v-text-field v-model="name" name="fName" label="First Name"></v-text-field>
+          </v-col>
+          <v-col>
+            <v-text-field v-model="name" name="lName" label="Last Name"></v-text-field>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col>
+            <v-select v-model="select" name="gender" :items="gender" :rules="[v => !!v || 'Item is required']" label="Gender" required></v-select>
+          </v-col>
+          <v-col>
+            <v-text-field name="email" label="Email"></v-text-field>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col>
+            <v-text-field name="number" label="Phone Number"></v-text-field>
+          </v-col>
+          <v-col>
+            <v-text-field name="institution" label="Name of Institution"></v-text-field>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col>
+            <v-text-field name="prog" label="Programme of Study"></v-text-field>
+          </v-col>
+          <v-col>
+            <v-select v-model="select" name="year" :items="year" :rules="[v => !!v || 'Item is required']" label="Year" required></v-select>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col>
+            <v-text-field name="stndId" label="Student ID/Index Number"></v-text-field>
+          </v-col>
+          <v-col>
+            <v-text-field name="localAssoc" label="Name of Local Association"></v-text-field>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col>
+            <v-text-field name="ntnID" label="National ID Number"></v-text-field>
+          </v-col>
+          <v-col>
+            <v-text-field name="residence" label="City/Town of Residence"></v-text-field>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col>
+            <v-file-input label="Passport Picture"></v-file-input>
+          </v-col>
+        </v-row>
+        <div class="fill-height">
+          <v-btn @click="SubForm()" type="submit" block>Submit</v-btn>
+        </div>
+      </v-container>
+    </v-form>
+  </div>
 </template>
 
 <script>
-import bgloop from '~/static/bgLoop.gif';
 import logo from '~/static/logo.png';
 
-fetch("https://api.apispreadsheets.com/data/OqsuUiv6hJ1Nqbo8/", {
+export default{
+  
+  data() {
+    fetch("https://api.apispreadsheets.com/data/EbczUz2z4KkpBUES/", {
 	method: "POST",
-	body: JSON.stringify({"data": {"dob":"","tel":"","email":"","fName":"","idNum":"","lName":"","idCard":""}}),
+	body: JSON.stringify({"data": {"prog":"","year":"","email":"","fName":"","lName":"","ntnID":"","gender":"","number":"","stdnId":"","residence":"","localAssoc":"","instituition":""}}),
 }).then(res =>{
 	if (res.status === 201){
 		// SUCCESS
@@ -112,45 +94,258 @@ fetch("https://api.apispreadsheets.com/data/OqsuUiv6hJ1Nqbo8/", {
 		// ERROR
 	}
 })
-
-export default {
-  name: 'IndexPage',
-  head:{
-    script: [
-      {
-        src: '~/static/main.js'
-      }
-    ]
-  }
-  ,
-  data() {
     return {
-      bgloop,
       logo,
-      form: Object.assign({},),
-        rules: {
-          age: [
-            val => val < 10 || `I don't believe you!`,
-          ],
-          idType: [val => (val || '').length > 0 || 'This field is required'],
-          name: [val => (val || '').length > 0 || 'This field is required'],
-        },
-        idType: ['Ghana Card', 'Voters ID', 'Passport', 'Voters ID'],
-        conditions: false,
-        date: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
-        menu: false,
-        modal: false,
-        menu2: false,
-        
-        //defaultForm,
+      select: null,
+      gender: ['Male', 'Female'],
+      year: ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5', 'Year 6', 'Year 7']
     }
   }
-
 }
 </script>
 <style>
-#app{
-  background: url('~/static/bgLoop.gif') no-repeat center fixed;
-  background-size: cover;
+body {
+    margin: 0;
+    font-weight: 100;
+    background: radial-gradient(#a23982,#1f1013);
+    -webkit-overflow-Y: hidden;
+    -moz-overflow-Y: hidden;
+    -o-overflow-Y: hidden;
+    overflow-y: hidden;
+    -webkit-animation: fadeIn 1 1s ease-out;
+    -moz-animation: fadeIn 1 1s ease-out;
+    -o-animation: fadeIn 1 1s ease-out;
+    animation: fadeIn 1 1s ease-out;
+}
+
+.light {
+    position: absolute;
+    width: 0px;
+    opacity: .75;
+    background-color: white;
+    box-shadow: #e9f1f1 0px 0px 20px 2px;
+    opacity: 0;
+    top: 100vh;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+.x1{
+  -webkit-animation: floatUp 4s infinite linear;
+  -moz-animation: floatUp 4s infinite linear;
+  -o-animation: floatUp 4s infinite linear;
+  animation: floatUp 4s infinite linear;
+   -webkit-transform: scale(1.0);
+   -moz-transform: scale(1.0);
+   -o-transform: scale(1.0);
+  transform: scale(1.0);
+}
+
+.x2{
+  -webkit-animation: floatUp 7s infinite linear;
+  -moz-animation: floatUp 7s infinite linear;
+  -o-animation: floatUp 7s infinite linear;
+  animation: floatUp 7s infinite linear;
+  -webkit-transform: scale(1.6);
+  -moz-transform: scale(1.6);
+  -o-transform: scale(1.6);
+  transform: scale(1.6);
+  left: 15%;
+}
+
+.x3{
+  -webkit-animation: floatUp 2.5s infinite linear;
+  -moz-animation: floatUp 2.5s infinite linear;
+  -o-animation: floatUp 2.5s infinite linear;
+  animation: floatUp 2.5s infinite linear;
+  -webkit-transform: scale(.5);
+  -moz-transform: scale(.5);
+  -o-transform: scale(.5);
+  transform: scale(.5);
+  left: -15%;
+}
+
+.x4{
+  -webkit-animation: floatUp 4.5s infinite linear;
+  -moz-animation: floatUp 4.5s infinite linear;
+  -o-animation: floatUp 4.5s infinite linear;
+  animation: floatUp 4.5s infinite linear;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+  left: -34%;
+}
+
+.x5{
+  -webkit-animation: floatUp 8s infinite linear;
+  -moz-animation: floatUp 8s infinite linear;
+  -o-animation: floatUp 8s infinite linear;
+  animation: floatUp 8s infinite linear;
+  -webkit-transform: scale(2.2);
+  -moz-transform: scale(2.2);
+  -o-transform: scale(2.2);
+  transform: scale(2.2);
+  left: -57%;
+}
+
+.x6{
+  -webkit-animation: floatUp 3s infinite linear;
+  -moz-animation: floatUp 3s infinite linear;
+  -o-animation: floatUp 3s infinite linear;
+  animation: floatUp 3s infinite linear;
+  -webkit-transform: scale(.8);
+  -moz-transform: scale(.8);
+  -o-transform: scale(.8);
+  transform: scale(.8);
+  left: -81%;
+}
+
+.x7{
+  -webkit-animation: floatUp 5.3s infinite linear;
+  -moz-animation: floatUp 5.3s infinite linear;
+  -o-animation: floatUp 5.3s infinite linear;
+  animation: floatUp 5.3s infinite linear;
+  -webkit-transform: scale(3.2);
+  -moz-transform: scale(3.2);
+  -o-transform: scale(3.2);
+  transform: scale(3.2);
+  left: 37%;
+}
+
+.x8{
+  -webkit-animation: floatUp 4.7s infinite linear;
+  -moz-animation: floatUp 4.7s infinite linear;
+  -o-animation: floatUp 4.7s infinite linear;
+  animation: floatUp 4.7s infinite linear;
+  -webkit-transform: scale(1.7);
+  -moz-transform: scale(1.7);
+  -o-transform: scale(1.7);
+  transform: scale(1.7);
+  left: 62%;
+}
+
+.x9{
+  -webkit-animation: floatUp 4.1s infinite linear;
+  -moz-animation: floatUp 4.1s infinite linear;
+  -o-animation: floatUp 4.1s infinite linear;
+  animation: floatUp 4.1s infinite linear;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+  left: 85%;
+}
+@-webkit-keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+@-moz-keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+@-o-keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+@keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+
+@-webkit-keyframes fadeIn{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+@-moz-keyframes fadeIn{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+@-o-keyframes fadeIn{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+@keyframes fadeIn{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+@-webkit-keyframes fadeOut{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 0;}
+}
+
+@-moz-keyframes fadeOut{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 0;}
+}
+
+@-o-keyframes fadeOut{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 0;}
+}
+
+@keyframes fadeOut{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 0;}
+}
+
+@-webkit-keyframes finalFade{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 1;}
+}
+
+@-moz-keyframes finalFade{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 1;}
+}
+
+@-o-keyframes finalFade{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 1;}
+}
+
+@keyframes finalFade{
+  0%{opacity: 0;}
+  30%{opacity: 1;}
+  80%{opacity: .9;}
+  100%{opacity: 1;}
+}
+
+.logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 </style>
