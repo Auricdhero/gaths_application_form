@@ -14,7 +14,7 @@
     <v-img class="logo" :src="logo" height="200" width="200"></v-img>
    
     <h1 class="text-center">GATHS REGISTRATION FORM</h1>
-    <v-form method="POST" action="https://api.apispreadsheets.com/data/EbczUz2z4KkpBUES/" @submit.prevent="submit" v-model="valid">
+    <v-form method="POST" action="https://api.apispreadsheets.com/data/1SooiCkqbqxQMR4z/" @submit.prevent="submit" v-model="valid">
       <v-container>
         <v-row>
           <v-col>
@@ -83,22 +83,22 @@ import logo from '~/static/logo.png';
 export default{
   
   data() {
-    fetch("https://api.apispreadsheets.com/data/EbczUz2z4KkpBUES/", {
-	method: "POST",
-	body: JSON.stringify({"data": {"prog":"","year":"","email":"","fName":"","lName":"","ntnID":"","gender":"","number":"","stdnId":"","residence":"","localAssoc":"","institution":""}}),
-}).then(res =>{
-	if (res.status === 201){
-		// SUCCESS
-	}
-	else{
-		// ERROR
-	}
+    fetch("https://api.apispreadsheets.com/data/1SooiCkqbqxQMR4z/", {
+	    method: "POST",
+	    body: JSON.stringify({"data": {"prog":"","year":"","email":"","fName":"","lName":"","ntnID":"","gender":"","number":"","stndId":"","residence":"","localAssoc":"","institution":""}}),
+    }).then(res =>{
+      if (res.status === 201){
+        // SUCCESS
+      }
+      else{
+        // ERROR
+      }
 })
     return {
       logo,
       select: null,
       gender: ['Male', 'Female'],
-      year: ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5', 'Year 6', 'Year 7']
+      year: ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Postgraduate']
     }
   }
 }
