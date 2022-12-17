@@ -18,10 +18,10 @@
       <v-container>
         <v-row>
           <v-col>
-            <v-text-field v-model="name" name="fName" label="First Name"></v-text-field>
+            <v-text-field v-model="name" name="fName" label="First Name" required></v-text-field>
           </v-col>
           <v-col>
-            <v-text-field v-model="name" name="lName" label="Last Name"></v-text-field>
+            <v-text-field v-model="name" name="lName" label="Last Name" required></v-text-field>
           </v-col>
         </v-row>
         <v-row>
@@ -80,10 +80,7 @@
 <script>
 import logo from '~/static/logo.png';
 
-export default{
-  
-  data() {
-    fetch("https://api.apispreadsheets.com/data/1SooiCkqbqxQMR4z/", {
+fetch("https://api.apispreadsheets.com/data/1SooiCkqbqxQMR4z/", {
 	    method: "POST",
 	    body: JSON.stringify({"data": {"prog":"","year":"","email":"","fName":"","lName":"","ntnID":"","gender":"","number":"","stndId":"","residence":"","localAssoc":"","institution":""}}),
     }).then(res =>{
@@ -94,9 +91,14 @@ export default{
         // ERROR
       }
 })
+
+export default{
+  
+  data() {
+    
     return {
       logo,
-      select: null,
+      //select: null,
       gender: ['Male', 'Female'],
       year: ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Postgraduate']
     }
