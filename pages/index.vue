@@ -85,7 +85,7 @@ export default{
   data() {
     fetch("https://api.apispreadsheets.com/data/EbczUz2z4KkpBUES/", {
 	method: "POST",
-	body: JSON.stringify({"data": {"prog":"","year":"","email":"","fName":"","lName":"","ntnID":"","gender":"","number":"","stdnId":"","residence":"","localAssoc":"","instituition":""}}),
+	body: JSON.stringify({"data": {"prog":"","year":"","email":"","fName":"","lName":"","ntnID":"","gender":"","number":"","stdnId":"","residence":"","localAssoc":"","institution":""}}),
 }).then(res =>{
 	if (res.status === 201){
 		// SUCCESS
@@ -347,5 +347,9 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+#app{
+  background-color: var(--v-background-base);
 }
 </style>
