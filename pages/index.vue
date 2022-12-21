@@ -11,89 +11,29 @@
     <div class="light x9"></div>
     
     
-    <v-img class="logo" :src="logo" height="200" width="200"></v-img>
+    <logo/>
    
-    <h1 class="text-center">GATHS REGISTRATION FORM</h1>
-    <v-form method="POST" action="https://api.apispreadsheets.com/data/1SooiCkqbqxQMR4z/" @submit.prevent="submit" v-model="valid">
-      <v-container>
-        <v-row>
-          <v-col cols="6" md="12" sm="6" lg="6">
-            <v-text-field v-model="name" name="fName" label="First Name" required></v-text-field>
-          </v-col>
-          <v-col cols="6" md="12" sm="6" lg="6">
-            <v-text-field v-model="name" name="lName" label="Last Name" required></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col cols="6" md="12" sm="6" lg="6">
-            <v-select v-model="select" name="gender" :items="gender" :rules="[v => !!v || 'Item is required']" label="Gender" required></v-select>
-          </v-col>
-          <v-col cols="6" md="12" sm="6" lg="6">
-            <v-text-field name="email" label="Email"></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col cols="6" md="12" sm="6" lg="6">
-            <v-text-field name="number" label="Phone Number"></v-text-field>
-          </v-col>
-          <v-col cols="6" md="12" sm="6" lg="6">
-            <v-text-field name="institution" label="Name of Institution"></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col cols="6" md="12" sm="6" lg="6">
-            <v-text-field name="prog" label="Programme of Study"></v-text-field>
-          </v-col>
-          <v-col cols="6" md="12" sm="6" lg="6">
-            <v-select v-model="select" name="year" :items="year" :rules="[v => !!v || 'Item is required']" label="Year" required></v-select>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col cols="6" md="12" sm="6" lg="6">
-            <v-text-field name="stndId" label="Student ID/Index Number"></v-text-field>
-          </v-col>
-          <v-col cols="6" md="12" sm="6" lg="6">
-            <v-text-field name="localAssoc" label="Name of Local Association"></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col cols="6" md="12" sm="6" lg="6">
-            <v-text-field name="ntnID" label="National ID Number"></v-text-field>
-          </v-col>
-          <v-col cols="6" md="12" sm="6" lg="6">
-            <v-text-field name="residence" label="City/Town of Residence"></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col >
-            <v-file-input label="Passport Picture"></v-file-input>
-          </v-col>
-        </v-row>
-        <div class="fill-height">
-          <v-btn @click="SubForm()" type="submit" block>Submit</v-btn>
-        </div>
-      </v-container>
-    </v-form>
+    <h1 class="text-center text-uppercase">call for naminations</h1>
+    <v-container>
+      <p class="text-center">
+        The Board of Directors of the Ghana Association of Tourism Students hereby opens nominations for various leadership portfolios of the association. All interested persons are encouraged to apply.  
+      </p>
+      <v-row class="d-flex mb-6 bg-surface-variant justify-center">
+        <v-col cols="5 ">
+          <v-btn variant="outlined">Learn More</v-btn>
+        </v-col>
+        <v-col cols="4">
+          <v-btn variant="outlined"><NuxtLink class="linkU" to="/form"><h4 class="link">Apply Now</h4></NuxtLink></v-btn>
+        </v-col>
+      </v-row>
+    </v-container>
+    
   </div>
 </template>
 
 <script>
-import logo from '~/static/logo.png';
+import logo from '../components/logo.vue';
 
-fetch("https://api.apispreadsheets.com/data/1SooiCkqbqxQMR4z/", {
-	    method: "POST",
-	    body: JSON.stringify({"data": {"prog":"","year":"","email":"","fName":"","lName":"","ntnID":"","gender":"","number":"","stndId":"","residence":"","localAssoc":"","institution":""}}),
-    }).then(res =>{
-      if (res.status === 201){
-        // SUCCESS
-        //alert("Your Form has been submitted Successfully!");
-        //  window.history.back();
-      }
-      else{
-        //alert("Failed!");
-        // ERROR
-      }
-})
 
 export default{
   
@@ -102,8 +42,6 @@ export default{
     return {
       logo,
       //select: null,
-      gender: ['Male', 'Female'],
-      year: ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Postgraduate']
     }
   }
 }
@@ -356,5 +294,11 @@ body {
 
 #app{
   background-color: var(--v-background-base);
+}
+.linkU{
+  text-decoration: none;
+}
+.link{
+  color: white;
 }
 </style>
