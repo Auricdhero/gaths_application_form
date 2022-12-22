@@ -20,7 +20,7 @@
       </p>
       <v-row class="d-flex mb-6 bg-surface-variant justify-center">
         <v-col cols="5 ">
-          <v-btn variant="outlined">Learn More</v-btn>
+          <v-btn variant="outlined"><NuxtLink class="linkU" to="/more"><h4 class="link">Learn More</h4></NuxtLink></v-btn>
         </v-col>
         <v-col cols="4">
           <v-btn variant="outlined"><NuxtLink class="linkU" to="/form"><h4 class="link">Apply Now</h4></NuxtLink></v-btn>

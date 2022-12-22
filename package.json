@@ -22,5 +22,21 @@
     "@nuxtjs/vuetify": "^1.12.3",
     "sass": "^1.56.1",
     "sass-loader": "^10.4.1"
-  }
+  },
+  "description": "## Build Setup",
+  "main": "nuxt.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Auricdhero/gaths_application_form.git"
+  },
+  "keywords": [
+    "Gaths_application",
+    "form"
+  ],
+  "author": "Auricdhero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Auricdhero/gaths_application_form/issues"
+  },
+  "homepage": "https://github.com/Auricdhero/gaths_application_form#readme"
 }
