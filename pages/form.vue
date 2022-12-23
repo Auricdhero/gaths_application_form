@@ -114,7 +114,7 @@
   
   <script>
 import Logo from "../components/logo.vue";
-//import firebase from "../firebase"
+import firebase from "../firebase"
 
 
 
@@ -132,30 +132,8 @@ export default {
           this.$nuxt.$router.push("/displayPg");
         });
     },
-   /* async uploadImage() {
-      // Get the file to be uploaded
-      const file = this.$refs.fileInput.files[0]
-
-      // Create a storage reference
-      const storageRef = firebase.storage().ref()
-
-      // Generate a unique file name for the image
-      const fileName = `${fName+lName}-${file.name}`
-
-      // Create a reference to the image in Cloud Storage
-      const imageRef = storageRef.child(fileName)
-
-      // Upload the image
-      try {
-        await imageRef.put(file)
-        // Get the URL of the uploaded image
-        const imageUrl = await imageRef.getDownloadURL()
-        // Do something with the image URL (e.g. save it to a database)
-      } catch (error) {
-        // Handle errors
-      }
-    },
-  },*/
+    
+  },
   mounted() {
     const form = document.getElementById("sheetdb-form");
     form.addEventListener("submit", this.handleSubmit);
@@ -172,7 +150,7 @@ export default {
       year: ["Year 1", "Year 2", "Year 3", "Year 4", "Postgraduate"],
     };
   },
-  }};
+};
 </script>
   <style>
 #app {
