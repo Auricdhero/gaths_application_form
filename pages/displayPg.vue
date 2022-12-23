@@ -9,7 +9,7 @@
                 <img src="" alt="">
             </v-avartar>
             <v-divider></v-divider><br>
-            <h3 class="text-white text-uppercase text-center">Name</h3><br>
+            <h3 class="text-white text-uppercase text-center">{{fName+lName}}</h3><br>
             <h4 class="text-white text-center">Institution</h4><br>
             <h4 class="text-white text-center">Program</h4><br>
             <h4 class="text-center text-white">Year</h4><br>
