@@ -101,7 +101,7 @@
         </v-row>
         <v-row>
           <v-col>
-            <v-file-input label="Passport Picture"></v-file-input>
+            <v-file-input name="imageUrl" label="Passport Picture"></v-file-input>
           </v-col>
         </v-row>
         <div class="fill-height">
@@ -114,6 +114,8 @@
   
   <script>
 import Logo from "../components/logo.vue";
+import firebase from "../firebase"
+
 
 
 export default {
@@ -129,6 +131,29 @@ export default {
         .then(() => {
           this.$nuxt.$router.push("/displayPg");
         });
+    },
+    async uploadImage() {
+      // Get the file to be uploaded
+      const file = this.$refs.fileInput.files[0]
+
+      // Create a storage reference
+      const storageRef = firebase.storage().ref()
+
+      // Generate a unique file name for the image
+      const fileName = `${fName+lName}-${file.name}`
+
+      // Create a reference to the image in Cloud Storage
+      const imageRef = storageRef.child(fileName)
+
+      // Upload the image
+      try {
+        await imageRef.put(file)
+        // Get the URL of the uploaded image
+        const imageUrl = await imageRef.getDownloadURL()
+        // Do something with the image URL (e.g. save it to a database)
+      } catch (error) {
+        // Handle errors
+      }
     },
   },
   mounted() {
