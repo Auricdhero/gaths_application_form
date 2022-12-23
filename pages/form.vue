@@ -114,7 +114,7 @@
   
   <script>
 import Logo from "../components/logo.vue";
-import firebase from "../firebase"
+//import firebase from "../firebase"
 
 
 
@@ -132,7 +132,7 @@ export default {
           this.$nuxt.$router.push("/displayPg");
         });
     },
-    async uploadImage() {
+   /* async uploadImage() {
       // Get the file to be uploaded
       const file = this.$refs.fileInput.files[0]
 
@@ -155,7 +155,7 @@ export default {
         // Handle errors
       }
     },
-  },
+  },*/
   mounted() {
     const form = document.getElementById("sheetdb-form");
     form.addEventListener("submit", this.handleSubmit);
@@ -172,7 +172,7 @@ export default {
       year: ["Year 1", "Year 2", "Year 3", "Year 4", "Postgraduate"],
     };
   },
-};
+  }};
 </script>
   <style>
 #app {
