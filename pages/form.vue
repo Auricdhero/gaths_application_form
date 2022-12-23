@@ -114,9 +114,12 @@
   
   <script>
 import Logo from "../components/logo.vue";
-import firebase from "../firebase"
+import axios from 'axios'
+//import firebase from "../firebase"
 
-
+const sheetdb = axios.create({
+  baseURL: 'https://sheetdb.io/api/v1/1awo7kmtjx9hi'
+})
 
 export default {
   methods: {
