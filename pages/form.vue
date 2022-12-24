@@ -114,12 +114,9 @@
   
   <script>
 import Logo from "../components/logo.vue";
-import axios from 'axios'
+
 //import firebase from "../firebase"
 
-const sheetdb = axios.create({
-  baseURL: 'https://sheetdb.io/api/v1/1awo7kmtjx9hi'
-})
 
 export default {
   methods: {
@@ -144,6 +141,14 @@ export default {
   beforeDestroy() {
     const form = document.getElementById("sheetdb-form");
     form.removeEventListener("submit", this.handleSubmit);
+  },
+  async created() {
+    try {
+      const res = await sheetdb.get('/')
+      this.data = res.data
+    } catch (error) {
+      console.error(error)
+    }
   },
   data() {
     Logo;
