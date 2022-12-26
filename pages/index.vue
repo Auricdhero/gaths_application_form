@@ -50,7 +50,7 @@ export default{
 body {
     margin: 0;
     font-weight: 100;
-    background: radial-gradient(#29C2E9);
+    background: radial-gradient(#29C2E9,#166790);
     -webkit-overflow-Y: hidden;
     -moz-overflow-Y: hidden;
     -o-overflow-Y: hidden;
