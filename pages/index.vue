@@ -16,7 +16,7 @@
     <h1 class="text-center text-uppercase">call for naminations</h1>
     <v-container>
       <p class="text-center">
-        The Board of Directors of the Ghana Association of Tourism Students hereby opens nominations for various leadership portfolios of the association. All interested persons are encouraged to apply.  
+        The Board of Directors of the Ghana Association of Tourism Students <br> Hereby opens nominations for various leadership portfolios of the association. <br> All interested persons are encouraged to apply.  
       </p>
       <v-row class="d-flex mb-6 bg-surface-variant justify-center">
         <v-col cols="5 ">
