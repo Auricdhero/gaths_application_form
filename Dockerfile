@@ -9,7 +9,7 @@ RUN npm install
 
 COPY . /app
 
-RUN npm run build
+RUN npm run generate
 
 EXPOSE 3000
 CMD ["npm", "start"]
