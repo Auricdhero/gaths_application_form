@@ -7,7 +7,6 @@
     <v-form
       method="POST"
       action="https://sheetdb.io/api/v1/1awo7kmtjx9hi"
-      @submit.prevent="submit"
       id="sheetdb-form"
       v-model="valid"
     >
@@ -117,15 +116,14 @@ import Logo from "../components/logo.vue";
 
 export default {
   methods: {
-    handleSubmit(e) {
-      e.preventDefault();
+    handleSubmit() {
+      //e.preventDefault();
 
       fetch(e.target.action, {
         method: "POST",
         body: new FormData(e.target),
       })
         .then((response)=>{
-          console.log("this is from sheetDB ", response.json())
           return response.json()}
           )
         .then(() => {
