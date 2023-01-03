@@ -114,9 +114,6 @@
   
   <script>
 import Logo from "../components/logo.vue";
-import sheetdb from "../axios";
-//import firebase from "../firebase"
-
 
 export default {
   methods: {
@@ -127,7 +124,10 @@ export default {
         method: "POST",
         body: new FormData(e.target),
       })
-        .then((response) => response.json())
+        .then((response)=>{
+          console.log("this is from sheetDB ", response.json())
+          return response.json()}
+          )
         .then(() => {
           this.$nuxt.$router.push("/displayPg");
         });
@@ -143,12 +143,6 @@ export default {
     form.removeEventListener("submit", this.handleSubmit);
   },
   async created() {
-    try {
-      const res = await sheetdb.get('/')
-      this.data = res.data
-    } catch (error) {
-      console.error(error)
-    }
   },
   data() {
     Logo;
@@ -156,6 +150,7 @@ export default {
       //select: null,
       gender: ["Male", "Female"],
       year: ["Year 1", "Year 2", "Year 3", "Year 4", "Postgraduate"],
+      link: "https://sheetdb.io/api/v1/1awo7kmtjx9hi"
     };
   },
 };
