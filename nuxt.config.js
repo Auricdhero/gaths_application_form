@@ -4,9 +4,6 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   target: 'static',
-  router: {
-    base: '/gaths_application_form/'
-  },
   head: {
     titleTemplate: '%s',
     title: 'GATHS Application Forms',
@@ -52,7 +49,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <bg />
+    
 
     <logo />
     <h1 class="text-center">GATHS REGISTRATION FORM</h1>
@@ -32,7 +32,6 @@
         <v-row>
           <v-col cols="6" md="12" sm="6" lg="6">
             <v-select
-              v-model="select"
               name="gender"
               :items="gender"
               :rules="[(v) => !!v || 'Item is required']"
@@ -61,7 +60,6 @@
           </v-col>
           <v-col cols="6" md="12" sm="6" lg="6">
             <v-select
-              v-model="select"
               name="year"
               :items="year"
               :rules="[(v) => !!v || 'Item is required']"
@@ -123,9 +121,6 @@ export default {
         method: "POST",
         body: new FormData(e.target),
       })
-        .then((response)=>{
-          return response.json()}
-          )
         .then(() => {
           this.$nuxt.$router.push("/displayPg");
         });
@@ -133,22 +128,21 @@ export default {
     
   },
   mounted() {
-    const form = document.getElementById("sheetdb-form");
-    form.addEventListener("submit", this.handleSubmit);
+    
   },
   beforeDestroy() {
-    const form = document.getElementById("sheetdb-form");
-    form.removeEventListener("submit", this.handleSubmit);
+    
   },
   async created() {
   },
   data() {
     Logo;
     return {
-      //select: null,
+      select: null,
       gender: ["Male", "Female"],
       year: ["Year 1", "Year 2", "Year 3", "Year 4", "Postgraduate"],
-      link: "https://sheetdb.io/api/v1/1awo7kmtjx9hi"
+      name:'',
+      valid:''
     };
   },
 };
