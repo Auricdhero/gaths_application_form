@@ -48,6 +48,9 @@ export default {
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
+    router: {
+      base: '/gaths_application_form/'
+    },
     theme: {
       dark: false,
       themes: {
