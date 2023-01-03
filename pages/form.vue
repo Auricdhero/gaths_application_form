@@ -5,16 +5,12 @@
     <logo />
     <h1 class="text-center">GATHS REGISTRATION FORM</h1>
     <v-form
-      method="POST"
-      action="https://sheetdb.io/api/v1/1awo7kmtjx9hi"
-      id="sheetdb-form"
-      v-model="valid"
+    id="sheetdb-form"
     >
       <v-container>
         <v-row>
           <v-col cols="6" md="12" sm="6" lg="6">
             <v-text-field
-              v-model="name"
               name="fName"
               label="First Name"
               required
@@ -22,7 +18,6 @@
           </v-col>
           <v-col cols="6" md="12" sm="6" lg="6">
             <v-text-field
-              v-model="name"
               name="lName"
               label="Last Name"
               required
@@ -102,7 +97,7 @@
           </v-col>
         </v-row>
         <div class="fill-height">
-          <v-btn @click="handleSubmit()" type="submit" block>Submit</v-btn>
+          <v-btn @click="handleSubmit($event)" block>Submit</v-btn>
         </div>
       </v-container>
     </v-form>
@@ -114,16 +109,14 @@ import Logo from "../components/logo.vue";
 
 export default {
   methods: {
-    handleSubmit() {
-      //e.preventDefault();
-
-      fetch(e.target.action, {
+    async handleSubmit(event) {
+      event.preventDefault();
+      
+      await fetch("https://sheetdb.io/api/v1/1awo7kmtjx9hi", {
         method: "POST",
-        body: new FormData(e.target),
+        body: new FormData(document.getElementById("sheetdb-form")),
       })
-        .then(() => {
-          this.$nuxt.$router.push("/displayPg");
-        });
+      this.$nuxt.$router.push("/displayPg");
     },
     
   },
