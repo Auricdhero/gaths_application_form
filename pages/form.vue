@@ -105,7 +105,7 @@
           </v-col>
         </v-row>
         <div class="fill-height">
-          <v-btn @click="SubForm()" type="submit" block>Submit</v-btn>
+          <v-btn @click="handleSubmit()" type="submit" block>Submit</v-btn>
         </div>
       </v-container>
     </v-form>
@@ -114,7 +114,7 @@
   
   <script>
 import Logo from "../components/logo.vue";
-
+import sheetdb from "../axios";
 //import firebase from "../firebase"
 
 
