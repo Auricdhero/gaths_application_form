@@ -35,12 +35,12 @@
             ></v-select>
           </v-col>
           <v-col cols="6" md="12" sm="6" lg="6">
-            <v-text-field name="email" label="Email"></v-text-field>
+            <v-text-field type="email" name="email" label="Email"></v-text-field>
           </v-col>
         </v-row>
         <v-row>
           <v-col cols="6" md="12" sm="6" lg="6">
-            <v-text-field name="number" label="Phone Number"></v-text-field>
+            <v-text-field name="number" type="number" label="Phone Number"></v-text-field>
           </v-col>
           <v-col cols="6" md="12" sm="6" lg="6">
             <v-text-field
