@@ -26,7 +26,10 @@ body {
 <script>
 import logo from '../components/logo.vue';
 export default {
-    //name: logo,
-    components: logo
+    data(){
+        return{
+            data: logo
+        }
+    }
 }
 </script>
