@@ -117,7 +117,7 @@ export default {
         method: "POST",
         body: new FormData(document.getElementById("sheetdb-form")),
       })
-      this.$nuxt.$router.push("/displayPg");
+      this.$nuxt.$router.push("/thank");
     },
     
   },

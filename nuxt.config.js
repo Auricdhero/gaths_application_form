@@ -42,9 +42,12 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    //'@nuxtjs/axios'
     //'@nuxtjs/firebase',
   ],
-  
+  axios: {
+    //baseURL: process.env.API_URL,
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {

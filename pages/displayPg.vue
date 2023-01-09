@@ -8,22 +8,29 @@
                 <img src="" alt="">
             </v-avartar>
             <v-divider></v-divider><br>
-            <h3 class="text-white text-center">Fullname</h3><br>
-            <h4 class="text-white text-center">Institution</h4><br>
-            <h4 class="text-white text-center">Program</h4><br>
-            <h4 class="text-center text-white">Year</h4><br>
-            <h4 class="text-center text-white">Student Id</h4><br>
-            <h4 class="text-center text-white">Residence</h4><br>
+            <h3 class="text-white text-center">{{data.fName + data.lName}}</h3><br>
+            <h4 class="text-white text-center">{{ data.institution }}</h4><br>
+            <h4 class="text-white text-center">{{data.prog}}</h4><br>
+            <h4 class="text-center text-white">{{data.year}}</h4><br>
+            <h4 class="text-center text-white">{{data.stndId}}</h4><br>
+            <h4 class="text-center text-white">{{data.residence}}</h4><br>
         </v-card>
     </v-container>
 </template>
 <script>
-//import axios from 'axios';
+//import axios from '@nuxtjs/axios';
 import logo from '../components/logo.vue';
-//import bg from '../components/background.vue';
-//import sheetdb from 'https://sheetdb.io/api/v1/1awo7kmtjx9hi'
 
+const sheetdbApiEndpoint = 'https://sheetdb.io/api/v1/1awo7kmtjx9hi';
+
+fetch(sheetdbApiEndpoint)
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data.value)
+        
+    })
 export default{
+    
     data() {
         return{
             data: [logo]
