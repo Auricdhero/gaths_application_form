@@ -26,14 +26,18 @@ const sheetdbApiEndpoint = 'https://sheetdb.io/api/v1/1awo7kmtjx9hi';
 fetch(sheetdbApiEndpoint)
     .then((response) => response.json())
     .then((data) => {
-        console.log(data.value)
+        const fName = data[0];
+        //for(let i = 0, )
+
+        
+        console.log(fName)
         
     })
 export default{
     
     data() {
         return{
-            data: [logo]
+            data: [logo, fName]
         }
     },
    
@@ -45,21 +49,5 @@ export default{
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-}
-#app {
-  background-color: var(--v-background-base);
-}
-body {
-    margin: 0;
-    font-weight: 100;
-    background: radial-gradient(#29C2E9,#166790);
-    -webkit-overflow-Y: hidden;
-    -moz-overflow-Y: hidden;
-    -o-overflow-Y: hidden;
-    overflow-y: hidden;
-    -webkit-animation: fadeIn 1 1s ease-out;
-    -moz-animation: fadeIn 1 1s ease-out;
-    -o-animation: fadeIn 1 1s ease-out;
-    animation: fadeIn 1 1s ease-out;
 }
 </style>

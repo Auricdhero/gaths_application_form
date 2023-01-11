@@ -23,6 +23,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/main.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -44,9 +45,10 @@ export default {
   modules: [
     //'@nuxtjs/axios'
     //'@nuxtjs/firebase',
+    '@nuxtjs/supabase'
   ],
   axios: {
-    //baseURL: process.env.API_URL,
+    baseURL: process.env.API_URL,
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify

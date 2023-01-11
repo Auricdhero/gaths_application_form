@@ -1,39 +1,3 @@
-<template>
-  <div>
-    
-    <logo/>
-   
-    <h1 class="text-center text-uppercase">call for naminations</h1>
-    <v-container>
-      <p class="text-center">
-        The Board of Directors of the Ghana Association of Tourism Students <br> Hereby opens nominations for various leadership portfolios of the association. All interested <br> persons are encouraged to apply.  
-      </p>
-      <v-row class="d-flex mb-5 bg-surface-variant justify-center">
-        <v-col cols="2">
-          <v-btn variant="outlined"><NuxtLink class="linkU" to="/form"><h4 class="link">Apply Now</h4></NuxtLink></v-btn>
-        </v-col>
-      </v-row>
-    </v-container>
-    
-  </div>
-</template>
-
-<script>
-import logo from '../components/logo.vue';
-
-
-export default{
-  
-  data() {
-    
-    return {
-      logo,
-      //select: null,
-    }
-  }
-}
-</script>
-<style>
 body {
     margin: 0;
     font-weight: 100;
@@ -183,4 +147,3 @@ body {
 .link{
   color: white;
 }
-</style>
