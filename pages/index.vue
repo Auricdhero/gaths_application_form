@@ -9,9 +9,7 @@
         The Board of Directors of the Ghana Association of Tourism Students <br> Hereby opens nominations for various leadership portfolios of the association. All interested <br> persons are encouraged to apply.  
       </p>
       <v-row class="d-flex mb-5 bg-surface-variant justify-center">
-        <v-col cols="2">
           <v-btn variant="outlined"><NuxtLink class="linkU" to="/form"><h4 class="link">Apply Now</h4></NuxtLink></v-btn>
-        </v-col>
       </v-row>
     </v-container>
     
