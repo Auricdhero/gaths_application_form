@@ -27,6 +27,7 @@
             <input
               type="email"
               name="email"
+              v-model="credentials.email"
               id="website-admin"
               class="
                 rounded-none rounded-r-lg
@@ -87,6 +88,7 @@
             </span>
             <input
               type="password"
+              v-model="credentials.password"
               id="pwd"
               class="
                 rounded-none rounded-r-lg
@@ -117,6 +119,7 @@
             type="submit"
             :value="Loading ? 'Loading' : 'Login'"
             :disabled="Loading"
+            
             class="
               text-white
               bg-gradient-to-r

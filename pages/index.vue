@@ -47,7 +47,7 @@
     </div>
   </div>
 </template>
-  <script>
+<script>
 import logo from "~/assets/img/logo.png";
 export default {
   data() {
@@ -57,10 +57,7 @@ export default {
   },
 };
 </script>
-<script setup>
-
-</script>
-  <style>
+<style>
 .heading {
   background-color: rgb(27, 95, 229);
   height: 100%;
