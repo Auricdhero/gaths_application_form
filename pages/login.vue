@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container mx-auto mt-10 mb-10 login">
-      <form action="" @submit.prevent="">
+      <form action="" @submit.prevent="handleLogin">
         <div class="container mx-auto">
           <br />
           <label
@@ -142,10 +142,10 @@
   </div>
 </template>
 <script setup>
-//const Loading = ref(false);
+
 </script>
 <style>
-.login{
+.login {
   height: 35em;
 }
 </style>
