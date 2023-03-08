@@ -16,7 +16,7 @@
         placeholder="password"
         outlined
       ></v-text-field>
-      <v-select :items="items" label="Institution" outlined></v-select>
+      <v-select label="Institution" outlined></v-select>
       <v-checkbox
         v-model="checkbox"
         :rules="[(v) => !!v || 'You must agree to continue!']"
