@@ -3,7 +3,7 @@
     <v-col class="pa-16" style="background-color: blue; height: 100vh;">
       <v-img class="mx-auto" max-height="180" max-width="200" :src="logo"></v-img>
       <br />
-      <h1 class="text-center" style="color: white;">Embark on an Exciting Journey <br /> With GATHS</h1><br><br>
+      <h1 class="text-left" style="color: white;">Embark on an Exciting Journey <br /> With GATHS</h1><br><br>
       <v-img class="mx-auto" max-height="200" max-width="220" :src="designs"></v-img>
     </v-col>
     <v-col class="pa-7">
