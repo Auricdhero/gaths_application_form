@@ -15,8 +15,7 @@
 
       <v-btn
         class="ma-2"
-        :loading="loading"
-        :disabled="loading"
+        
         color="error"
         @click="loader = ''"
       >
@@ -46,6 +45,6 @@
 </template>
 <script>
 export default {
-  name: "signin",
+  // name: "signin",
 };
 </script>

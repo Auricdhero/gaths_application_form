@@ -29,13 +29,7 @@
         acknowledge that GATHS processes your personal data in accordance with
         the Privacy policy.
       </h6>
-      <v-btn
-        class="ma-2"
-        :loading="loading"
-        :disabled="loading"
-        color="error"
-        @click="loader = ''"
-      >
+      <v-btn class="ma-2" color="error" @click="loader = ''">
         Create an Account For Free
       </v-btn>
 
@@ -61,6 +55,6 @@
 </template>
 <script>
 export default {
-  name: "signup",
+  // name: "signup",
 };
 </script>
