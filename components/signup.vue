@@ -18,7 +18,6 @@
       ></v-text-field>
       <v-select label="Institution" outlined></v-select>
       <v-checkbox
-        v-model="checkbox"
         :rules="[(v) => !!v || 'You must agree to continue!']"
         label="I agree that GATHS may send me marketing messages?"
         required
