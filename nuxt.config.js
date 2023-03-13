@@ -1,5 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
 
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -38,6 +39,24 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/pwa',
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+          apiKey: 'AIzaSyCVVbo8i6FlWKO58VxY35555atAiknyOz0',
+          authDomain: 'gaths-application-form-1c4db.firebaseapp.com',
+          projectId: 'gaths-application-form-1c4db',
+          storageBucket: 'gaths-application-form-1c4db.appspot.com',
+          messagingSenderId: '680240215115',
+          appId: '1:680240215115:web:995078c1a26f4277d109ce',
+          // measurementId: '<measurementId>'
+        },
+        services: {
+          auth: true
+        }
+      }
+    ]
   ],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify

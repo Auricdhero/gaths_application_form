@@ -5,12 +5,15 @@
         label="Username or Email"
         placeholder="Username or Email"
         outlined
+        required
       ></v-text-field>
       <br />
       <v-text-field
         label="password"
         placeholder="password"
+        type="password"
         outlined
+        required
       ></v-text-field>
 
       <v-btn
@@ -45,6 +48,8 @@
 </template>
 <script>
 export default {
-  // name: "signin",
+  methods:{
+
+  }
 };
 </script>

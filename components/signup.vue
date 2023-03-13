@@ -1,22 +1,29 @@
 <template>
   <v-container>
-    <v-form>
+    <v-form  v-model="valid" @submit.prevent="signup">
       <v-text-field
         label="Full Name"
         placeholder="password"
+        v-model="fullName"
         outlined
+        required
       ></v-text-field>
       <v-text-field
         label="Email"
-        placeholder="password"
+        placeholder="email"
+        v-model="email"
         outlined
+        required
       ></v-text-field>
       <v-text-field
         label="Password"
         placeholder="password"
+        type="password"
+        v-model="password"
         outlined
+        required
       ></v-text-field>
-      <v-select label="Institution" outlined></v-select>
+      <v-select v-model="institution" :items="institution" label="Institution" outlined></v-select>
       <v-checkbox
         :rules="[(v) => !!v || 'You must agree to continue!']"
         label="I agree that GATHS may send me marketing messages?"
@@ -55,5 +62,29 @@
 <script>
 export default {
   // name: "signup",
+  methods:{
+    async signup() {
+      let that = this
+      const auth = getAuth();
+      createUserWithEmailAndPassword(auth, this.email, this.password)
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          console.log("user", user);
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          that.snackbarText = error.message
+          that.snackbar = true
+          console.log("error", error);
+          // ..
+        });
+    },
+  },
+  data: () => ({
+    institution:['ATU', 'KNUST','AIT','UG', 'UCC', 'UDS', 'KTU','ATU','TTU' ]
+  })
 };
 </script>
