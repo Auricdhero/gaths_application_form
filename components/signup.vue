@@ -1,29 +1,29 @@
 <template>
   <v-container>
-    <v-form  v-model="valid" @submit.prevent="signup">
+    <v-form @submit.prevent="signup">
       <v-text-field
         label="Full Name"
-        placeholder="password"
-        v-model="fullName"
+        placeholder="Full Name"
+        name="fullName"
         outlined
         required
       ></v-text-field>
       <v-text-field
         label="Email"
         placeholder="email"
-        v-model="email"
+        name="email"
         outlined
         required
       ></v-text-field>
       <v-text-field
         label="Password"
         placeholder="password"
+        name="passowrd"
         type="password"
-        v-model="password"
         outlined
         required
       ></v-text-field>
-      <v-select v-model="institution" :items="institution" label="Institution" outlined></v-select>
+      <v-select name="institution" v-model="institution" :items="institution" label="Institution" outlined></v-select>
       <v-checkbox
         :rules="[(v) => !!v || 'You must agree to continue!']"
         label="I agree that GATHS may send me marketing messages?"
@@ -66,7 +66,7 @@ export default {
     async signup() {
       let that = this
       const auth = getAuth();
-      createUserWithEmailAndPassword(auth, this.email, this.password)
+      createUserWithEmailAndPassword(auth, this.fullName, this.email, this.password)
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
