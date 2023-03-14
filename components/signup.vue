@@ -84,7 +84,7 @@ export default {
     },
   },
   data: () => ({
-    institution:['ATU', 'KNUST','AIT','UG', 'UCC', 'UDS', 'KTU','ATU','TTU' ]
+    institution:['ATU', 'KNUST','AIT','UG', 'UMAT', 'UENR', 'UCC', 'UDS', 'KTU','ATU','TTU','Ashesi University College' ]
   })
 };
 </script>
