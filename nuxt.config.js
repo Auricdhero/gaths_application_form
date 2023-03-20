@@ -53,11 +53,22 @@ export default {
           // measurementId: '<measurementId>'
         },
         services: {
-          auth: true
+          auth: {
+            persistence: 'local',
+            initialize:{
+              //onAuthStateChangedMutation: 'ON_AUTH_STATE_CHANGED_MUTATION',
+              onAuthStateChangedAction: 'onAuthStateChangedAction',
+              subscribeManually: false
+            },
+            ssr: false,
+          }
         }
       }
     ]
   ],
+  router: {
+    middleware: 'auth'
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
