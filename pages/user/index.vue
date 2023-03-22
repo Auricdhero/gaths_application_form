@@ -16,6 +16,7 @@
 
         <v-tab-item><welcome /></v-tab-item>
         <v-tab-item><biodata /></v-tab-item>
+        <v-tab-item><institution /></v-tab-item>
 
 
       </v-tabs>
