@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-form @submit.prevent="signup">
+    <v-form>
       <!-- <v-text-field
         label="Full Name"
         placeholder="Full Name"
@@ -23,21 +23,25 @@
         outlined
         required
       ></v-text-field>
-      <!-- <v-select name="institution" v-model="institution" :items="institution" label="Institution" outlined></v-select> -->
-      <!-- <v-checkbox
+      <v-select
+        name="institution"
+        v-model="institution"
+        :items="institution"
+        label="Institution"
+        outlined
+      ></v-select>
+      <v-checkbox
         :rules="[(v) => !!v || 'You must agree to continue!']"
         label="I agree that GATHS may send me marketing messages?"
         required
-      ></v-checkbox> -->
+      ></v-checkbox>
       <h6 class="text-muted">
         By creating an account, you agree to the terms of service and Homor code
         and <br />
         acknowledge that GATHS processes your personal data in accordance with
         the Privacy policy.
       </h6>
-      <v-btn class="ma-2" color="error">
-        Create an Account For Free
-      </v-btn>
+      <v-btn class="ma-2" color="error"> Create an Account For Free </v-btn>
 
       <br /><br />
       <h5 class="text-bold">or Register With:</h5>
@@ -50,7 +54,7 @@
           </v-btn>
         </v-col>
         <v-col>
-          <v-btn color="blue" depressed>
+          <v-btn @click="signup()" color="blue" depressed>
             <v-icon>mdi-facebook</v-icon>
             Sign up with Facebook
           </v-btn>
@@ -62,23 +66,45 @@
 <script>
 export default {
   // name: "signup",
+
+  data: () => ({
+    institution: [
+      "ATU",
+      "KNUST",
+      "AIT",
+      "UG",
+      "UMAT",
+      "UENR",
+      "UCC",
+      "UDS",
+      "KTU",
+      "ATU",
+      "TTU",
+      "Ashesi University College",
+    ],
+    email: "",
+    password: "",
+  }),
   methods: {
     async signup() {
-      try {
-        const { user } = await this.$fireAuth.createUserWithEmailAndPassword(
-          this.email,
-          this.password
-        )
-        console.log('User created:', user)
-      } catch (error) {
-        console.error('Error creating user:', error)
-      }
-    }
+      let that = this;
+      const auth = getAuth();
+      createUserWithEmailAndPassword(auth, this.email, this.password, this.institution)
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          console.log("user", user);
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          that.snackbarText = error.message;
+          that.snackbar = true;
+          console.log("error", error);
+          // ..
+        });
+    },
   },
-  data: () => ({
-    institution:['ATU', 'KNUST','AIT','UG', 'UMAT', 'UENR', 'UCC', 'UDS', 'KTU','ATU','TTU','Ashesi University College' ],
-    email: '',
-    password: ''
-  })
 };
 </script>

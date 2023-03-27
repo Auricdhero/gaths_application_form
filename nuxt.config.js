@@ -36,6 +36,9 @@ export default {
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
   ],
+  router: {
+    middleware: ['auth']
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -54,21 +57,28 @@ export default {
         },
         services: {
           auth: {
-            persistence: 'local',
-            initialize:{
-              //onAuthStateChangedMutation: 'ON_AUTH_STATE_CHANGED_MUTATION',
+            persistence: 'local', // default
+            initialize: {
+              // onAuthStateChangedMutation: 'ON_AUTH_STATE_CHANGED_MUTATION',
               onAuthStateChangedAction: 'onAuthStateChangedAction',
               subscribeManually: false
             },
-            ssr: false,
-          }
-        }
+            ssr: false, // default
+          },
+          firestore: true,  
+          database: true
+        },
+
       }
     ]
   ],
-  router: {
-    middleware: 'auth'
+
+  pwa: {
+    manifest: {
+      lang: 'en'
+    }
   },
+
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {

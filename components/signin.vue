@@ -16,14 +16,7 @@
         required
       ></v-text-field>
 
-      <v-btn
-        class="ma-2"
-        
-        color="error"
-        @click="loader = ''"
-      >
-        Login
-      </v-btn>
+      <v-btn class="ma-2" color="error" @click="loader = ''"> Login </v-btn>
       <nuxt-link to="">Forget Password</nuxt-link>
 
       <br /><br />
@@ -48,8 +41,35 @@
 </template>
 <script>
 export default {
-  methods:{
+  methods: {
+    async login() {
+      let that = this;
+      this.$fire.auth
+        .signInWithEmailAndPassword(this.email, this.password)
+        .catch(function (error) {
+          that.snackbarText = error.message;
+          that.snackbar = true;
+        })
+        .then((user) => {
+          //we are signed in
+          console.log("We are logged in", user);
+          $nuxt.$router.push("/user/");
+        });
+    },
 
-  }
+    async forgotPassword() {
+      let that = this;
+      this.$fire.auth
+        .sendPasswordResetEmail(this.email)
+        .then(function () {
+          that.snackbarText = "reset link sent to " + that.email;
+          that.snackbar = true;
+        })
+        .catch(function (error) {
+          that.snackbarText = error.message;
+          that.snackbar = true;
+        });
+    },
+  },
 };
 </script>
