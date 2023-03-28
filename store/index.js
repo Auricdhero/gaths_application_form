@@ -6,7 +6,7 @@ const actions = {
   
         //redirect from here
         this.$router.push({
-          path: '/',
+        //   path: '/',
         })
       } else {
         const { uid, email } = authUser
@@ -15,7 +15,7 @@ const actions = {
           email,
         })
         this.$router.push({
-          path: '/user/',
+        //   path: '/user/',
         })
       }
     },

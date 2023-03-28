@@ -5,11 +5,39 @@
         <h3 style="color: white">Local Chapter</h3> </v-card
       ><br />
 
-      <v-card>
+      <v-card style="padding: 1rem">
         <v-form>
-            
+            <h3 class="text-center">Please Note: All fields marked with * are mandatory.</h3>
+            <h4 class="text-uppercase">Details of local chapter</h4>
+            <v-divider></v-divider><br>
+
+            <v-row>
+              <v-col>
+                <v-label>Name of Local Chapter</v-label>
+                <v-select label="Please Select" outlined></v-select>
+              </v-col>
+              <v-col>
+                <v-label>Position in Chapter</v-label>
+                <v-text-field label="Please Enter" outlined></v-text-field>
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col>
+                <v-label>Year Joined</v-label>
+                <datePicker />
+              </v-col>
+              <v-col>
+                <v-label>Membership Number</v-label>
+                <v-text-field label="Please Enter" outlined></v-text-field>
+              </v-col>
+            </v-row>
+            <v-btn color="success">Save and Continue</v-btn>
         </v-form>
-      </v-card>
+      </v-card><br>
+
+
+
+      <externalLinks />
     </v-container>
   </div>
 </template>
