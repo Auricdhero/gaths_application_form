@@ -31,7 +31,7 @@
                 <v-text-field label="Please Enter" outlined></v-text-field>
               </v-col>
             </v-row>
-            <v-btn color="success">Save and Continue</v-btn>
+            <buttonSuccess />
         </v-form>
       </v-card><br>
 

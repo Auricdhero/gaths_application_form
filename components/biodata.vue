@@ -96,7 +96,7 @@
             </v-col>
           </v-row>
 
-          <v-btn color="success">Save and Continue</v-btn>
+          <buttonSuccess />
         </v-form>
       </v-card>
     </v-container>
