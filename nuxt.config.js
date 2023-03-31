@@ -37,12 +37,12 @@ export default {
     '@nuxtjs/vuetify',
   ],
   router: {
-    // middleware: ['auth']
+    //  middleware: ['auth']
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/pwa',
+    '@nuxtjs/axios',
     [
       '@nuxtjs/firebase',
       {
@@ -56,15 +56,7 @@ export default {
           // measurementId: '<measurementId>'
         },
         services: {
-          auth: {
-            persistence: 'local', // default
-            initialize: {
-              // onAuthStateChangedMutation: 'ON_AUTH_STATE_CHANGED_MUTATION',
-              onAuthStateChangedAction: 'onAuthStateChangedAction',
-              subscribeManually: false
-            },
-            ssr: false, // default
-          },
+          auth: true,
           firestore: true,  
           database: true
         },
@@ -73,11 +65,11 @@ export default {
     ]
   ],
 
-  pwa: {
-    manifest: {
-      lang: 'en'
-    }
-  },
+  // pwa: {
+  //   manifest: {
+  //     lang: 'en'
+  //   }
+  // },
 
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify

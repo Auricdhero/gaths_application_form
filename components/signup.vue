@@ -1,17 +1,18 @@
 <template>
   <v-container>
-    <v-form>
-      <!-- <v-text-field
+    <v-form >
+      <v-text-field
         label="Full Name"
         placeholder="Full Name"
         name="fullName"
         outlined
         required
-      ></v-text-field> -->
+      ></v-text-field>
       <v-text-field
         label="Email"
         placeholder="email"
         name="email"
+        type="email"
         outlined
         required
       ></v-text-field>
@@ -84,26 +85,20 @@ export default {
     ],
     email: "",
     password: "",
+    institution: "",
   }),
   methods: {
-    async signup() {
-      let that = this;
-      const auth = getAuth();
-      createUserWithEmailAndPassword(auth, this.email, this.password, this.institution)
-        .then((userCredential) => {
-          // Signed in
-          const user = userCredential.user;
-          console.log("user", user);
-          // ...
-        })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          that.snackbarText = error.message;
-          that.snackbar = true;
-          console.log("error", error);
-          // ..
-        });
+    async createUser() {
+      console.log("Registered");
+      try {
+        await this.$fire.auth.createUserWithEmailAndPassword(
+          this.email,
+          this.password
+        );
+        this.$router.push("/user/");
+      } catch (e) {
+        handleError(e);
+      }
     },
   },
 };
