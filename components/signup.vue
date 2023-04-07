@@ -85,21 +85,9 @@ export default {
     ],
     email: "",
     password: "",
-    institution: "",
   }),
   methods: {
-    async createUser() {
-      console.log("Registered");
-      try {
-        await this.$fire.auth.createUserWithEmailAndPassword(
-          this.email,
-          this.password
-        );
-        this.$router.push("/user/");
-      } catch (e) {
-        handleError(e);
-      }
-    },
+    
   },
 };
 </script>

@@ -42,18 +42,7 @@
 <script>
 export default {
   methods: {
-    async loginUser() {
-      console.log("strted");
-      try {
-        await this.$fire.auth.signInWithEmailAndPassword(
-          this.email,
-          this.password
-        );
-        this.$router.push("/user/");
-      } catch (e) {
-        handleError(e);
-      }
-    }
+    
   },
 };
 </script>
