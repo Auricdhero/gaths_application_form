@@ -31,8 +31,7 @@
 <script>
 import logo from "~/static/logo.png";
 import designs from "~/static/designs.png";
-// import signin from "../components/signin.vue";
-// import signup from "../components/signup.vue";
+
 export default {
   name: "IndexPage",
   // components: [signin, signup],

@@ -26,6 +26,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    {src: '~/plugins/amplify.js', mode: 'client'}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -43,33 +44,10 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
-    [
-      '@nuxtjs/firebase',
-      {
-        config: {
-          apiKey: 'AIzaSyCVVbo8i6FlWKO58VxY35555atAiknyOz0',
-          authDomain: 'gaths-application-form-1c4db.firebaseapp.com',
-          projectId: 'gaths-application-form-1c4db',
-          storageBucket: 'gaths-application-form-1c4db.appspot.com',
-          messagingSenderId: '680240215115',
-          appId: '1:680240215115:web:995078c1a26f4277d109ce',
-          // measurementId: '<measurementId>'
-        },
-        services: {
-          auth: true,
-          firestore: true,  
-          database: true
-        },
-
-      }
-    ]
+    '@nuxtjs/auth-next'
   ],
 
-  // pwa: {
-  //   manifest: {
-  //     lang: 'en'
-  //   }
-  // },
+  
 
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify

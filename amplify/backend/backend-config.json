@@ -1,0 +1,62 @@
+{
+  "auth": {
+    "gathsapplicationform35270c8b": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_gathsapplicationform35270c8bCustomMessage_EMAILMESSAGE": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gathsapplicationform35270c8bCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_gathsapplicationform35270c8bCustomMessage_EMAILSUBJECT": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gathsapplicationform35270c8bCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_gathsapplicationform35270c8bCustomMessage_REDIRECTURL": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gathsapplicationform35270c8bCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_gathsapplicationform35270c8bVerifyAuthChallengeResponse_RECAPTCHASECRET": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gathsapplicationform35270c8bVerifyAuthChallengeResponse"
+        }
+      ]
+    }
+  }
+}

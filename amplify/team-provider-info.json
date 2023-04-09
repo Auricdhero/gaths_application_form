@@ -1,0 +1,32 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-gathsapplicationform-dev-15224-authRole",
+      "UnauthRoleArn": "arn:aws:iam::319123594138:role/amplify-gathsapplicationform-dev-15224-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::319123594138:role/amplify-gathsapplicationform-dev-15224-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-gathsapplicationform-dev-15224-deployment",
+      "UnauthRoleName": "amplify-gathsapplicationform-dev-15224-unauthRole",
+      "StackName": "amplify-gathsapplicationform-dev-15224",
+      "StackId": "arn:aws:cloudformation:us-east-1:319123594138:stack/amplify-gathsapplicationform-dev-15224/da4cdb70-d4e6-11ed-8742-0a5cc82bb987",
+      "AmplifyAppId": "dhkhyhqxacllb"
+    },
+    "categories": {
+      "auth": {
+        "gathsapplicationform35270c8b": {}
+      },
+      "function": {
+        "gathsapplicationform35270c8bDefineAuthChallenge": {},
+        "gathsapplicationform35270c8bCreateAuthChallenge": {},
+        "gathsapplicationform35270c8bVerifyAuthChallengeResponse": {
+          "RECAPTCHASECRET": ""
+        },
+        "gathsapplicationform35270c8bCustomMessage": {
+          "REDIRECTURL": "application.gathstudent.com/user",
+          "EMAILSUBJECT": "GATHSCONFIRMATION",
+          "EMAILMESSAGE": "Hello {{user}},"
+        }
+      }
+    }
+  }
+}

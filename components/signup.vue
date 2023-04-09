@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-form >
+    <v-form v-if="step === steps.register" @submit.prevent="register">
       <v-text-field
         label="Full Name"
         placeholder="Full Name"
@@ -42,7 +42,7 @@
         acknowledge that GATHS processes your personal data in accordance with
         the Privacy policy.
       </h6>
-      <v-btn class="ma-2" color="error"> Create an Account For Free </v-btn>
+      <v-btn class="ma-2" type="submit" color="error"> Create an Account For Free </v-btn>
 
       <br /><br />
       <h5 class="text-bold">or Register With:</h5>
@@ -55,20 +55,48 @@
           </v-btn>
         </v-col>
         <v-col>
-          <v-btn @click="signup()" color="blue" depressed>
+          <v-btn color="blue" depressed>
             <v-icon>mdi-facebook</v-icon>
             Sign up with Facebook
           </v-btn>
         </v-col>
       </v-row>
     </v-form>
+    <!-- <v-form v-else>
+      <v-label>Enter Code Here</v-label>
+      <v-text-field
+        label="Enter Code"
+        placeholder="Enter Code"
+        name="code"
+        type="password"
+        v-model="code"
+        outlined
+        required
+      ></v-text-field>
+      <v-btn class="ma-2" type="submit" color="error">Verify Account</v-btn>
+
+    </v-form> -->
   </v-container>
 </template>
 <script>
+const steps = {
+  register: 'REGISTER',
+  confirmation: 'CONFIRMATION'
+}
 export default {
   // name: "signup",
 
   data: () => ({
+    steps: {...steps},
+    step:steps.register,
+    registerForm:{
+      email: '',
+      password: ''
+    },
+    // confirmForm:{
+    //   email: '',
+    //   code: ''
+    // },
     institution: [
       "ATU",
       "KNUST",
