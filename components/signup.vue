@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-form v-if="steps === step.register" @submit.prevent="register">
+    <v-form v-if="step === steps.register" @submit.prevent="register">
       <v-text-field
         label="Full Name"
         v-model="registerForm.fullName"
@@ -36,7 +36,6 @@
       <v-checkbox
         :rules="[(v) => !!v || 'You must agree to continue!']"
         label="I agree that GATHS may send me marketing messages?"
-        v-model="checked"
         required
       ></v-checkbox>
       <h6 class="text-muted">
