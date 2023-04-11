@@ -68,7 +68,10 @@
     </v-form>
     <!-- confirm user sign up -->
     <v-form v-else @submit.prevent="confirm">
-      <h2 class="text-justify">Check your Email and Enter the Verification code You've received here.</h2><br>
+      <h2 class="text-justify">
+        Check your Email and Enter the Verification code You've received here.
+      </h2>
+      <br />
       <v-label>Enter Your Email Here</v-label>
       <v-text-field
         label="Email"
@@ -125,7 +128,20 @@ export default {
         "Ashesi University College",
       ],
       password: "",
-    },
+    },institution: [
+        "ATU",
+        "KNUST",
+        "AIT",
+        "UG",
+        "UMAT",
+        "UENR",
+        "UCC",
+        "UDS",
+        "KTU",
+        "ATU",
+        "TTU",
+        "Ashesi University College",
+      ],
 
     confirmForm: {
       email: "",

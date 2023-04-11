@@ -13,7 +13,8 @@
     },
     "categories": {
       "auth": {
-        "gathsapplicationform35270c8b": {}
+        "gathsapplicationform35270c8b": {},
+        "gathsapplicationform0b0a4b29": {}
       },
       "function": {
         "gathsapplicationform35270c8bDefineAuthChallenge": {},
