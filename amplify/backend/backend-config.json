@@ -1,6 +1,6 @@
 {
   "auth": {
-    "gathsapplicationform902680b2": {
+    "gathsapplicationform56cfff97": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -15,10 +15,7 @@
         "signupAttributes": [
           "EMAIL"
         ],
-        "socialProviders": [
-          "FACEBOOK",
-          "GOOGLE"
-        ],
+        "socialProviders": [],
         "usernameAttributes": [
           "EMAIL"
         ],
