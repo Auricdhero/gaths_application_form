@@ -1,4 +1,3 @@
-import { Amplify } from "aws-amplify";
-import awsConfig from "../src/aws-exports";
-
-Amplify.configure(awsConfig)
+import {Amplify} from 'aws-amplify';
+import awsconfig from '../src/aws-exports';
+Amplify.configure(awsconfig);

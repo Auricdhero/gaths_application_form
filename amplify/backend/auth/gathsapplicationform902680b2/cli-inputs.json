@@ -1,10 +1,10 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "gathsapplicationform0b0a4b29_identitypool_0b0a4b29",
+    "identityPoolName": "gathsapplicationform902680b2_identitypool_902680b2",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "gathsa0b0a4b29",
-    "userPoolName": "gathsapplicationform0b0a4b29_userpool_0b0a4b29",
+    "resourceNameTruncated": "gathsa902680b2",
+    "userPoolName": "gathsapplicationform902680b2_userpool_902680b2",
     "autoVerifiedAttributes": [
       "email"
     ],
@@ -31,23 +31,23 @@
     "userpoolClientReadAttributes": [
       "email"
     ],
-    "userpoolClientLambdaRole": "gathsa0b0a4b29_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "gathsa902680b2_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "0b0a4b29",
-    "resourceName": "gathsapplicationform0b0a4b29",
+    "sharedId": "902680b2",
+    "resourceName": "gathsapplicationform902680b2",
     "authSelections": "identityPoolAndUserPool",
     "useDefault": "defaultSocial",
     "hostedUI": true,
     "usernameAttributes": [
       "email"
     ],
-    "hostedUIDomainName": "gathsapplicationform0b0a4b29-0b0a4b29",
+    "hostedUIDomainName": "gathsapplicationform902680b2-902680b2",
     "authProvidersUserPool": [
       "Facebook",
       "Google"
     ],
     "hostedUIProviderMeta": "[{\"ProviderName\":\"Facebook\",\"authorize_scopes\":\"email,public_profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"id\"}},{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"sub\"}}]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/user/\"],\"LogoutURLs\":[\"http://localhost:3000/\"]}",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/user/\",\"https://application.gathstudent.com/user/\"],\"LogoutURLs\":[\"http://localhost:3000/\",\"https://application.gathstudent.com/\"]}",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="height: 100vh;">
     <v-card color="blue" elevation="2" style="padding: 1em; color: white">
       <h3>Biodata</h3> </v-card
     ><br />

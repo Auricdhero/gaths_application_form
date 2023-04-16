@@ -12,8 +12,7 @@
         <v-tab
           ><v-icon>mdi-application-import</v-icon> Application Status</v-tab
         >
-        <v-tab><v-icon>mdi-logout</v-icon> Logout</v-tab>
-
+        
         <v-tab-item><welcome /></v-tab-item>
         <v-tab-item><biodata /></v-tab-item>
         <v-tab-item><institution /></v-tab-item>

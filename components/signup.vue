@@ -1,6 +1,10 @@
 <template>
   <v-container>
-    <v-form v-if="step === steps.register" @submit.prevent="register">
+    <v-form
+      method="POST"
+      v-if="step === steps.register"
+      @submit.prevent="register"
+    >
       <v-text-field
         label="Full Name"
         v-model="registerForm.fullName"
@@ -106,7 +110,6 @@ const steps = {
 
 export default {
   // name: "signup",
-
   data: () => ({
     steps: { ...steps },
     step: steps.register,
@@ -128,21 +131,21 @@ export default {
         "Ashesi University College",
       ],
       password: "",
-    },institution: [
-        "ATU",
-        "KNUST",
-        "AIT",
-        "UG",
-        "UMAT",
-        "UENR",
-        "UCC",
-        "UDS",
-        "KTU",
-        "ATU",
-        "TTU",
-        "Ashesi University College",
-      ],
-
+    },
+    institution: [
+      "ATU",
+      "KNUST",
+      "AIT",
+      "UG",
+      "UMAT",
+      "UENR",
+      "UCC",
+      "UDS",
+      "KTU",
+      "ATU",
+      "TTU",
+      "Ashesi University College",
+    ],
     confirmForm: {
       email: "",
       code: "",
@@ -158,7 +161,6 @@ export default {
         console.log({ error });
       }
     },
-
     async confirm() {
       try {
         await this.$store.dispatch(
