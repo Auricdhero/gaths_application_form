@@ -1,9 +1,9 @@
 <template>
   <div>
-    <v-app-bar color="deep-purple accent-4" style="height: 3em;" dense dark>
+    <v-app-bar color="deep-purple accent-4" style="height: 3.5em;" dense dark>
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Page title</v-toolbar-title>
+      <v-toolbar-title><v-img :src="logo" height="60" width="60"></v-img></v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -17,7 +17,7 @@
         <v-menu bottom rounded offset-y>
           <template v-slot:activator="{ on }">
             <v-btn icon x-large v-on="on">
-              <v-avatar color="brown" size="48">
+              <v-avatar color="blue" size="48">
                 <span class="white--text text-h5">{{ user.initials }}</span>
               </v-avatar>
             </v-btn>
@@ -25,7 +25,7 @@
           <v-card>
             <v-list-item-content class="justify-center">
               <div class="mx-auto text-center">
-                <v-avatar color="brown">
+                <v-avatar color="blue">
                   <span class="white--text text-h5">{{ user.initials }}</span>
                 </v-avatar>
                 <h3>{{ $auth.fullName }}</h3>
@@ -35,7 +35,7 @@
                 <v-divider class="my-3"></v-divider>
                 <v-btn depressed rounded text> Edit Account </v-btn>
                 <v-divider class="my-3"></v-divider>
-                <v-btn depressed @click="$store.dispatch('auth/logout')" rounded text> Logout </v-btn>
+                <v-btn  @click="$store.dispatch('auth/logout')" rounded text> Logout </v-btn>
               </div>
             </v-list-item-content>
           </v-card>
@@ -47,6 +47,7 @@
 </template>
 
 <script>
+import logo from '../static/logo.png';
 export default {
   data: () => ({
     user: {
@@ -54,6 +55,7 @@ export default {
       fullName: "John Doe",
       email: "john.doe@doe.com",
     },
+    logo
   }),
 };
 </script>

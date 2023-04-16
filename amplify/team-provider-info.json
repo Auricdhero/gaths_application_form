@@ -14,7 +14,8 @@
     "categories": {
       "auth": {
         "gathsapplicationform35270c8b": {},
-        "gathsapplicationform56cfff97": {}
+        "gathsapplicationform56cfff97": {},
+        "userPoolGroups": {}
       },
       "function": {
         "gathsapplicationform35270c8bDefineAuthChallenge": {},

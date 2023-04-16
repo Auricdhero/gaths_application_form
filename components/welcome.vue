@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-container>
-      <h1 class="text-center">Welcome, <strong>{{ $Auth.fullName }}</strong></h1>
+      <h1 class="text-center">Welcome, <strong>{{ $Auth.email }}</strong></h1>
       <h6 class="text-center">
         You have not completed your membership profile
       </h6>
@@ -48,6 +48,6 @@
 </template>
 <script>
 export default{
-  
+
 }
 </script>

@@ -46,6 +46,10 @@ export const actions = {
 
     async logout({ commit }) {
         await Auth.signOut();
+        this.$router.push({
+            path: '/'
+        })
+        alert('You are loging out!')
         commit('set', null)
     }
 }
