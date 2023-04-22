@@ -1,7 +1,6 @@
 <template>
   <v-container>
     <v-form
-      method="POST"
       v-if="step === steps.register"
       @submit.prevent="register"
     >
@@ -76,7 +75,7 @@
         Check your Email and Enter the Verification code You've received here.
       </h2>
       <br />
-      <v-label>Enter Your Email Here</v-label>
+      <!-- <v-label>Enter Your Email Here</v-label> -->
       <v-text-field
         label="Email"
         placeholder="email"
@@ -87,7 +86,7 @@
         required
       ></v-text-field>
       <br />
-      <v-label>Enter Code Here</v-label>
+      <!-- <v-label>Enter Code Here</v-label> -->
       <v-text-field
         label="Enter Code"
         placeholder="Enter Code"
@@ -131,21 +130,20 @@ export default {
         "Ashesi University College",
       ],
       password: "",
-    },
-    institution: [
-      "ATU",
-      "KNUST",
-      "AIT",
-      "UG",
-      "UMAT",
-      "UENR",
-      "UCC",
-      "UDS",
-      "KTU",
-      "ATU",
-      "TTU",
-      "Ashesi University College",
-    ],
+    },institution: [
+        "ATU",
+        "KNUST",
+        "AIT",
+        "UG",
+        "UMAT",
+        "UENR",
+        "UCC",
+        "UDS",
+        "KTU",
+        "ATU",  
+        "TTU",
+        "Ashesi University College",
+      ],
     confirmForm: {
       email: "",
       code: "",

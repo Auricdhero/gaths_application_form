@@ -39,6 +39,7 @@ export const actions = {
     },
 
     async login({ commit }, { email, password }) {
+        // console.log('You are amazing!');
         const user = await Auth.signIn(email, password);
         commit('set', user);
         return user;
@@ -49,7 +50,7 @@ export const actions = {
         this.$router.push({
             path: '/'
         })
-        alert('You are loging out!')
+        // alert('You are loging out!')
         commit('set', null)
     }
 }

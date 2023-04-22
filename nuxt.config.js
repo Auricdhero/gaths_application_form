@@ -26,12 +26,15 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    {src: '~/plugins/amplify.js', mode: 'client'},
-    {src:'~/plugins/auth'}
+    { src: '~/plugins/amplify.js', ssr: false, mode: 'client' },
+    // { src: '~/plugins/auth' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
+  router: {
+    middleware: ["auth"]
+  },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -47,9 +50,32 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/auth-next'
   ],
+  auth: {
+    strategies: {
+      local: {
+        token: {
+          property: "access_token",
+          type: "Bearer"
+        },
+        endpoints: {
+          user: false,
+        },
+        clientId: process.env.client_id,
+        scope: ["email", "openid", "profile"]
+      }
+    },
+    redirect: {
+      home: "/user/",
+      login: "/",
+      logout: "/"
+    }
+  },
 
-  
-
+  // compilerOptions: {
+  //   "types": [
+  //     "@nuxtjs/auth-next",
+  //   ]
+  // },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
