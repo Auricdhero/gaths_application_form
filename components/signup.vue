@@ -157,6 +157,7 @@ export default {
         this.steps = this.steps.confirm;
       } catch (error) {
         console.log({ error });
+        alert({ error });
       }
     },
     async confirm() {
