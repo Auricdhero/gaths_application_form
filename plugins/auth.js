@@ -10,7 +10,7 @@ class AuthService {
   }
 
   get user() {
-    return this.$store.state.Auth.user
+    return this.$store.state.auth.user
   }
 
   get email() {

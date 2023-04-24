@@ -1,27 +1,32 @@
 <template>
   <div>
-    <v-form @submit.prevent="login">
-      <v-text-field
-        label="Username or Email"
-        placeholder="Username or Email"
-        v-model="form.email"
-        outlined
-        required
-      ></v-text-field>
-      <br />
-      <v-text-field
-        label="password"
-        v-model="form.password"
-        placeholder="password"
-        type="password"
-        outlined
-        required
-      ></v-text-field>
+    <div v-if="!$Auth.isAuthenticated">
+      <v-form @submit.prevent="login">
+        <v-text-field
+          label="Username or Email"
+          placeholder="Username or Email"
+          v-model="form.email"
+          outlined
+          required
+        ></v-text-field>
+        <br />
+        <v-text-field
+          label="password"
+          v-model="form.password"
+          placeholder="password"
+          type="password"
+          outlined
+          required
+        ></v-text-field>
 
-      <v-btn class="ma-2" color="error"> Login </v-btn>
-      <nuxt-link to="">Forget Password</nuxt-link>
-    </v-form>
+        <v-btn class="ma-2" color="error"> Login </v-btn>
+        <nuxt-link to="">Forget Password</nuxt-link>
+      </v-form>
+    </div>
 
+    <div v-else>
+      <p>{{ $Auth.email }} you are successfully logged</p>
+    </div>
     <br /><br />
     <h5 class="text-bold">or Sign In With:</h5>
     <br />
@@ -42,8 +47,6 @@
   </div>
 </template>
 <script>
-
-
 export default {
   // name: 'Login',
   data: () => ({
@@ -52,11 +55,7 @@ export default {
       password: "",
     },
   }),
-  // computed: {
-  //   userLoggedIn() {
-  //     return store.getters.isUserLoggedIn;
-  //   },
-  // },
+
   methods: {
     async login() {
       try {

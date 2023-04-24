@@ -4,14 +4,14 @@
       v-if="step === steps.register"
       @submit.prevent="register"
     >
-      <v-text-field
+      <!-- <v-text-field
         label="Full Name"
         v-model="registerForm.fullName"
         placeholder="Full Name"
         name="fullName"
         outlined
         required
-      ></v-text-field>
+      ></v-text-field> -->
       <v-text-field
         label="Email"
         placeholder="email"
@@ -30,12 +30,12 @@
         outlined
         required
       ></v-text-field>
-      <v-select
+      <!-- <v-select
         v-model="registerForm.institution"
         :items="institution"
         label="Institution"
         outlined
-      ></v-select>
+      ></v-select> -->
       <v-checkbox
         :rules="[(v) => !!v || 'You must agree to continue!']"
         label="I agree that GATHS may send me marketing messages?"
@@ -113,37 +113,38 @@ export default {
     steps: { ...steps },
     step: steps.register,
     registerForm: {
-      fullName: "",
+      // fullName: "",
       email: "",
-      institution: [
-        "ATU",
-        "KNUST",
-        "AIT",
-        "UG",
-        "UMAT",
-        "UENR",
-        "UCC",
-        "UDS",
-        "KTU",
-        "ATU",
-        "TTU",
-        "Ashesi University College",
-      ],
+      // institution: [
+      //   "ATU",
+      //   "KNUST",
+      //   "AIT",
+      //   "UG",
+      //   "UMAT",
+      //   "UENR",
+      //   "UCC",
+      //   "UDS",
+      //   "KTU",
+      //   "ATU",
+      //   "TTU",
+      //   "Ashesi University College",
+      // ],
       password: "",
-    },institution: [
-        "ATU",
-        "KNUST",
-        "AIT",
-        "UG",
-        "UMAT",
-        "UENR",
-        "UCC",
-        "UDS",
-        "KTU",
-        "ATU",  
-        "TTU",
-        "Ashesi University College",
-      ],
+    },
+    // institution: [
+    //     "ATU",
+    //     "KNUST",
+    //     "AIT",
+    //     "UG",
+    //     "UMAT",
+    //     "UENR",
+    //     "UCC",
+    //     "UDS",
+    //     "KTU",
+    //     "ATU",  
+    //     "TTU",
+    //     "Ashesi University College",
+    //   ],
     confirmForm: {
       email: "",
       code: "",

@@ -1,9 +1,11 @@
 <template>
   <div>
-    <v-app-bar color="deep-purple accent-4" style="height: 3.5em;" dense dark>
+    <v-app-bar color="deep-purple accent-4" style="height: 3.5em" dense dark>
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-      <v-toolbar-title><v-img :src="logo" height="60" width="60"></v-img></v-toolbar-title>
+      <v-toolbar-title
+        ><v-img :src="logo" height="60" width="60"></v-img
+      ></v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -28,26 +30,27 @@
                 <v-avatar color="blue">
                   <span class="white--text text-h5">{{ user.initials }}</span>
                 </v-avatar>
-                <h3>{{ $auth.fullName }}</h3>
+                <h3>{{ $Auth.fullName }}</h3>
                 <p class="text-caption mt-1">
-                  {{ $auth.email }}
+                  {{ $Auth.email }}
                 </p>
                 <v-divider class="my-3"></v-divider>
                 <v-btn depressed rounded text> Edit Account </v-btn>
                 <v-divider class="my-3"></v-divider>
-                <v-btn  @click="$store.dispatch('auth/logout')" rounded text> Logout </v-btn>
+                <v-btn @click="$store.dispatch('auth/logout')" rounded text>
+                  Logout
+                </v-btn>
               </div>
             </v-list-item-content>
           </v-card>
         </v-menu>
       </v-row>
-
     </v-app-bar>
   </div>
 </template>
 
 <script>
-import logo from '../static/logo.png';
+import logo from "../static/logo.png";
 export default {
   data: () => ({
     user: {
@@ -55,7 +58,7 @@ export default {
       fullName: "John Doe",
       email: "john.doe@doe.com",
     },
-    logo
+    logo,
   }),
 };
 </script>
