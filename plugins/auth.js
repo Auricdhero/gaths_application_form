@@ -22,6 +22,6 @@ class AuthService {
 export default async ({ store }) => {
   const authService = new AuthService(store)
   Vue.prototype.$Auth = authService
-  Vue.$auth = authService
+  Vue.$Auth = authService
   await store.dispatch('auth/load')
 }
