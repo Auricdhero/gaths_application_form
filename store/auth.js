@@ -1,4 +1,4 @@
-import { Auth } from 'aws-amplify';
+import { Auth } from 'aws-amplify'
 
 export const state = () => ({
     isAuthenticated: false,
@@ -7,50 +7,44 @@ export const state = () => ({
 
 export const mutations = {
     set(state, user) {
-        state.isAuthenticated = !!user;
-        state.user = user;
+        state.isAuthenticated = !!user
+        state.user = user
     }
 }
 
 export const actions = {
     async load({ commit }) {
         try {
-            const user = await Auth.currentAuthenticatedUser();
-            commit('set', user);
-            return user;
+            const user = await Auth.currentAuthenticatedUser()
+            commit('set', user)
+            return user
         } catch (error) {
-            commit('set', null);
+            commit('set', null)
         }
     },
 
-    async register(_, { email, password }) {
+    async register(_, { fullname, institution, email, password }) {
         const user = await Auth.signUp({
-            // fullName: fullName,
+            fullname,
+            institution,
             username: email,
-            password,
-            // Institution: institution,
-
+            password
         })
         return user
     },
 
     async confirmRegistration(_, { email, code }) {
-        return await Auth.confirmSignUp(email, code);
+        return await Auth.confirmSignUp(email, code)
     },
 
     async login({ commit }, { email, password }) {
-        // console.log('You are amazing!');
-        const user = await Auth.signIn(email, password);
-        commit('set', user);
-        return user;
+        const user = await Auth.signIn(email, password)
+        commit('set', user)
+        return user
     },
 
     async logout({ commit }) {
-        await Auth.signOut();
-        this.$router.push({
-            path: '/'
-        })
-        // alert('You are loging out!')
+        await Auth.signOut()
         commit('set', null)
     }
 }

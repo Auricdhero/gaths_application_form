@@ -1,27 +1,27 @@
 import Vue from 'vue'
 
 class AuthService {
-  constructor(store) {
-    this.$store = store
-  }
+    constructor(store) {
+        this.$store = store
+    }
 
-  get isAuthenticated() {
-    return this.$store.state.auth.isAuthenticated
-  }
+    get isAuthenticated() {
+        return this.$store.state.auth.isAuthenticated
+    }
 
-  get user() {
-    return this.$store.state.auth.user
-  }
+    get user() {
+        return this.$store.state.auth.user
+    }
 
-  get email() {
-    if (!this.user) return
-    return this.user.attributes.email
-  }
+    get email() {
+        if (!this.user) return
+        return this.user.attributes.email
+    }
 }
 
 export default async ({ store }) => {
-  const authService = new AuthService(store)
-  Vue.prototype.$Auth = authService
-  Vue.$Auth = authService
-  await store.dispatch('auth/load')
+    const authService = new AuthService(store)
+    Vue.prototype.$auth = authService
+    Vue.$auth = authService
+    await store.dispatch('auth/load')
 }

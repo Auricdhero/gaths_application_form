@@ -1,10 +1,10 @@
 export type AmplifyDependentResourcesAttributes = {
   "auth": {
-    "gathsapplicationform95d0747e": {
+    "gathsapplicationform6d0de882": {
       "AppClientID": "string",
       "AppClientIDWeb": "string",
-      "HostedUIDomain": "string",
-      "OAuthMetadata": "string",
+      "IdentityPoolId": "string",
+      "IdentityPoolName": "string",
       "UserPoolArn": "string",
       "UserPoolId": "string",
       "UserPoolName": "string"

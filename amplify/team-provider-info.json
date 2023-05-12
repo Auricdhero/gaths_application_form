@@ -1,32 +1,19 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-gathsapplicationform-dev-15224-authRole",
-      "UnauthRoleArn": "arn:aws:iam::319123594138:role/amplify-gathsapplicationform-dev-15224-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::319123594138:role/amplify-gathsapplicationform-dev-15224-authRole",
+      "AuthRoleName": "amplify-gathsapplicationform-dev-184354-authRole",
+      "UnauthRoleArn": "arn:aws:iam::319123594138:role/amplify-gathsapplicationform-dev-184354-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::319123594138:role/amplify-gathsapplicationform-dev-184354-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-gathsapplicationform-dev-15224-deployment",
-      "UnauthRoleName": "amplify-gathsapplicationform-dev-15224-unauthRole",
-      "StackName": "amplify-gathsapplicationform-dev-15224",
-      "StackId": "arn:aws:cloudformation:us-east-1:319123594138:stack/amplify-gathsapplicationform-dev-15224/da4cdb70-d4e6-11ed-8742-0a5cc82bb987",
-      "AmplifyAppId": "dhkhyhqxacllb"
+      "DeploymentBucketName": "amplify-gathsapplicationform-dev-184354-deployment",
+      "UnauthRoleName": "amplify-gathsapplicationform-dev-184354-unauthRole",
+      "StackName": "amplify-gathsapplicationform-dev-184354",
+      "StackId": "arn:aws:cloudformation:us-east-1:319123594138:stack/amplify-gathsapplicationform-dev-184354/775ba990-e9e2-11ed-9e8f-0afd497892d5",
+      "AmplifyAppId": "dkldwdh99mu16"
     },
     "categories": {
       "auth": {
-        "gathsapplicationform35270c8b": {},
-        "gathsapplicationform95d0747e": {}
-      },
-      "function": {
-        "gathsapplicationform35270c8bDefineAuthChallenge": {},
-        "gathsapplicationform35270c8bCreateAuthChallenge": {},
-        "gathsapplicationform35270c8bVerifyAuthChallengeResponse": {
-          "RECAPTCHASECRET": ""
-        },
-        "gathsapplicationform35270c8bCustomMessage": {
-          "REDIRECTURL": "application.gathstudent.com/user",
-          "EMAILSUBJECT": "GATHSCONFIRMATION",
-          "EMAILMESSAGE": "Hello {{user}},"
-        }
+        "gathsapplicationform6d0de882": {}
       }
     }
   }

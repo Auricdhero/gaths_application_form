@@ -26,7 +26,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/amplify.js', ssr: false, mode: 'client' },
+    { src: '~/plugins/amplify.js', mode: 'client' },
     { src: '~/plugins/auth' }
   ],
 
@@ -76,6 +76,10 @@ export default {
   //     "@nuxtjs/auth-next",
   //   ]
   // },
+
+  serverMiddleware:{
+    // '/api': '~/api'
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
