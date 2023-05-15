@@ -21,6 +21,7 @@
     "bootstrap": "^5.2.3",
     "buffer": "^6.0.3",
     "Buffer": "npm:buffer@^6.0.3",
+    "caniuse-lite": "^1.0.30001487",
     "core-js": "^3.25.3",
     "express": "^4.18.2",
     "nuxt": "^2.15.8",

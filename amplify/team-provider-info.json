@@ -12,8 +12,25 @@
       "AmplifyAppId": "dkldwdh99mu16"
     },
     "categories": {
+      "function": {
+        "gathsapplicationform5def7be2DefineAuthChallenge": {
+          "deploymentBucketName": "amplify-gathsapplicationform-dev-184354-deployment",
+          "s3Key": "amplify-builds/gathsapplicationform5def7be2DefineAuthChallenge-6337544f4e575a534152-build.zip"
+        },
+        "gathsapplicationform5def7be2CreateAuthChallenge": {
+          "deploymentBucketName": "amplify-gathsapplicationform-dev-184354-deployment",
+          "s3Key": "amplify-builds/gathsapplicationform5def7be2CreateAuthChallenge-7462485a6e6c354c5366-build.zip"
+        },
+        "AdminQueries10ede7d8": {
+          "deploymentBucketName": "amplify-gathsapplicationform-dev-184354-deployment",
+          "s3Key": "amplify-builds/AdminQueries10ede7d8-385954714f676465784d-build.zip"
+        }
+      },
       "auth": {
-        "gathsapplicationform6d0de882": {}
+        "gathsapplicationform6672f371": {}
+      },
+      "api": {
+        "AdminQueries": {}
       }
     }
   }

@@ -30,14 +30,14 @@
                 <v-avatar color="blue">
                   <span class="white--text text-h5">{{ user.initials }}</span>
                 </v-avatar>
-                <h3>{{ $Auth.fullName }}</h3>
+                <h3>{{ user.fullName }}</h3>
                 <p class="text-caption mt-1">
-                  {{ $Auth.email }}
+                  {{ user.email }}
                 </p>
                 <v-divider class="my-3"></v-divider>
                 <v-btn depressed rounded text> Edit Account </v-btn>
                 <v-divider class="my-3"></v-divider>
-                <v-btn @click="$store.dispatch('auth/logout')" rounded text>
+                <v-btn type="submit" @click="$store.dispatch('auth/logout')" rounded>
                   Logout
                 </v-btn>
               </div>

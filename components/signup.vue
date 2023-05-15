@@ -67,7 +67,7 @@
           </v-col>
         </v-row>
       </v-form>
-      <v-form>
+      <v-form v-else>
         <h2 class="text-justify">
           Check your Email and Enter the Verification code You've received here.
         </h2>
