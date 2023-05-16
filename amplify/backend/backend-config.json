@@ -1,10 +1,10 @@
 {
   "auth": {
-    "gathsapplicationform2b82b1a2": {
+    "gathsapplicationform2eb264eb2eb264eb": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
-        "mfaConfiguration": "OFF",
+        "mfaConfiguration": "OPTIONAL",
         "mfaTypes": [
           "SMS"
         ],

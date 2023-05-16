@@ -1,20 +1,20 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "gathsapplicationform2b82b1a2_identitypool_2b82b1a2",
+    "identityPoolName": "gathsapplicationform2eb264eb_identitypool_2eb264eb",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "gathsa2b82b1a2",
-    "userPoolName": "gathsapplicationform2b82b1a2_userpool_2b82b1a2",
+    "resourceNameTruncated": "gathsa2eb264eb",
+    "userPoolName": "gathsapplicationform2eb264eb_userpool_2eb264eb",
     "autoVerifiedAttributes": [
       "email"
     ],
-    "mfaConfiguration": "OFF",
+    "mfaConfiguration": "OPTIONAL",
     "mfaTypes": [
       "SMS Text Message"
     ],
     "smsAuthenticationMessage": "Your authentication code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
-    "emailVerificationSubject": "Your verification code",
+    "emailVerificationSubject": "GATHS APPLICATION VERIFICATION CODE",
     "emailVerificationMessage": "Your verification code is {####}",
     "defaultPasswordPolicy": false,
     "passwordPolicyMinLength": 8,
@@ -31,16 +31,24 @@
     "userpoolClientReadAttributes": [
       "email"
     ],
-    "userpoolClientLambdaRole": "gathsa2b82b1a2_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "gathsa2eb264eb_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "2b82b1a2",
-    "resourceName": "gathsapplicationform2b82b1a2",
+    "sharedId": "2eb264eb",
+    "resourceName": "gathsapplicationform2eb264eb2eb264eb",
     "authSelections": "identityPoolAndUserPool",
-    "useDefault": "default",
+    "useDefault": "manual",
+    "thirdPartyAuth": false,
     "usernameAttributes": [
       "email"
     ],
+    "userPoolGroups": false,
+    "adminQueries": true,
     "triggers": {},
+    "hostedUI": true,
+    "hostedUIDomainName": "gathsapplicationform2eb264eb-2eb264eb",
+    "authProvidersUserPool": [],
+    "hostedUIProviderMeta": "[]",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/user/\"],\"LogoutURLs\":[\"http://localhost:3000/\"]}",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
