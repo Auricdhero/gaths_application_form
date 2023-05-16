@@ -1,34 +1,10 @@
 {
-  "api": {
-    "AdminQueries": {
-      "authorizationType": "AMAZON_COGNITO_USER_POOLS",
-      "dependsOn": [
-        {
-          "attributes": [
-            "UserPoolId"
-          ],
-          "category": "auth",
-          "resourceName": "gathsapplicationform6672f371"
-        },
-        {
-          "attributes": [
-            "Arn",
-            "Name"
-          ],
-          "category": "function",
-          "resourceName": "AdminQueries10ede7d8"
-        }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "API Gateway"
-    }
-  },
   "auth": {
-    "gathsapplicationform6672f371": {
+    "gathsapplicationform2b82b1a2": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
-        "mfaConfiguration": "OPTIONAL",
+        "mfaConfiguration": "OFF",
         "mfaTypes": [
           "SMS"
         ],
@@ -49,82 +25,6 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
-    }
-  },
-  "function": {
-    "AdminQueries10ede7d8": {
-      "build": true,
-      "dependsOn": [
-        {
-          "attributes": [
-            "UserPoolId"
-          ],
-          "category": "auth",
-          "resourceName": "gathsapplicationform6672f371"
-        }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    },
-    "gathsapplicationform5def7be2CreateAuthChallenge": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    },
-    "gathsapplicationform5def7be2DefineAuthChallenge": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    }
-  },
-  "parameters": {
-    "AMPLIFY_function_AdminQueries10ede7d8_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "AdminQueries10ede7d8"
-        }
-      ]
-    },
-    "AMPLIFY_function_AdminQueries10ede7d8_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "AdminQueries10ede7d8"
-        }
-      ]
-    },
-    "AMPLIFY_function_gathsapplicationform5def7be2CreateAuthChallenge_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "gathsapplicationform5def7be2CreateAuthChallenge"
-        }
-      ]
-    },
-    "AMPLIFY_function_gathsapplicationform5def7be2CreateAuthChallenge_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "gathsapplicationform5def7be2CreateAuthChallenge"
-        }
-      ]
-    },
-    "AMPLIFY_function_gathsapplicationform5def7be2DefineAuthChallenge_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "gathsapplicationform5def7be2DefineAuthChallenge"
-        }
-      ]
-    },
-    "AMPLIFY_function_gathsapplicationform5def7be2DefineAuthChallenge_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "gathsapplicationform5def7be2DefineAuthChallenge"
-        }
-      ]
     }
   }
 }

@@ -1,36 +1,19 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-gathsapplicationform-dev-184354-authRole",
-      "UnauthRoleArn": "arn:aws:iam::319123594138:role/amplify-gathsapplicationform-dev-184354-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::319123594138:role/amplify-gathsapplicationform-dev-184354-authRole",
+      "AuthRoleName": "amplify-gathsapplicationform-dev-71429-authRole",
+      "UnauthRoleArn": "arn:aws:iam::319123594138:role/amplify-gathsapplicationform-dev-71429-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::319123594138:role/amplify-gathsapplicationform-dev-71429-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-gathsapplicationform-dev-184354-deployment",
-      "UnauthRoleName": "amplify-gathsapplicationform-dev-184354-unauthRole",
-      "StackName": "amplify-gathsapplicationform-dev-184354",
-      "StackId": "arn:aws:cloudformation:us-east-1:319123594138:stack/amplify-gathsapplicationform-dev-184354/775ba990-e9e2-11ed-9e8f-0afd497892d5",
-      "AmplifyAppId": "dkldwdh99mu16"
+      "DeploymentBucketName": "amplify-gathsapplicationform-dev-71429-deployment",
+      "UnauthRoleName": "amplify-gathsapplicationform-dev-71429-unauthRole",
+      "StackName": "amplify-gathsapplicationform-dev-71429",
+      "StackId": "arn:aws:cloudformation:us-east-1:319123594138:stack/amplify-gathsapplicationform-dev-71429/4f6609e0-f3b9-11ed-a5cc-12c3583b9edd",
+      "AmplifyAppId": "daipcbkdtaw2j"
     },
     "categories": {
-      "function": {
-        "gathsapplicationform5def7be2DefineAuthChallenge": {
-          "deploymentBucketName": "amplify-gathsapplicationform-dev-184354-deployment",
-          "s3Key": "amplify-builds/gathsapplicationform5def7be2DefineAuthChallenge-6337544f4e575a534152-build.zip"
-        },
-        "gathsapplicationform5def7be2CreateAuthChallenge": {
-          "deploymentBucketName": "amplify-gathsapplicationform-dev-184354-deployment",
-          "s3Key": "amplify-builds/gathsapplicationform5def7be2CreateAuthChallenge-7462485a6e6c354c5366-build.zip"
-        },
-        "AdminQueries10ede7d8": {
-          "deploymentBucketName": "amplify-gathsapplicationform-dev-184354-deployment",
-          "s3Key": "amplify-builds/AdminQueries10ede7d8-385954714f676465784d-build.zip"
-        }
-      },
       "auth": {
-        "gathsapplicationform6672f371": {}
-      },
-      "api": {
-        "AdminQueries": {}
+        "gathsapplicationform2b82b1a2": {}
       }
     }
   }
