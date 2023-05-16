@@ -58,9 +58,9 @@ export default {
       console.log('hello bitch!')
       try {
         await this.$store.dispatch("auth/login", this.form);
-        
         this.$router.push("/user/");
       } catch (error) {
+        alert({error})
         console.log({ error });
       }
     },
