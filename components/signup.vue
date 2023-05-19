@@ -67,7 +67,8 @@
           </v-col>
         </v-row>
       </v-form>
-      <v-form v-else>
+      <!-- confirm user sign up -->
+      <v-form @submit.prevent="confirm" v-else>
         <h2 class="text-justify">
           Check your Email and Enter the Verification code You've received here.
         </h2>
@@ -97,10 +98,7 @@
         <v-btn class="ma-2" type="submit" color="error">Verify Account</v-btn>
       </v-form>
     </div>
-    <!-- confirm user sign up -->
-    <div v-else @submit.prevent="confirm">
-      
-    </div>
+    <!-- <div v-else  @submit.prevent="confirm"></div> -->
   </v-container>
 </template>
 <script>
@@ -146,6 +144,7 @@ export default {
         this.confirmForm.email = this.registerForm.email;
         this.step = this.steps.confirm;
       } catch (error) {
+        // alert({ error: error });
         console.log({ error });
       }
     },
@@ -157,6 +156,7 @@ export default {
       await this.$store.dispatch("auth/login", this.registerForm);
       this.$router.push("/user/");
     } catch (error) {
+      // alert({ error: error });
       console.log({ error });
     }
   },
