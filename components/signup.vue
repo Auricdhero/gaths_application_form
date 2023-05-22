@@ -68,7 +68,7 @@
         </v-row>
       </v-form>
       <!-- confirm user sign up -->
-      <v-form @submit.prevent="confirm" v-else>
+      <v-form v-else @submit.prevent="confirm">
         <h2 class="text-justify">
           Check your Email and Enter the Verification code You've received here.
         </h2>
@@ -98,7 +98,7 @@
         <v-btn class="ma-2" type="submit" color="error">Verify Account</v-btn>
       </v-form>
     </div>
-    <!-- <div v-else  @submit.prevent="confirm"></div> -->
+    <div v-else>You're in {{ $auth.email }}.</div>
   </v-container>
 </template>
 <script>
@@ -118,10 +118,7 @@ export default {
       password: "",
       institution: "",
     },
-    confirmForm: {
-      email: "",
-      code: "",
-    },
+
     institution: [
       "ATU",
       "KNUST",
@@ -136,7 +133,12 @@ export default {
       "TTU",
       "Ashesi University College",
     ],
+    confirmForm: {
+      email: "",
+      code: "",
+    },
   }),
+
   methods: {
     async register() {
       try {
@@ -148,17 +150,18 @@ export default {
         console.log({ error });
       }
     },
-  },
-
-  async confirm() {
-    try {
-      await this.$store.dispatch("auth/confirmRegistration", this.confirmForm);
-      await this.$store.dispatch("auth/login", this.registerForm);
-      this.$router.push("/user/");
-    } catch (error) {
-      // alert({ error: error });
-      console.log({ error });
-    }
+    async confirm() {
+      try {
+        await this.$store.dispatch(
+          "auth/confirmRegistration",
+          this.confirmForm
+        );
+        await this.$store.dispatch("auth/login", this.registerForm);
+        this.$router.push("/user/");
+      } catch (error) {
+        console.log({ error });
+      }
+    },
   },
 };
 </script>
