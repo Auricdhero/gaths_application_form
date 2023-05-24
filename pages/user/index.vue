@@ -59,4 +59,8 @@
 .v-tabs--vertical {
   align-items: start;
 }
+/* .icon{
+  text-align: left;
+  align-items: start;
+} */
 </style>
