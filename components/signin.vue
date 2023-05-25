@@ -55,12 +55,11 @@ export default {
 
   methods: {
     async login() {
-      console.log('hello bitch!')
       try {
         await this.$store.dispatch("auth/login", this.form);
         this.$router.push("/user/");
       } catch (error) {
-        alert({error})
+        // alert({error})
         console.log({ error });
       }
     },
