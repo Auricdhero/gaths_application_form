@@ -19,6 +19,9 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  script:[
+    
+  ],
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -48,34 +51,23 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
+    // '@nuxtjs/apollo'
     // '@nuxtjs/auth-next'
   ],
-  // auth: {
-  //   strategies: {
-  //     local: {
-  //       token: {
-  //         property: "access_token",
-  //         type: "Bearer"
-  //       },
-  //       endpoints: {
-  //         user: false,
-  //       },
-  //       clientId: process.env.client_id,
-  //       scope: ["email", "openid", "profile"]
-  //     }
+  // apollo: {
+  //   cookieAttributes: {
+  //     expires: 7,
   //   },
-  //   redirect: {
-  //     home: "/user/",
-  //     login: "/",
-  //     logout: "/"
-  //   }
+  //   includeNodeModules: true,
+  //   authenticationType: "Bearer",
+  //   errorHandler: "~/plugins/apollo-error-handler.js",
+  //   clientConfigs: {
+  //     default: "~/apollo/clientConfig.js",
+  //   },
   // },
+  
 
-  // compilerOptions: {
-  //   "types": [
-  //     "@nuxtjs/auth-next",
-  //   ]
-  // },
+  
 
   serverMiddleware:{
     // '/api': '~/api'
