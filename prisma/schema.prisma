@@ -10,3 +10,32 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model members{
+  title                     String
+  surname                   String
+  fname                     String
+  oname                     String
+  gender                    String
+  dob                       DateTime
+  countrybirth              String
+  nationality               String
+  hometown                  String
+  region                    String
+  addressline1              String
+  addressline2              String
+  ghcard                    String
+  phone                     String    @unique
+  email                     String    @unique
+  institution               String
+  regioninstitution         String
+  prog                      String
+  clevel                    String
+  startdate                 DateTime
+  enddate                   DateTime
+  studentid                 String
+  department                String
+  localchapter              String
+  positionlocalchapter      String
+  yearjoinedlocal           DateTime
+  localchaptermembership    String
+}
