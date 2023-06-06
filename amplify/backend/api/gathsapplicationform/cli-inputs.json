@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "gathsapplicationform",
+    "serviceName": "AppSync",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authgathsapplicationform93ee339b93ee339b"
+    },
+    "conflictResolution": {},
+    "additionalAuthTypes": []
+  }
+}
