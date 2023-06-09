@@ -20,7 +20,7 @@
         ></v-text-field>
 
         <v-btn class="ma-2" type="submit" color="error"> Login </v-btn>
-        <nuxt-link to="">Forget Password</nuxt-link>
+        <v-btn plain to="/forgot">Forget Password</v-btn>
       </v-form>
     </div>
 
