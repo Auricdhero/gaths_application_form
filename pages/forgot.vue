@@ -26,64 +26,70 @@
           <v-btn color="error" type="submit">Send Code</v-btn>
         </div> -->
 
-        <v-form
-          @submit.prevent="handleForgotPassword"
-          v-if="!$auth.isAuthenticated"
-        >
-          <h3>We will send you a verification code to Change your password.</h3>
-          <br />
-          <v-label>Enter Your Email Here</v-label>
-          <v-text-field
-            label="Email"
-            placeholder="email"
-            name="email"
-            v-model="form.email"
-            type="email"
-            outlined
-            required
-          ></v-text-field>
-          <v-btn class="ma-2" type="submit" color="error">Send Code</v-btn>
-        </v-form>
-        <v-form v-else>
-          <h3 class="text-justify">Check your Email for verification code.</h3>
-          <br />
-          <v-label>Enter Your Email Here</v-label>
-          <v-text-field
-            label="Email"
-            placeholder="email"
-            name="email"
-            v-model="email"
-            type="email"
-            outlined
-            required
-          ></v-text-field>
-          <br />
-          <v-label>Enter Code Here</v-label>
-          <v-text-field
-            label="Enter Code"
-            placeholder="Enter Code"
-            name="code"
-            v-model="form.confirmationCode"
-            type="code"
-            outlined
-            required
-          ></v-text-field>
-          <br />
-          <v-label>Enter New Password Here</v-label>
-          <v-text-field
-            label="Enter Password"
-            placeholder="Enter Password"
-            name="password"
-            type="password"
-            v-model="form.newPassword"
-            outlined
-            required
-          ></v-text-field>
-
-          <v-btn class="ma-2" type="submit" color="error"
-            >Change Password</v-btn
+        <div v-if="!$auth.isAuthenticated">
+          <v-form
+            @submit.prevent="forgotPassword"
+            v-if="step === steps.sendcode"
           >
-        </v-form>
+            <h3>
+              We will send you a verification code to Change your password.
+            </h3>
+            <br />
+            <v-label>Enter Your Email Here</v-label>
+            <v-text-field
+              label="Email"
+              placeholder="email"
+              name="email"
+              v-model="sendForm.email"
+              type="email"
+              outlined
+              required
+            ></v-text-field>
+            <v-btn class="ma-2" type="submit" color="error">Send Code</v-btn>
+          </v-form>
+          <v-form @submit.prevent="resetPassword" v-else>
+            <h3 class="text-justify">
+              Check your Email for verification code.
+            </h3>
+            <br />
+            <v-label>Enter Your Email Here</v-label>
+            <v-text-field
+              label="Email"
+              placeholder="email"
+              name="email"
+              v-model="newPwdForm.email"
+              type="email"
+              outlined
+              required
+            ></v-text-field>
+            <br />
+            <v-label>Enter Code Here</v-label>
+            <v-text-field
+              label="Enter Code"
+              placeholder="Enter Code"
+              name="code"
+              v-model="newPwdForm.code"
+              type="code"
+              outlined
+              required
+            ></v-text-field>
+            <br />
+            <v-label>Enter New Password Here</v-label>
+            <v-text-field
+              label="Enter Password"
+              placeholder="Enter Password"
+              name="password"
+              type="password"
+              v-model="newPwdForm.newPassword"
+              outlined
+              required
+            ></v-text-field>
+
+            <v-btn class="ma-2" type="submit" color="error"
+              >Change Password</v-btn
+            >
+          </v-form>
+        </div>
       </v-container>
     </v-col>
   </v-row>
@@ -92,31 +98,44 @@
 import logo from "~/static/logo.png";
 import designs from "~/static/designs.png";
 
+const steps = {
+  sendcode: "sendCode",
+  confirm: "changePassword",
+};
+
 export default {
   name: "ResetPassword",
 
   data: () => ({
     logo,
     designs,
-    form: {
+    steps: { ...steps },
+    step: steps.sendcode,
+    sendForm: {
       email: "",
-      confirmationCode: "",
+    },
+    newPwdForm: {
+      email: "",
+      code: "",
       newPassword: "",
     },
   }),
 
   methods: {
-    async handleForgotPassword() {
+    async forgotPassword() {
       try {
-        await this.$store.dispatch("auth/handleForgotPassword");
+        await this.$store.dispatch("auth/forgotPassword", this.sendForm);
         // this.$router.push("/forgot");
       } catch (error) {
         console.log({ error });
       }
     },
-    async handleResetPassword() {
+    async resetPassword() {
       try {
-        await this.$store.dispatch("auth/handleResetPassword");
+        await this.$store.dispatch(
+          "auth/forgotPasswordSubmit",
+          this.newPwdForm
+        );
       } catch (error) {
         console.log({ error });
       }
