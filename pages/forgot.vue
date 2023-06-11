@@ -47,7 +47,8 @@
             ></v-text-field>
             <v-btn class="ma-2" type="submit" color="error">Send Code</v-btn>
           </v-form>
-          <v-form @submit.prevent="resetPassword" v-else>
+          <!-- reset password -->
+          <v-form v-else @submit.prevent="resetPassword">
             <h3 class="text-justify">
               Check your Email for verification code.
             </h3>
@@ -90,6 +91,7 @@
             >
           </v-form>
         </div>
+        <div v-else>Password Changed Successfully</div>
       </v-container>
     </v-col>
   </v-row>
@@ -100,11 +102,11 @@ import designs from "~/static/designs.png";
 
 const steps = {
   sendcode: "sendCode",
-  confirm: "changePassword",
+  change: "changePassword",
 };
 
 export default {
-  name: "ResetPassword",
+  name: "ForgetPassword",
 
   data: () => ({
     logo,
@@ -125,7 +127,8 @@ export default {
     async forgotPassword() {
       try {
         await this.$store.dispatch("auth/forgotPassword", this.sendForm);
-        // this.$router.push("/forgot");
+        this.sendForm.email = this.newPwdForm.email;
+        this.step = this.steps.change;
       } catch (error) {
         console.log({ error });
       }
@@ -136,6 +139,7 @@ export default {
           "auth/forgotPasswordSubmit",
           this.newPwdForm
         );
+        this.$router.push("/user/");
       } catch (error) {
         console.log({ error });
       }

@@ -49,10 +49,10 @@
           Create an Account For Free
         </v-btn>
         <!-- federal sign up -->
-        <br /><br />
+        <!-- <br /><br />
         <h5 class="text-bold">or Register With:</h5>
-        <br />
-        <v-row>
+        <br /> -->
+        <!-- <v-row>
           <v-col>
             <v-btn color="white" depressed>
               <v-icon>mdi-google</v-icon>
@@ -65,7 +65,7 @@
               Sign up with Facebook
             </v-btn>
           </v-col>
-        </v-row>
+        </v-row> -->
       </v-form>
       <!-- confirm user sign up -->
       <v-form v-else @submit.prevent="confirm">

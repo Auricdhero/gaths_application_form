@@ -24,10 +24,10 @@
       </v-form>
     </div>
 
-    <br /><br />
+    <!-- <br /><br />
     <h5 class="text-bold">or Sign In With:</h5>
-    <br />
-    <v-row>
+    <br /> -->
+    <!-- <v-row>
       <v-col>
         <v-btn color="white" depressed>
           <v-icon>mdi-google</v-icon>
@@ -40,7 +40,7 @@
           Sign in with Facebook
         </v-btn>
       </v-col>
-    </v-row>
+    </v-row> -->
   </div>
 </template>
 <script>
