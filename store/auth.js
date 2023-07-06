@@ -17,6 +17,11 @@ export const actions = {
         try {
             const user = await Auth.currentAuthenticatedUser()
             commit('set', user)
+
+            // if (user) {
+            //     await dispatch('user/getUser', user.username, { root: true })
+            // }
+
             return user
         } catch (error) {
             commit('set', null)
@@ -40,12 +45,15 @@ export const actions = {
     async login({ commit }, { email, password }) {
         const user = await Auth.signIn(email, password)
         commit('set', user)
+
+        // await dispatch('user/findOrCreateUser', user, { root: true })
+
         return user
     },
 
     async forgotPassword(_, { email }) {
         const user = await Auth.forgotPassword(email)
-        // commit('set', user)
+        commit('set', user)
         return user
     },
 

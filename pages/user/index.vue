@@ -6,7 +6,7 @@
     <theHeader />
 
     <v-tabs vertical>
-      <v-tab> <v-icon left>mdi-home</v-icon> Welcome </v-tab>
+      <v-tab><v-icon left>mdi-home</v-icon> Welcome </v-tab>
       <v-tab>
         <v-icon left>mdi-account</v-icon>
         Biodata
@@ -56,11 +56,9 @@
   </div>
 </template>
 <style>
-.v-tabs--vertical {
-  align-items: start;
-}
-/* .icon{
-  text-align: left;
-  align-items: start;
+/* @media only screen and(max-width: 600px) {
+  v-tab-item {
+    min-width: 50%;
+  }
 } */
 </style>

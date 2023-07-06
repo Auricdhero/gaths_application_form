@@ -6,9 +6,11 @@
         You have not completed your membership profile
       </h6>
       <br />
-      <v-card elevation="2" style="padding: 1rem;" color="blue">
-        <h4 class="text-center" style="color: white;">Complete your profile</h4>
-      </v-card><br>
+      <v-card elevation="2" style="padding: 1rem" color="blue">
+        <h4 class="text-center" style="color: white">
+          Complete your profile
+        </h4> </v-card
+      ><br />
       <v-card elevation="2" style="padding: 1em">
         <h3>New Message</h3>
         <p>
@@ -47,7 +49,5 @@
   </div>
 </template>
 <script>
-export default{
-
-}
+export default {};
 </script>

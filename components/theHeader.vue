@@ -37,9 +37,7 @@
                 <v-divider class="my-3"></v-divider>
                 <v-btn depressed rounded text> Edit Account </v-btn>
                 <v-divider class="my-3"></v-divider>
-                <v-btn type="submit" @click="logout" rounded>
-                  Logout
-                </v-btn>
+                <v-btn type="submit" @click="logout" rounded> Logout </v-btn>
               </div>
             </v-list-item-content>
           </v-card>
@@ -61,15 +59,15 @@ export default {
     logo,
   }),
 
-  methods:{
-    async logout(){
+  methods: {
+    async logout() {
       try {
-        await this.$store.dispatch("auth/logout", this.form)
+        await this.$store.dispatch("auth/logout", this.form);
         this.$router.push("/");
       } catch (error) {
-        console.log({error})
+        console.log({ error });
       }
-    }
-  }
+    },
+  },
 };
 </script>
