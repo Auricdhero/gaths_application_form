@@ -16,83 +16,87 @@
           <v-row>
             <v-col>
               <v-label>Title</v-label>
-              <v-select label="Please Select" outlined></v-select>
+              <v-select
+                label="Please Select"
+                v-model="title"
+                outlined
+              ></v-select>
             </v-col>
 
             <v-col>
               <v-label>Surname</v-label>
-              <v-text-field label="Enter" outlined></v-text-field>
+              <v-text-field label="Enter" v-model="sName" outlined></v-text-field>
             </v-col>
           </v-row>
           <v-row>
             <v-col>
               <v-label>First Name</v-label>
-              <v-text-field label="Enter" outlined></v-text-field>
+              <v-text-field label="Enter" v-model="fName" outlined></v-text-field>
             </v-col>
             <v-col>
               <v-label>Other Names</v-label>
-              <v-text-field label="Enter" outlined></v-text-field>
+              <v-text-field label="Enter" v-model="oName" outlined></v-text-field>
             </v-col>
           </v-row>
           <v-row>
             <v-col>
               <v-label>Gender</v-label>
-              <v-select label="Please Select" outlined></v-select>
+              <v-select label="Please Select" v-model="gender" outlined></v-select>
             </v-col>
             <v-col>
               <v-label>Date of Birth</v-label>
-              <datePicker />
+              <datePicker v-model="dob" />
             </v-col>
           </v-row>
           <v-row>
             <v-col>
-                <v-label>Country of Birth</v-label>
-                <v-select label="Please Select" outlined></v-select>
+              <v-label>Country of Birth</v-label>
+              <v-select label="Please Select" v-model="countryofbirth" outlined></v-select>
             </v-col>
             <v-col>
-                <v-label>Nationality</v-label>
-                <v-select label="Please Select" outlined></v-select>
+              <v-label>Nationality</v-label>
+              <v-select label="Please Select" v-model="nationality" outlined></v-select>
             </v-col>
           </v-row>
           <v-row>
             <v-col>
-                <v-label>Hometown</v-label>
-                <v-text-field label="Enter" outlined></v-text-field>
+              <v-label>Hometown</v-label>
+              <v-text-field label="Enter" v-model="hometown" outlined></v-text-field>
             </v-col>
             <v-col>
-                <v-label>Region</v-label>
-                <v-select label="Please Select" outlined></v-select>
+              <v-label>Region</v-label>
+              <v-select label="Please Select" v-model="region" outlined></v-select>
             </v-col>
           </v-row>
 
-          <br>
+          <br />
 
           <h3 class="text-left">ADDRESS OF APPLICANT</h3>
-          <v-divider></v-divider><br>
+          <v-divider></v-divider><br />
           <v-row>
             <v-col>
-                <v-label>Address Line 1</v-label>
-                <v-text-field label="Enter" outlined></v-text-field>
+              <v-label>Address Line 1</v-label>
+              <v-text-field label="Enter" v-model="addr1" outlined></v-text-field>
             </v-col>
             <v-col>
-                <v-label>Address Line 2</v-label>
-                <v-text-field label="Enter" outlined></v-text-field>
+              <v-label>Address Line 2</v-label>
+              <v-text-field label="Enter" outlined></v-text-field>
             </v-col>
           </v-row>
           <v-row>
             <v-col>
-                <v-label>Ghana Card Number (If available)</v-label>
-                <v-text-field label="Enter" outlined></v-text-field>
+              <v-label>Ghana Card Number (If available)</v-label>
+              <v-text-field label="Enter" outlined></v-text-field>
             </v-col>
             <v-col>
-                <v-label>Phone Number</v-label>
-                <v-text-field label="Enter" outlined></v-text-field>
+              <v-label>Phone Number</v-label>
+              <v-text-field label="Enter" outlined></v-text-field>
             </v-col>
           </v-row>
           <v-row>
             <v-col>
-                <v-label>Email</v-label>
-                <v-text-field label="Enter" outlined></v-text-field>
+              <v-label>Email</v-label>
+              <v-text-field label="Enter" outlined></v-text-field>
             </v-col>
           </v-row>
 
@@ -103,7 +107,5 @@
   </div>
 </template>
 <script>
-export default {
-    
-}
+export default {};
 </script>

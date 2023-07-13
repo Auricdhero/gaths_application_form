@@ -20,7 +20,7 @@
           <template v-slot:activator="{ on }">
             <v-btn icon x-large v-on="on">
               <v-avatar color="blue" size="48">
-                <span class="white--text text-h5">{{ user.initials }}</span>
+                <v-icon dark> mdi-account-circle </v-icon>
               </v-avatar>
             </v-btn>
           </template>
@@ -28,11 +28,11 @@
             <v-list-item-content class="justify-center">
               <div class="mx-auto text-center">
                 <v-avatar color="blue">
-                  <span class="white--text text-h5">{{ user.initials }}</span>
+                  <v-icon dark> mdi-account-circle </v-icon>
                 </v-avatar>
-                <h3>{{ user.fullName }}</h3>
+                <h3>{{ $auth.fullName }}</h3>
                 <p class="text-caption mt-1">
-                  {{ user.email }}
+                  {{ $auth.email }}
                 </p>
                 <v-divider class="my-3"></v-divider>
                 <v-btn depressed rounded text> Edit Account </v-btn>
@@ -53,8 +53,6 @@ export default {
   data: () => ({
     user: {
       initials: "JD",
-      fullName: "John Doe",
-      email: "john.doe@doe.com",
     },
     logo,
   }),
