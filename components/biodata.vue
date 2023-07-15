@@ -56,6 +56,7 @@
               <v-label>Gender</v-label>
               <v-select
                 label="Please Select"
+                :items="gender"
                 v-model="form.gender"
                 outlined
               ></v-select>
@@ -68,19 +69,19 @@
           <v-row>
             <v-col>
               <v-label>Country of Birth</v-label>
-              <v-select
-                label="Please Select"
+              <v-text-field
+                label="Country of Birth"
                 v-model="form.countryofbirth"
                 outlined
-              ></v-select>
+              ></v-text-field>
             </v-col>
             <v-col>
               <v-label>Nationality</v-label>
-              <v-select
-                label="Please Select"
+              <v-text-field
+                label="Nationality"
                 v-model="form.nationality"
                 outlined
-              ></v-select>
+              ></v-text-field>
             </v-col>
           </v-row>
           <v-row>
@@ -180,12 +181,13 @@ export default {
       "Upper East",
       "Upper West",
     ],
+    gender: ["Male", "Female", "Rather not say"],
     form: {
       title: [],
       sName: "",
       fName: "",
       oName: "",
-      gender: "",
+      gender: [],
       dob: "",
       email: "",
       countryofbirth: "",
