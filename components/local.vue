@@ -16,12 +16,11 @@
           <v-row>
             <v-col>
               <v-label>Name of Local Chapter</v-label>
-              <v-select
-                :items="localChapter"
-                v-model="localChapter"
+              <v-text-field
+                v-model="form.localChapter"
                 label="Please Select"
                 outlined
-              ></v-select>
+              ></v-text-field>
             </v-col>
             <v-col>
               <v-label>Position in Chapter</v-label>
@@ -57,9 +56,8 @@
 <script>
 export default {
   data: () => ({
-    localChapter:[],
     form: {
-      localChapter: [],
+      localChapter: "",
       positionLocalChapter: "",
       yearJoined: "",
       membershipNo: "",

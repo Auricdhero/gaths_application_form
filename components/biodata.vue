@@ -21,6 +21,7 @@
                 v-model="form.title"
                 :items="title"
                 outlined
+                required
               ></v-select>
             </v-col>
 
@@ -30,6 +31,7 @@
                 label="Enter"
                 v-model="form.sName"
                 outlined
+                required
               ></v-text-field>
             </v-col>
           </v-row>
@@ -39,6 +41,7 @@
               <v-text-field
                 label="Enter"
                 v-model="form.fName"
+                required
                 outlined
               ></v-text-field>
             </v-col>
@@ -58,12 +61,13 @@
                 label="Please Select"
                 :items="gender"
                 v-model="form.gender"
+                required
                 outlined
               ></v-select>
             </v-col>
             <v-col>
               <v-label>Date of Birth</v-label>
-              <datePicker v-model="form.dob" />
+              <datePicker v-model="form.dob" required />
             </v-col>
           </v-row>
           <v-row>
@@ -73,6 +77,7 @@
                 label="Country of Birth"
                 v-model="form.countryofbirth"
                 outlined
+                required
               ></v-text-field>
             </v-col>
             <v-col>
@@ -80,6 +85,7 @@
               <v-text-field
                 label="Nationality"
                 v-model="form.nationality"
+                required
                 outlined
               ></v-text-field>
             </v-col>
@@ -91,6 +97,7 @@
                 label="Enter"
                 v-model="form.hometown"
                 outlined
+                required
               ></v-text-field>
             </v-col>
             <v-col>
@@ -100,6 +107,7 @@
                 :items="region"
                 v-model="form.region"
                 outlined
+                required
               ></v-select>
             </v-col>
           </v-row>
@@ -115,6 +123,7 @@
                 label="Enter"
                 v-model="form.addr1"
                 outlined
+                required
               ></v-text-field>
             </v-col>
             <v-col>
@@ -132,6 +141,7 @@
               <v-text-field
                 label="Enter"
                 v-model="form.ghcardNo"
+                required
                 outlined
               ></v-text-field>
             </v-col>
@@ -140,6 +150,7 @@
               <v-text-field
                 label="Enter"
                 v-model="form.phoneNo"
+                required
                 outlined
               ></v-text-field>
             </v-col>
@@ -151,6 +162,7 @@
                 label="Enter"
                 v-model="form.email"
                 outlined
+                required
               ></v-text-field>
             </v-col>
           </v-row>
@@ -164,7 +176,7 @@
 <script>
 export default {
   data: () => ({
-    title: ["MR", "MS", "Mrs.", "Dr.", "Prof"],
+    title: ["Mr", "Ms", "Mrs.", "Dr.", "Prof"],
     region: [
       "Greater Accra",
       "Central",
