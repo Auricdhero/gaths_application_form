@@ -16,13 +16,7 @@
           <v-row>
             <v-col>
               <v-label>Title</v-label>
-              <v-select
-                label="Please Select Your Title"
-                v-model="form.title"
-                :items="title"
-                outlined
-                required
-              ></v-select>
+              <selectTitle v-model="form.title" />
             </v-col>
 
             <v-col>
@@ -57,13 +51,7 @@
           <v-row>
             <v-col>
               <v-label>Gender</v-label>
-              <v-select
-                label="Please Select"
-                :items="gender"
-                v-model="form.gender"
-                required
-                outlined
-              ></v-select>
+              <selectGender v-model="form.gender" />
             </v-col>
             <v-col>
               <v-label>Date of Birth</v-label>
@@ -102,13 +90,7 @@
             </v-col>
             <v-col>
               <v-label>Region</v-label>
-              <v-select
-                label="Please Select"
-                :items="region"
-                v-model="form.region"
-                outlined
-                required
-              ></v-select>
+              <selectRegion v-model="form.region" />
             </v-col>
           </v-row>
 
@@ -176,36 +158,18 @@
 <script>
 export default {
   data: () => ({
-    title: ["Mr", "Ms", "Mrs.", "Dr.", "Prof"],
-    region: [
-      "Greater Accra",
-      "Central",
-      "Western",
-      "Ashanti",
-      "Volta",
-      "Oti",
-      "Eastern",
-      "Northern",
-      "North East",
-      "Bono East",
-      "Brong Ahafo",
-      "Western North",
-      "Upper East",
-      "Upper West",
-    ],
-    gender: ["Male", "Female", "Rather not say"],
     form: {
-      title: [],
+      title: "",
       sName: "",
       fName: "",
       oName: "",
-      gender: [],
+      gender: "",
       dob: "",
       email: "",
       countryofbirth: "",
       nationality: "",
       hometown: "",
-      region: [],
+      region: "",
       addr1: "",
       addr2: "",
       ghcardNo: "",

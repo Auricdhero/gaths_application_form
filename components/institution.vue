@@ -17,21 +17,11 @@
           <v-row>
             <v-col>
               <v-label>Name of Institution</v-label>
-              <v-select
-                label="Please select"
-                v-model="form.institution"
-                :items="institution"
-                outlined
-              ></v-select>
+              <selectInstitution v-model="form.institution" />
             </v-col>
             <v-col>
               <v-label>Region</v-label>
-              <v-select
-                label="Please select"
-                :items="institutionRegion"
-                v-model="form.institutionRegion"
-                outlined
-              ></v-select>
+              <selectRegion v-model="form.institutionRegion" />
             </v-col>
           </v-row>
           <v-row>
@@ -45,12 +35,7 @@
             </v-col>
             <v-col>
               <v-label>Current level</v-label>
-              <v-select
-                v-model="form.level"
-                :items="level"
-                label="Please Select"
-                outlined
-              ></v-select>
+              <selectLevel v-model="form.level" />
             </v-col>
           </v-row>
           <v-row>
@@ -90,36 +75,11 @@
 <script>
 export default {
   data: () => ({
-    institution: [
-      "University of Ghana",
-      "Kwame Nkrumah University of Science and Technology",
-      "Accra Techncal University",
-      "Kumasi technical University",
-      "Takoradi Technical University",
-      "Accra Institute of Technology",
-    ],
-    institutionRegion: [
-      "Greater Accra",
-      "Central",
-      "Western",
-      "Ashanti",
-      "Volta",
-      "Oti",
-      "Eastern",
-      "Northern",
-      "North East",
-      "Bono East",
-      "Brong Ahafo",
-      "Western North",
-      "Upper East",
-      "Upper West",
-    ],
-    level: ["Year 1", "Year 2", "Year 3", "Year 4", "Postgraduate"],
     form: {
-      institution: [],
-      institutionRegion: [],
+      institution: "",
+      institutionRegion: "",
       prog: "",
-      level: [],
+      level: "",
       startDate: "",
       endDate: "",
       studentID: "",

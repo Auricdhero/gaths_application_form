@@ -4,8 +4,8 @@ import * as gqlMutations from '~/src/graphql/mutations';
 import * as gqlSchema from '~/src/graphql/schema'
 
 export const state = {
-    post: [],
-    post: null
+    members: [],
+    members: null
 }
 
 export const getters = {

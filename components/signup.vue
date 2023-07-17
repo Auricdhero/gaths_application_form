@@ -28,12 +28,7 @@
           outlined
           required
         ></v-text-field>
-        <v-select
-          v-model="registerForm.institution"
-          :items="institution"
-          label="Institution"
-          outlined
-        ></v-select>
+        <selectInstitution v-model="registerForm.institution" />
         <v-checkbox
           :rules="[(v) => !!v || 'You must agree to continue!']"
           label="I agree that GATHS may send me marketing messages?"
@@ -118,21 +113,6 @@ export default {
       password: "",
       institution: "",
     },
-
-    institution: [
-      "ATU",
-      "KNUST",
-      "AIT",
-      "UG",
-      "UMAT",
-      "UENR",
-      "UCC",
-      "UDS",
-      "KTU",
-      "ATU",
-      "TTU",
-      "Ashesi University College",
-    ],
     confirmForm: {
       email: "",
       code: "",

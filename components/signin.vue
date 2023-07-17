@@ -19,7 +19,14 @@
           required
         ></v-text-field>
 
-        <v-btn class="ma-2" type="submit" color="error"> Login </v-btn>
+        <v-btn
+          class="ma-2"
+          type="submit"
+          @click="loader = 'loading'"
+          color="error"
+        >
+          Login
+        </v-btn>
         <v-btn plain to="/forgot">Forget Password</v-btn>
       </v-form>
     </div>
@@ -51,8 +58,21 @@ export default {
       email: "",
       password: "",
     },
+    return: {
+      loader: null,
+      loadingSubmit: false,
+    },
   }),
+  watch: {
+    loader() {
+      const l = this.loader;
+      this[l] = !this[l];
 
+      setTimeout(() => (this[l] = false), 3000);
+
+      this.loader = null;
+    },
+  },
   methods: {
     async login() {
       try {
@@ -63,6 +83,41 @@ export default {
         console.log({ error });
       }
     },
+    // async loadingSubmit() {},
   },
 };
 </script>
+<style>
+@-moz-keyframes loader {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes loader {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes loader {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>

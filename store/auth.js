@@ -2,13 +2,15 @@ import { Auth } from 'aws-amplify'
 
 export const state = () => ({
     isAuthenticated: false,
-    user: null
+    user: null,
+    isLoading: false
 })
 
 export const mutations = {
     set(state, user) {
         state.isAuthenticated = !!user
         state.user = user
+        // state.isLoading = value
     }
 }
 
