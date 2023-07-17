@@ -12,7 +12,8 @@ export default {
       "Accra Techncal University",
       "Kumasi technical University",
       "Takoradi Technical University",
-      "Accra Institute of Technology",
+      "University of Energy and Natural Resources",
+      "University of Development Studies",
     ],
   }),
 };

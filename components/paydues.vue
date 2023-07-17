@@ -2,17 +2,17 @@
   <div>
     <v-container>
       <h1 class="text-center">
-        Congratulations, <strong>{{ $auth.email }}</strong>
+        <p>{{ $auth.email }}, have you paid your monthly dues already?</p>
       </h1>
-      <h6 class="text-center">
-        You have successfully completed your membership profile
-      </h6>
+      <h6 class="text-center">It is GHS 5.00 every month</h6>
       <br />
       <v-card elevation="2" style="padding: 1rem" color="blue">
-        <h4 class="text-center" style="color: white">Edit Profile</h4> </v-card
+        <h4 class="text-center" style="color: white">
+          Pay your nonthly dues now!
+        </h4> </v-card
       ><br />
       <v-card elevation="2" style="padding: 1em">
-        <h3>New Message</h3>
+        <h3>Benefits of paying your dues.</h3>
         <p>
           Welcome to the Ghana Association of Tourism and Hospitality Students
           (GATHS) website! We are thrilled that you have signed up to be a part
@@ -26,9 +26,11 @@
           any related field, we are committed to providing you with the tools
           and support you need to succeed.
         </p>
+
+        <v-btn color="success" type="submit">Pay Dues</v-btn>
       </v-card>
       <br />
-      <v-card style="padding: 1em">
+      <!-- <v-card style="padding: 1em">
         <h3 style="color: orange">Privacy Policy</h3>
         <p>
           The Ghana Association of Tourism and Hospitality Students (GATHS)
@@ -41,7 +43,7 @@
         <v-btn color="green" style="color: white"
           >Learn More <v-icon>mdi-arrow-right-circle-outline</v-icon></v-btn
         >
-      </v-card>
+      </v-card> -->
 
       <br />
       <externalLinks />

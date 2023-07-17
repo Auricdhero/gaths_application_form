@@ -66,7 +66,7 @@
               ></v-text-field>
             </v-col>
           </v-row>
-          <buttonSuccess />
+          <buttonSuccess type="submit" />
         </v-card>
       </v-form>
     </v-container>

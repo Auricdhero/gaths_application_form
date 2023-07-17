@@ -32,7 +32,7 @@
           <!-- Summary -->
         </v-tab>
         <v-tab>
-          <v-icon left>mdi-application-import</v-icon>
+          <v-icon left>mdi-cash-multiple</v-icon>
           <!-- Application Status -->
         </v-tab>
 
@@ -55,7 +55,7 @@
           ><v-container><bioSum /></v-container
         ></v-tab-item>
         <v-tab-item
-          ><v-container><status /></v-container
+          ><v-container><paydues /></v-container
         ></v-tab-item>
       </v-tabs>
     </div>

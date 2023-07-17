@@ -10,12 +10,9 @@
       <v-spacer></v-spacer>
 
       <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-
       <v-row justify="center">
+        <v-icon>mdi-bell</v-icon>
+        <v-spacer></v-spacer>
         <v-menu bottom rounded offset-y>
           <template v-slot:activator="{ on }">
             <v-btn icon x-large v-on="on">
@@ -26,7 +23,7 @@
           </template>
           <v-card>
             <v-list-item-content class="justify-center">
-              <div class="mx-auto text-center">
+              <div class="mx-auto text-center" style="padding: 10px">
                 <v-avatar color="blue">
                   <v-icon dark> mdi-account-circle </v-icon>
                 </v-avatar>
@@ -34,14 +31,15 @@
                 <p class="text-caption mt-1">
                   {{ $auth.email }}
                 </p>
-                <v-divider class="my-3"></v-divider>
-                <v-btn depressed rounded text> Edit Account </v-btn>
+                <!-- <v-divider class="my-3"></v-divider> -->
+                <!-- <v-btn depressed rounded text> Edit Account </v-btn> -->
                 <v-divider class="my-3"></v-divider>
                 <v-btn type="submit" @click="logout" rounded> Logout </v-btn>
               </div>
             </v-list-item-content>
           </v-card>
         </v-menu>
+        <v-spacer></v-spacer>
       </v-row>
     </v-app-bar>
   </div>
