@@ -1,5 +1,5 @@
 <template>
-  <div style="height: 100vh;">
+  <div style="height: 88vh">
     <v-card color="blue" elevation="2" style="padding: 1em; color: white">
       <h3>Biodata</h3> </v-card
     ><br />
@@ -27,14 +27,14 @@
           <v-divider vertical></v-divider>
           <v-col>
             <v-card style="padding: 1rem" class="text-center" outlined>
-              <h4>Notice</h4>
-            </v-card><br>
+              <h4>Notice</h4> </v-card
+            ><br />
             <ul>
-                <li>Image size should be less than 500KB</li>
-                <li>Image dimmensions should be 192px by 192px minimum</li>
+              <li>Image size should be less than 500KB</li>
+              <li>Image dimmensions should be 192px by 192px minimum</li>
             </ul>
-          </v-col>
-        </v-row><br>
+          </v-col> </v-row
+        ><br />
         <buttonSuccess />
       </v-form>
     </v-card>

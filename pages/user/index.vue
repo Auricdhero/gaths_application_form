@@ -54,6 +54,9 @@
         <v-tab-item
           ><v-container><bioSum /></v-container
         ></v-tab-item>
+        <v-tab-item
+          ><v-container><status /></v-container
+        ></v-tab-item>
       </v-tabs>
     </div>
 

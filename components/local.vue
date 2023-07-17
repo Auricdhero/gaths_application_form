@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-container>
+    <v-container style="height: 85vh">
       <v-card elevation="2" style="padding: 1rem" color="blue">
         <h3 style="color: white">Local Chapter</h3> </v-card
       ><br />

@@ -10,33 +10,115 @@
         </div>
       </v-avartar>
 
-      <div class="biodata" style="padding: 1rem">
-        
-          <v-row>
-            <v-col>
-              <h4 elevation="1" style="padding: 1rem">Biodata</h4>
-            </v-col>
-            <v-col>
-              <v-card
-                elevation="1"
-                color="success"
-                style="padding: 1rem; color: white"
-                class="text-center"
-                >Submitted</v-card
-              >
-            </v-col>
-          </v-row>
-          
-        <br>
-        <v-divider></v-divider><br>
+      <div style="padding: 1rem">
+        <v-row>
+          <v-col cols="2">
+            <h4 elevation="1" style="padding: 1rem">Biodata</h4>
+          </v-col>
+          <v-col cols="2">
+            <v-card
+              elevation="1"
+              color="success"
+              style="padding: 1rem; color: white"
+              class="text-center"
+              >Submitted</v-card
+            >
+          </v-col>
+        </v-row>
 
-        
+        <br />
+        <v-divider></v-divider><br />
+
+        <v-sheet>
+          <div
+            style="border: 1px solid #dbdbdb; background: #fafbfc"
+            class="bioSummary"
+          >
+            <div style="padding: 3%">
+              <p>Title:</p>
+              <p>First Name:</p>
+              <p>Other Names:</p>
+              <p>Date of Birth:</p>
+              <p>Gender:</p>
+              <p>Email:</p>
+              <p>Mobile Number:</p>
+              <p>Nationality:</p>
+              <p>Identification Number:</p>
+            </div>
+          </div>
+        </v-sheet>
+      </div>
+      <div style="padding: 1rem">
+        <v-row>
+          <v-col cols="2">
+            <h4 elevation="1" style="padding: 1rem">Institution</h4>
+          </v-col>
+          <v-col cols="2">
+            <v-card
+              elevation="1"
+              color="success"
+              style="padding: 1rem; color: white"
+              class="text-center"
+              >Submitted</v-card
+            >
+          </v-col>
+        </v-row>
+
+        <br />
+        <v-divider></v-divider><br />
+
+        <v-sheet>
+          <div
+            style="border: 1px solid #dbdbdb; background: #fafbfc"
+            class="bioSummary"
+          >
+            <div style="padding: 3%">
+              <p>Institution:</p>
+              <p>Program:</p>
+              <p>Start Date:</p>
+              <p>End Date:</p>
+              <p>Student ID:</p>
+            </div>
+          </div>
+        </v-sheet>
+      </div>
+      <div style="padding: 1rem">
+        <v-row>
+          <v-col cols="2">
+            <h4 elevation="1" style="padding: 1rem">Local Chapter</h4>
+          </v-col>
+          <v-col cols="2">
+            <v-card
+              elevation="1"
+              color="success"
+              style="padding: 1rem; color: white"
+              class="text-center"
+              >Submitted</v-card
+            >
+          </v-col>
+        </v-row>
+
+        <br />
+        <v-divider></v-divider><br />
+
+        <v-sheet>
+          <div
+            style="border: 1px solid #dbdbdb; background: #fafbfc"
+            class="bioSummary"
+          >
+            <div style="padding: 3%">
+              <p>Local Chapter:</p>
+              <p>Position:</p>
+              <p>Year Joined:</p>
+              <p>Membership ID:</p>
+              <!-- <p>Student ID:</p> -->
+            </div>
+          </div>
+        </v-sheet>
       </div>
     </v-card>
   </div>
 </template>
 <script>
-export default {
-  
-}
+export default {};
 </script>
