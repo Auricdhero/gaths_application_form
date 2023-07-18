@@ -1,7 +1,7 @@
 import { API } from 'aws-amplify';
 import * as gqlQueries from '~/src/graphql/queries';
 import * as gqlMutations from '~/src/graphql/mutations';
-import * as gqlSchema from '~/src/graphql/schema'
+// import * as gqlSchema from '~/src/graphql/schema'
 
 export const state = {
     members: [],
@@ -19,6 +19,22 @@ export const mutations = {
 }
 
 export const actions = {
+    async listMembers({ dispatch }) {
+        return dispatch('query', { key: 'members', query: 'listMembers' })
+    },
+
+    async getMembers({ dispatch }, id) {
+        return dispatch('get', { key: 'members', query: 'getMembers', id })
+    },
+
+    async createMembers({ dispatch }, input) {
+        return dispatch('mutate', { key: 'members', mutation: 'createMembers', input })
+    },
+
+    async updateMembers({ dispatch }, input) {
+        return dispatch('mutate', { key: 'members', mutation: 'updateMembers', input })
+    },
+
     async get({ commit, getters }, { key, query, id }) {
         const { data } = await API.graphql({
             query: gqlQueries[query],

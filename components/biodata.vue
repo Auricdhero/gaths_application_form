@@ -8,7 +8,7 @@
         <h3 class="text-center">
           Please Note: All fields marked with * are mandatory.
         </h3>
-        <v-form>
+        <v-form @submit.prevent="create">
           <h3>Basic Information</h3>
           <v-divider></v-divider>
 
@@ -23,7 +23,7 @@
               <v-label>Surname</v-label>
               <v-text-field
                 label="Enter"
-                v-model="form.sName"
+                v-model="form.surname"
                 outlined
                 required
               ></v-text-field>
@@ -34,7 +34,7 @@
               <v-label>First Name</v-label>
               <v-text-field
                 label="Enter"
-                v-model="form.fName"
+                v-model="form.firstname"
                 required
                 outlined
               ></v-text-field>
@@ -43,7 +43,7 @@
               <v-label>Other Names</v-label>
               <v-text-field
                 label="Enter"
-                v-model="form.oName"
+                v-model="form.othername"
                 outlined
               ></v-text-field>
             </v-col>
@@ -63,7 +63,7 @@
               <v-label>Country of Birth</v-label>
               <v-text-field
                 label="Country of Birth"
-                v-model="form.countryofbirth"
+                v-model="form.country_of_birth"
                 outlined
                 required
               ></v-text-field>
@@ -103,7 +103,7 @@
               <v-label>Address Line 1</v-label>
               <v-text-field
                 label="Enter"
-                v-model="form.addr1"
+                v-model="form.addressLine1"
                 outlined
                 required
               ></v-text-field>
@@ -112,7 +112,7 @@
               <v-label>Address Line 2</v-label>
               <v-text-field
                 label="Enter"
-                v-model="form.addr2"
+                v-model="form.addressLine2"
                 outlined
               ></v-text-field>
             </v-col>
@@ -122,7 +122,7 @@
               <v-label>Ghana Card Number (If available)</v-label>
               <v-text-field
                 label="Enter"
-                v-model="form.ghcardNo"
+                v-model="form.ghCardNo"
                 required
                 outlined
               ></v-text-field>
@@ -160,22 +160,41 @@ export default {
   data: () => ({
     form: {
       title: "",
-      sName: "",
-      fName: "",
-      oName: "",
+      surname: "",
+      firstname: "",
+      othername: "",
       gender: "",
       dob: "",
       email: "",
-      countryofbirth: "",
+      country_of_birth: "",
       nationality: "",
       hometown: "",
       region: "",
-      addr1: "",
-      addr2: "",
-      ghcardNo: "",
+      addressLine1: "",
+      addressLine2: "",
+      ghCardNo: "",
       phoneNo: "",
       email: "",
     },
   }),
+  methods: {
+    async create() {
+      try {
+        const members = await this.$store.dispatch(
+          'api/createMembers',
+          this.getPayLoad()
+        )
+        console.log('Submitted');
+      } catch (error) {
+        console.log({ error });
+      }
+    },
+    getPayload() {
+      return {
+        ...this.form,
+        authorId: this.$auth.id,
+      };
+    },
+  },
 };
 </script>

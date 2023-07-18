@@ -17,7 +17,7 @@
             <v-col>
               <v-label>Name of Local Chapter</v-label>
               <v-text-field
-                v-model="form.localChapter"
+                v-model="form.localChapterName"
                 label="Please Select"
                 outlined
               ></v-text-field>
@@ -25,7 +25,7 @@
             <v-col>
               <v-label>Position in Chapter</v-label>
               <v-text-field
-                v-model="form.positionLocalChapter"
+                v-model="form.PositionsChapter"
                 label="Please Enter"
                 outlined
               ></v-text-field>
@@ -34,7 +34,7 @@
           <v-row>
             <v-col>
               <v-label>Year Joined</v-label>
-              <datePicker v-model="form.yearJoined" />
+              <datePicker v-model="form.dateJoined" />
             </v-col>
             <v-col>
               <v-label>Membership Number</v-label>
@@ -57,9 +57,9 @@
 export default {
   data: () => ({
     form: {
-      localChapter: "",
-      positionLocalChapter: "",
-      yearJoined: "",
+      localChapterName: "",
+      PositionsChapter: "",
+      dateJoined: "",
       membershipNo: "",
     },
   }),

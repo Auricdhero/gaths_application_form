@@ -17,7 +17,7 @@
           <v-row>
             <v-col>
               <v-label>Name of Institution</v-label>
-              <selectInstitution v-model="form.institution" />
+              <selectInstitution v-model="form.nameOfInstitution" />
             </v-col>
             <v-col>
               <v-label>Region</v-label>
@@ -41,7 +41,7 @@
           <v-row>
             <v-col>
               <v-label>Start Date</v-label>
-              <datePicker v-model="form.startDate" />
+              <datePicker v-model="form.dateStart" />
             </v-col>
             <v-col>
               <v-label>End Date</v-label>
@@ -52,7 +52,7 @@
             <v-col>
               <v-label>Student Identification</v-label>
               <v-text-field
-                v-model="form.studentID"
+                v-model="form.studentId"
                 label="Please Enter"
                 outlined
               ></v-text-field>
@@ -76,13 +76,13 @@
 export default {
   data: () => ({
     form: {
-      institution: "",
+      nameOfInstitution: "",
       institutionRegion: "",
       prog: "",
       level: "",
-      startDate: "",
+      dateStart: "",
       endDate: "",
-      studentID: "",
+      studentId: "",
       department: "",
     },
   }),

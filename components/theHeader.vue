@@ -49,9 +49,6 @@
 import logo from "../static/logo.png";
 export default {
   data: () => ({
-    user: {
-      initials: "JD",
-    },
     logo,
   }),
 

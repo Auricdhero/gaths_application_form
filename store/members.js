@@ -17,7 +17,17 @@ export const actions = {
 
     async createMembers({ commit, dispatch }, input) {
         const user = await dispatch('api/mutate', { mutation: 'createMember', input }, { root: true })
-        commit('setMember', member)
+        commit('setMembers', member)
         return member
+    },
+
+    async findOrCreateMembers({ dispatch }, { attributes, fullName }) {
+        const members = await dispatch('getMembers', fullName)
+        if (members) return members
+
+        return dispatch('createMembers', {
+            id: fullName,
+            email: attributes.email
+        })
     }
 }
