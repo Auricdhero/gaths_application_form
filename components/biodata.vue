@@ -180,11 +180,11 @@ export default {
   methods: {
     async create() {
       try {
-        const members = await this.$store.dispatch(
-          'api/createMembers',
+        const user = await this.$store.dispatch(
+          "api/createMembers",
           this.getPayLoad()
-        )
-        console.log('Submitted');
+        );
+        console.log("Submitted");
       } catch (error) {
         console.log({ error });
       }

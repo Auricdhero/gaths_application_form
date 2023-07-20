@@ -1,12 +1,12 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createMembers = /* GraphQL */ `
-  mutation CreateMembers(
-    $input: CreateMembersInput!
-    $condition: ModelMembersConditionInput
+export const createUser = /* GraphQL */ `
+  mutation CreateUser(
+    $input: CreateUserInput!
+    $condition: ModelUserConditionInput
   ) {
-    createMembers(input: $input, condition: $condition) {
+    createUser(input: $input, condition: $condition) {
       id
       title
       surname
@@ -40,12 +40,12 @@ export const createMembers = /* GraphQL */ `
     }
   }
 `;
-export const updateMembers = /* GraphQL */ `
-  mutation UpdateMembers(
-    $input: UpdateMembersInput!
-    $condition: ModelMembersConditionInput
+export const updateUser = /* GraphQL */ `
+  mutation UpdateUser(
+    $input: UpdateUserInput!
+    $condition: ModelUserConditionInput
   ) {
-    updateMembers(input: $input, condition: $condition) {
+    updateUser(input: $input, condition: $condition) {
       id
       title
       surname
@@ -79,12 +79,12 @@ export const updateMembers = /* GraphQL */ `
     }
   }
 `;
-export const deleteMembers = /* GraphQL */ `
-  mutation DeleteMembers(
-    $input: DeleteMembersInput!
-    $condition: ModelMembersConditionInput
+export const deleteUser = /* GraphQL */ `
+  mutation DeleteUser(
+    $input: DeleteUserInput!
+    $condition: ModelUserConditionInput
   ) {
-    deleteMembers(input: $input, condition: $condition) {
+    deleteUser(input: $input, condition: $condition) {
       id
       title
       surname

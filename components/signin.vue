@@ -77,7 +77,7 @@ export default {
     async login() {
       try {
         await this.$store.dispatch("auth/login", this.form);
-        this.$router.push("/user/");
+        this.$router.push("/user/${user.id}");
       } catch (error) {
         // alert({error})
         console.log({ error });

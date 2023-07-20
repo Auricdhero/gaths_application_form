@@ -4,8 +4,8 @@ import * as gqlMutations from '~/src/graphql/mutations';
 // import * as gqlSchema from '~/src/graphql/schema'
 
 export const state = {
-    members: [],
-    members: null
+    user: [],
+    user: null
 }
 
 export const getters = {
@@ -19,20 +19,20 @@ export const mutations = {
 }
 
 export const actions = {
-    async listMembers({ dispatch }) {
-        return dispatch('query', { key: 'members', query: 'listMembers' })
+    async listUser({ dispatch }) {
+        return dispatch('query', { key: 'user', query: 'listUser' })
     },
 
-    async getMembers({ dispatch }, id) {
-        return dispatch('get', { key: 'members', query: 'getMembers', id })
+    async getUser({ dispatch }, id) {
+        return dispatch('get', { key: 'user', query: 'getUser', id })
     },
 
-    async createMembers({ dispatch }, input) {
-        return dispatch('mutate', { key: 'members', mutation: 'createMembers', input })
+    async createUser({ dispatch }, input) {
+        return dispatch('mutate', { key: 'user', mutation: 'createUser', input })
     },
 
-    async updateMembers({ dispatch }, input) {
-        return dispatch('mutate', { key: 'members', mutation: 'updateMembers', input })
+    async updateUser({ dispatch }, input) {
+        return dispatch('mutate', { key: 'user', mutation: 'updateUser', input })
     },
 
     async get({ commit, getters }, { key, query, id }) {

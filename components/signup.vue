@@ -137,7 +137,7 @@ export default {
           this.confirmForm
         );
         await this.$store.dispatch("auth/login", this.registerForm);
-        this.$router.push("/user/");
+        this.$router.push("/user/${user.id}");
       } catch (error) {
         console.log({ error });
       }

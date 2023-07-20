@@ -16,12 +16,19 @@
             <h4 elevation="1" style="padding: 1rem">Biodata</h4>
           </v-col>
           <v-col cols="2">
-            <v-card
+            <v-card v-if="bioDataSubmit==true"
               elevation="1"
               color="success"
               style="padding: 1rem; color: white"
               class="text-center"
               >Submitted</v-card
+            >
+            <v-card v-else
+              elevation="1"
+              color="error"
+              style="padding: 1rem; color: white"
+              class="text-center"
+              >Not Submited</v-card
             >
           </v-col>
         </v-row>
@@ -54,12 +61,19 @@
             <h4 elevation="1" style="padding: 1rem">Institution</h4>
           </v-col>
           <v-col cols="2">
-            <v-card
+            <v-card v-if="institutionSubmit==true"
               elevation="1"
               color="success"
               style="padding: 1rem; color: white"
               class="text-center"
               >Submitted</v-card
+            >
+            <v-card v-else
+              elevation="1"
+              color="error"
+              style="padding: 1rem; color: white"
+              class="text-center"
+              >Not Submited</v-card
             >
           </v-col>
         </v-row>
@@ -89,11 +103,19 @@
           </v-col>
           <v-col cols="2">
             <v-card
+            v-if="localChapter==true"
               elevation="1"
               color="success"
               style="padding: 1rem; color: white"
               class="text-center"
               >Submitted</v-card
+            >
+            <v-card v-else
+              elevation="1"
+              color="error"
+              style="padding: 1rem; color: white"
+              class="text-center"
+              >Not Submited</v-card
             >
           </v-col>
         </v-row>

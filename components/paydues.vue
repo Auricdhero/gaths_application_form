@@ -4,11 +4,12 @@
       <h1 class="text-center">
         <p>{{ $auth.email }}, have you paid your monthly dues already?</p>
       </h1>
-      <h6 class="text-center">It is GHS 5.00 every month</h6>
+      <h6 class="text-center">Dues is 21 cedis monthly...</h6>
+      <h6 class="text-center">To cover a year is GHS 256.00...</h6>
       <br />
       <v-card elevation="2" style="padding: 1rem" color="blue">
         <h4 class="text-center" style="color: white">
-          Pay your nonthly dues now!
+          Pay Dues to ACTIVATE your Membership
         </h4> </v-card
       ><br />
       <v-card elevation="2" style="padding: 1em">

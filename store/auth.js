@@ -20,8 +20,8 @@ export const actions = {
             const user = await Auth.currentAuthenticatedUser()
             commit('set', user)
 
-            if (members) {
-                await dispatch('user/getMembers', member.username, { root: true })
+            if (user) {
+                await dispatch('user/getUser', user.username, { root: true })
             }
 
             return user
@@ -48,7 +48,7 @@ export const actions = {
         const user = await Auth.signIn(email, password)
         commit('set', user)
 
-        // await dispatch('members/findOrCreateMembers', member, { root: true })
+        // await dispatch('user/findOrCreateMembers', user, { root: true })
 
         return user
     },

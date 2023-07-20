@@ -115,10 +115,10 @@
 </style>
 <script>
 export default {
-  // computed: {
-  //   shouldRenderContent() {
-  //     // return window.innerWidth >= 768;
-  //   },
-  // },
+  async asyncData({ $store, params }) {
+    return {
+      // user: await $store.dispatch("api/getMembers", params.id),
+    };
+  },
 };
 </script>

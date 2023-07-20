@@ -9,10 +9,12 @@
 
       <v-spacer></v-spacer>
 
-      <v-spacer></v-spacer>
+      
+      <v-spacer></v-spacer><v-spacer></v-spacer><v-spacer></v-spacer>
+      <v-spacer></v-spacer><v-spacer></v-spacer>
       <v-row justify="center">
         <v-icon>mdi-bell</v-icon>
-        <v-spacer></v-spacer>
+
         <v-menu bottom rounded offset-y>
           <template v-slot:activator="{ on }">
             <v-btn icon x-large v-on="on">

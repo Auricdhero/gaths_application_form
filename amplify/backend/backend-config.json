@@ -12,7 +12,16 @@
       ],
       "output": {
         "authConfig": {
-          "additionalAuthenticationProviders": [],
+          "additionalAuthenticationProviders": [
+            {
+              "apiKeyConfig": {
+                "apiKeyExpirationDate": "2024-07-19T02:37:09.139Z",
+                "apiKeyExpirationDays": 365,
+                "description": "public access"
+              },
+              "authenticationType": "API_KEY"
+            }
+          ],
           "defaultAuthentication": {
             "authenticationType": "AMAZON_COGNITO_USER_POOLS",
             "userPoolConfig": {
