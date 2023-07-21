@@ -98,10 +98,18 @@ export default {
           error.code == "NotAuthorizedException" &&
           error.message == "Incorrect username or password."
         ) {
-          alert(error);
-          this.error = "Invalid username or password. Please try again.";
+          alert("Invalid username or password. Please try again.");
+          //this.error = "Invalid username or password. Please try again.";
+        } else if (
+          error.code == "ResourceNotFoundException" &&
+          error.message == "User pool  does not exist."
+        ) {
+          //this.error = "An unexpected error occurred. Please try again later.";
+          alert("We'll get back to you soon");
+          //this.error = "We'll get back to you soon";
         } else {
-          this.error = "An unexpected error occurred. Please try again later.";
+          //this.error = "An unexpected error occurred. Please try again later.";
+          alert("An unexpected error occurred. Please try again later.");
         }
       }
     },
