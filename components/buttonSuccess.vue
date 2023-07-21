@@ -1,5 +1,5 @@
 <template>
     <div>
-        <v-btn color="success">Save and Continue</v-btn>
+        <v-btn type="submit" color="success">Save and Continue</v-btn>
     </div>
 </template>

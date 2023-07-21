@@ -18,6 +18,17 @@
           outlined
           required
         ></v-text-field>
+        <br />
+
+        <h6
+          dense
+          outlined
+          type="error"
+          v-if="form.error == true"
+          class="text-muted"
+        >
+          {{ form.error }}
+        </h6>
 
         <v-btn
           class="ma-2"
@@ -57,10 +68,12 @@ export default {
     form: {
       email: "",
       password: "",
+      // error:""
     },
     return: {
       loader: null,
       loadingSubmit: false,
+      // error: "",
     },
   }),
   watch: {
@@ -81,6 +94,15 @@ export default {
       } catch (error) {
         // alert({error})
         console.log({ error });
+        if (
+          error.code == "NotAuthorizedException" &&
+          error.message == "Incorrect username or password."
+        ) {
+          alert(error);
+          this.error = "Invalid username or password. Please try again.";
+        } else {
+          this.error = "An unexpected error occurred. Please try again later.";
+        }
       }
     },
     // async loadingSubmit() {},

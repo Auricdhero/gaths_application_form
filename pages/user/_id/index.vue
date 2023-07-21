@@ -115,10 +115,14 @@
 </style>
 <script>
 export default {
-  async asyncData({ $store, params }) {
-    return {
-      // user: await $store.dispatch("api/getMembers", params.id),
-    };
+  async asyncData({ store, params }) {
+    try {
+      return {
+        user: await store.dispatch("api/getUser", params.id),
+      };
+    } catch (error) {
+      console.log(`Error getting User ${params.id}:`, error);
+    }
   },
 };
 </script>

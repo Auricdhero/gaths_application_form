@@ -149,7 +149,7 @@
             </v-col>
           </v-row>
 
-          <buttonSuccess type="submit" />
+          <buttonSuccess />
         </v-form>
       </v-card>
     </v-container>
@@ -180,21 +180,13 @@ export default {
   methods: {
     async create() {
       try {
-        const user = await this.$store.dispatch(
-          "api/createMembers",
-          this.getPayLoad()
-        );
+        const user = await this.$store.dispatch("api/createUser");
         console.log("Submitted");
       } catch (error) {
         console.log({ error });
       }
     },
-    getPayload() {
-      return {
-        ...this.form,
-        authorId: this.$auth.id,
-      };
-    },
+    //
   },
 };
 </script>
