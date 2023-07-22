@@ -1,19 +1,19 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-gathsapplicationform-dev-225223-authRole",
-      "UnauthRoleArn": "arn:aws:iam::319123594138:role/amplify-gathsapplicationform-dev-225223-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::319123594138:role/amplify-gathsapplicationform-dev-225223-authRole",
+      "AuthRoleName": "amplify-gathsapplicationform-dev-220718-authRole",
+      "UnauthRoleArn": "arn:aws:iam::695489116704:role/amplify-gathsapplicationform-dev-220718-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::695489116704:role/amplify-gathsapplicationform-dev-220718-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-gathsapplicationform-dev-225223-deployment",
-      "UnauthRoleName": "amplify-gathsapplicationform-dev-225223-unauthRole",
-      "StackName": "amplify-gathsapplicationform-dev-225223",
-      "StackId": "arn:aws:cloudformation:us-east-1:319123594138:stack/amplify-gathsapplicationform-dev-225223/abe84ef0-f5ce-11ed-b9cf-0acaa2663749",
-      "AmplifyAppId": "d24iwiswh8g48e"
+      "DeploymentBucketName": "amplify-gathsapplicationform-dev-220718-deployment",
+      "UnauthRoleName": "amplify-gathsapplicationform-dev-220718-unauthRole",
+      "StackName": "amplify-gathsapplicationform-dev-220718",
+      "StackId": "arn:aws:cloudformation:us-east-1:695489116704:stack/amplify-gathsapplicationform-dev-220718/244ebc40-28dc-11ee-a174-0afd0dbca291",
+      "AmplifyAppId": "d23rbdk0oumckm"
     },
     "categories": {
       "auth": {
-        "gathsapplicationform93ee339b93ee339b": {}
+        "gathsapplicationformf295c6a3": {}
       },
       "api": {
         "gathsapplicationform": {}

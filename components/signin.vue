@@ -105,7 +105,7 @@ export default {
           error.message == "User pool  does not exist."
         ) {
           //this.error = "An unexpected error occurred. Please try again later.";
-          alert("We'll get back to you soon");
+          alert("Please Register!");
           //this.error = "We'll get back to you soon";
         } else {
           //this.error = "An unexpected error occurred. Please try again later.";

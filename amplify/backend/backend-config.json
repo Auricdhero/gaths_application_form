@@ -1,32 +1,15 @@
 {
   "api": {
     "gathsapplicationform": {
-      "dependsOn": [
-        {
-          "attributes": [
-            "UserPoolId"
-          ],
-          "category": "auth",
-          "resourceName": "gathsapplicationform93ee339b93ee339b"
-        }
-      ],
+      "dependsOn": [],
       "output": {
         "authConfig": {
-          "additionalAuthenticationProviders": [
-            {
-              "apiKeyConfig": {
-                "apiKeyExpirationDate": "2024-07-19T02:37:09.139Z",
-                "apiKeyExpirationDays": 365,
-                "description": "public access"
-              },
-              "authenticationType": "API_KEY"
-            }
-          ],
+          "additionalAuthenticationProviders": [],
           "defaultAuthentication": {
-            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
-            "userPoolConfig": {
-              "userPoolId": "authgathsapplicationform93ee339b93ee339b"
-            }
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            },
+            "authenticationType": "API_KEY"
           }
         }
       },
@@ -35,7 +18,7 @@
     }
   },
   "auth": {
-    "gathsapplicationform93ee339b93ee339b": {
+    "gathsapplicationformf295c6a3": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
