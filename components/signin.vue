@@ -107,8 +107,13 @@ export default {
           //this.error = "An unexpected error occurred. Please try again later.";
           alert("Please Register!");
           //this.error = "We'll get back to you soon";
-        } else {
+        } else if (
+          error.code == "UserNotFoundException" &&
+          error.message == "User does not exist."
+        ) {
           //this.error = "An unexpected error occurred. Please try again later.";
+          alert("Please Register!");
+        } else {
           alert("An unexpected error occurred. Please try again later.");
         }
       }
