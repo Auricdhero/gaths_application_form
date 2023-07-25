@@ -5,7 +5,7 @@
         <h3 style="color: white">Institution</h3> </v-card
       ><br />
 
-      <v-form>
+      <v-form @submit.prevent="create">
         <v-card elevation="2" style="padding: 1rem">
           <h3 class="text-center">
             PLEASE NOTE: All fields marked with * are mandatory
@@ -86,5 +86,15 @@ export default {
       department: "",
     },
   }),
+  methods: {
+    async create() {
+      try {
+        const user = await this.$store.dispatch("api/createUser");
+        console.log("Submitted");
+      } catch (error) {
+        console.log({ error });
+      }
+    },
+  }
 };
 </script>

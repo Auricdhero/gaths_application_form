@@ -8,11 +8,12 @@
         <h3 class="text-center">
           Please Note: All fields marked with * are mandatory.
         </h3>
-        <v-form @submit.prevent="create">
+        <v-form @submit.prevent="create" class="form">
           <h3>Basic Information</h3>
           <v-divider></v-divider>
 
           <br />
+
           <v-row>
             <v-col>
               <v-label>Title</v-label>
@@ -29,6 +30,7 @@
               ></v-text-field>
             </v-col>
           </v-row>
+
           <v-row>
             <v-col>
               <v-label>First Name</v-label>
@@ -48,6 +50,7 @@
               ></v-text-field>
             </v-col>
           </v-row>
+          <!-- </v-col> -->
           <v-row>
             <v-col>
               <v-label>Gender</v-label>
@@ -190,3 +193,8 @@ export default {
   },
 };
 </script>
+<style>
+/* @media screen, only screen and( min-width: 767px) {
+  
+} */
+</style>

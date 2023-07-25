@@ -6,7 +6,7 @@
       ><br />
 
       <v-card style="padding: 1rem">
-        <v-form>
+        <v-form @submit.prevent="create">
           <h3 class="text-center">
             Please Note: All fields marked with * are mandatory.
           </h3>
@@ -63,5 +63,15 @@ export default {
       membershipNo: "",
     },
   }),
+  methods: {
+    async create() {
+      try {
+        const user = await this.$store.dispatch("api/createUser");
+        console.log("Submitted");
+      } catch (error) {
+        console.log({ error });
+      }
+    },
+  }
 };
 </script>

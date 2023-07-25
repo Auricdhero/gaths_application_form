@@ -118,7 +118,7 @@ export default {
   async asyncData({ store, params }) {
     try {
       return {
-        user: await store.dispatch("api/getUser", params.id),
+        user: await store.dispatch('api/getUser', params.id),
       };
     } catch (error) {
       console.log(`Error getting User ${params.id}:`, error);

@@ -4,8 +4,8 @@
       <h1 class="text-center">
         <p>{{ $auth.email }}, have you paid your monthly dues already?</p>
       </h1>
-      <h6 class="text-center">It is GHS 21.00 monthly.</h6>
-      <h6 class="text-center">It is GHS 256.00 yearly...</h6>
+      <h6 class="text-center">It is GHS 21.00 every month.</h6>
+      <h6 class="text-center">To Cover a year it's GHS 256.00...</h6>
       <br />
       <v-card elevation="2" style="padding: 1rem" color="blue">
         <h4 class="text-center" style="color: white">

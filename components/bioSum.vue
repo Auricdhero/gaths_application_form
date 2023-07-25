@@ -16,14 +16,16 @@
             <h4 elevation="1" style="padding: 1rem">Biodata</h4>
           </v-col>
           <v-col cols="2">
-            <v-card v-if="bioDataSubmit==true"
+            <v-card
+              v-if="bioDataSubmit == true"
               elevation="1"
               color="success"
               style="padding: 1rem; color: white"
               class="text-center"
               >Submitted</v-card
             >
-            <v-card v-else
+            <v-card
+              v-else
               elevation="1"
               color="error"
               style="padding: 1rem; color: white"
@@ -43,6 +45,7 @@
           >
             <div style="padding: 3%">
               <p>Title:</p>
+              <p>Surname:</p>
               <p>First Name:</p>
               <p>Other Names:</p>
               <p>Date of Birth:</p>
@@ -61,14 +64,16 @@
             <h4 elevation="1" style="padding: 1rem">Institution</h4>
           </v-col>
           <v-col cols="2">
-            <v-card v-if="institutionSubmit==true"
+            <v-card
+              v-if="institutionSubmit == true"
               elevation="1"
               color="success"
               style="padding: 1rem; color: white"
               class="text-center"
               >Submitted</v-card
             >
-            <v-card v-else
+            <v-card
+              v-else
               elevation="1"
               color="error"
               style="padding: 1rem; color: white"
@@ -103,14 +108,15 @@
           </v-col>
           <v-col cols="2">
             <v-card
-            v-if="localChapter==true"
+              v-if="localChapter == true"
               elevation="1"
               color="success"
               style="padding: 1rem; color: white"
               class="text-center"
               >Submitted</v-card
             >
-            <v-card v-else
+            <v-card
+              v-else
               elevation="1"
               color="error"
               style="padding: 1rem; color: white"

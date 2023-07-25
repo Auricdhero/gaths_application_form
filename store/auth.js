@@ -48,7 +48,7 @@ export const actions = {
         const user = await Auth.signIn(email, password)
         commit('set', user)
 
-        // await dispatch('user/findOrCreateMembers', user, { root: true })
+        // await dispatch('user/findOrCreateUser', user, { root: true })
 
         return user
     },

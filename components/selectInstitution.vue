@@ -14,6 +14,9 @@ export default {
       "Takoradi Technical University",
       "University of Energy and Natural Resources",
       "University of Development Studies",
+      "Ho Technical University",
+      "University of Health and Allied Sciences",
+      "Ashesi University College"
     ],
   }),
 };

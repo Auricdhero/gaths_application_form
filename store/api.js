@@ -3,10 +3,10 @@ import * as gqlQueries from '~/src/graphql/queries';
 import * as gqlMutations from '~/src/graphql/mutations';
 // import * as gqlSchema from '~/src/graphql/schema'
 
-export const state = {
-    user: [],
+export const state = () => ({
+    users: [],
     user: null
-}
+})
 
 export const getters = {
     authMode: (state, getters, rootState) => rootState.auth.isAuthenticated ? 'AMAZON_COGNITO_USER_POOLS' : 'API_KEY'
