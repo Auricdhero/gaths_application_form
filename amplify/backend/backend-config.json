@@ -1,15 +1,7 @@
 {
   "api": {
     "gathsapplicationform": {
-      "dependsOn": [
-        {
-          "attributes": [
-            "UserPoolId"
-          ],
-          "category": "auth",
-          "resourceName": "gathsapplicationformf295c6a3"
-        }
-      ],
+      "dependsOn": [],
       "output": {
         "authConfig": {
           "additionalAuthenticationProviders": [
@@ -23,10 +15,7 @@
             }
           ],
           "defaultAuthentication": {
-            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
-            "userPoolConfig": {
-              "userPoolId": "authgathsapplicationformf295c6a3"
-            }
+            "authenticationType": "AWS_IAM"
           }
         }
       },

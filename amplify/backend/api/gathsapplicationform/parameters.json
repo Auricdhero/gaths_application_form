@@ -2,11 +2,5 @@
   "AppSyncApiName": "gathsapplicationform",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
   "DynamoDBEnableServerSideEncryption": false,
-  "AuthCognitoUserPoolId": {
-    "Fn::GetAtt": [
-      "authgathsapplicationformf295c6a3",
-      "Outputs.UserPoolId"
-    ]
-  },
-  "AuthModeLastUpdated": "2023-07-26T10:49:56.582Z"
+  "AuthModeLastUpdated": "2023-07-26T11:43:46.723Z"
 }

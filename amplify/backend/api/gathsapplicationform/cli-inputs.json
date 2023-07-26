@@ -4,8 +4,7 @@
     "apiName": "gathsapplicationform",
     "serviceName": "AppSync",
     "defaultAuthType": {
-      "mode": "AMAZON_COGNITO_USER_POOLS",
-      "cognitoUserPoolId": "authgathsapplicationformf295c6a3"
+      "mode": "AWS_IAM"
     },
     "conflictResolution": {},
     "additionalAuthTypes": [
