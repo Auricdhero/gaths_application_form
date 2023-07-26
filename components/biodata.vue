@@ -32,15 +32,14 @@
           </v-row>
 
           <v-row>
-            <v-col>
-              <v-label>First Name</v-label>
-              <v-text-field
-                label="Enter"
-                v-model="form.firstname"
-                required
-                outlined
-              ></v-text-field>
-            </v-col>
+            <v-label>First Name</v-label>
+            <v-text-field
+              label="Enter"
+              v-model="form.firstname"
+              required
+              outlined
+            ></v-text-field>
+
             <v-col>
               <v-label>Other Names</v-label>
               <v-text-field
@@ -50,6 +49,7 @@
               ></v-text-field>
             </v-col>
           </v-row>
+
           <!-- </v-col> -->
           <v-row>
             <v-col>
@@ -98,7 +98,7 @@
           </v-row>
 
           <br />
-
+          >
           <h3 class="text-left">ADDRESS OF APPLICANT</h3>
           <v-divider></v-divider><br />
           <v-row>
@@ -195,6 +195,6 @@ export default {
 </script>
 <style>
 /* @media screen, only screen and( min-width: 767px) {
-  
+  .form{}
 } */
 </style>
