@@ -1,15 +1,32 @@
 {
   "api": {
     "gathsapplicationform": {
-      "dependsOn": [],
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "gathsapplicationformf295c6a3"
+        }
+      ],
       "output": {
         "authConfig": {
-          "additionalAuthenticationProviders": [],
+          "additionalAuthenticationProviders": [
+            {
+              "apiKeyConfig": {
+                "apiKeyExpirationDate": "2024-07-25T10:52:15.604Z",
+                "apiKeyExpirationDays": 365,
+                "description": "gathsKey"
+              },
+              "authenticationType": "API_KEY"
+            }
+          ],
           "defaultAuthentication": {
-            "apiKeyConfig": {
-              "apiKeyExpirationDays": 7
-            },
-            "authenticationType": "API_KEY"
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authgathsapplicationformf295c6a3"
+            }
           }
         }
       },

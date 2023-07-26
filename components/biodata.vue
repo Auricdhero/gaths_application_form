@@ -32,14 +32,15 @@
           </v-row>
 
           <v-row>
-            <v-label>First Name</v-label>
-            <v-text-field
-              label="Enter"
-              v-model="form.firstname"
-              required
-              outlined
-            ></v-text-field>
-
+            <v-col>
+              <v-label>First Name</v-label>
+              <v-text-field
+                label="Enter"
+                v-model="form.firstname"
+                required
+                outlined
+              ></v-text-field>
+            </v-col>
             <v-col>
               <v-label>Other Names</v-label>
               <v-text-field
