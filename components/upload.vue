@@ -24,7 +24,7 @@
 
             <picUpload />
           </v-col>
-          <v-divider vertical></v-divider>
+          <v-divider class="d-none d-sm-flex" vertical></v-divider>
           <v-col>
             <v-card style="padding: 1rem" class="text-center" outlined>
               <h4>Notice</h4> </v-card

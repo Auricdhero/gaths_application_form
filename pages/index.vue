@@ -1,6 +1,6 @@
 <template>
   <v-row align-content="center">
-    <v-col class="pa-16" style="background-color: blue; height: 100vh;">
+    <v-col class="pa-16" style="background-color: blue;">
       <v-img class="mx-auto" max-height="180" max-width="200" :src="logo"></v-img>
       <br />
       <h1 class="text-left" style="color: white;">Embark on an Exciting Journey <br /> With GATHS</h1><br><br>
