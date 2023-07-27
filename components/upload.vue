@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card color="blue" elevation="2" style="padding: 1em; color: white">
+    <v-card color="blue" elevation="2" style="padding: 1em; color: white; height: auto;">
       <h3>Biodata</h3> </v-card
     ><br />
 
