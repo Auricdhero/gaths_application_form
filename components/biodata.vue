@@ -9,18 +9,19 @@
           Please Note: All fields marked with * are mandatory.
         </h3>
         <v-form @submit.prevent="create" class="form">
+          <br />
           <h3>Basic Information</h3>
           <v-divider></v-divider>
 
           <br />
 
-          <v-row class="d-xs-block">
-            <v-col>
+          <v-row>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Title</v-label>
               <selectTitle v-model="form.title" />
             </v-col>
 
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Surname</v-label>
               <v-text-field
                 label="Enter"
@@ -31,8 +32,8 @@
             </v-col>
           </v-row>
 
-          <v-row class="d-xs-block">
-            <v-col>
+          <v-row>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>First Name</v-label>
               <v-text-field
                 label="Enter"
@@ -41,7 +42,7 @@
                 outlined
               ></v-text-field>
             </v-col>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Other Names</v-label>
               <v-text-field
                 label="Enter"
@@ -53,17 +54,17 @@
 
           <!-- </v-col> -->
           <v-row>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Gender</v-label>
               <selectGender v-model="form.gender" />
             </v-col>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Date of Birth</v-label>
               <datePicker v-model="form.dob" required />
             </v-col>
           </v-row>
           <v-row>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Country of Birth</v-label>
               <v-text-field
                 label="Country of Birth"
@@ -72,7 +73,7 @@
                 required
               ></v-text-field>
             </v-col>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Nationality</v-label>
               <v-text-field
                 label="Nationality"
@@ -83,7 +84,7 @@
             </v-col>
           </v-row>
           <v-row>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Hometown</v-label>
               <v-text-field
                 label="Enter"
@@ -92,18 +93,18 @@
                 required
               ></v-text-field>
             </v-col>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Region</v-label>
               <selectRegion v-model="form.region" />
             </v-col>
           </v-row>
 
           <br />
-          >
+
           <h3 class="text-left">ADDRESS OF APPLICANT</h3>
           <v-divider></v-divider><br />
           <v-row>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Address Line 1</v-label>
               <v-text-field
                 label="Enter"
@@ -112,7 +113,7 @@
                 required
               ></v-text-field>
             </v-col>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Address Line 2</v-label>
               <v-text-field
                 label="Enter"
@@ -122,7 +123,7 @@
             </v-col>
           </v-row>
           <v-row>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Ghana Card Number (If available)</v-label>
               <v-text-field
                 label="Enter"
@@ -131,7 +132,7 @@
                 outlined
               ></v-text-field>
             </v-col>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Phone Number</v-label>
               <v-text-field
                 label="Enter"
@@ -142,7 +143,7 @@
             </v-col>
           </v-row>
           <v-row>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Email</v-label>
               <v-text-field
                 label="Enter"

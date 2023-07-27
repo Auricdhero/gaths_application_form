@@ -10,22 +10,22 @@
           <h3 class="text-center">
             PLEASE NOTE: All fields marked with * are mandatory
           </h3>
-          <br />
+          <br /><br />
           <h3>DETAILS OF INSTITUTION</h3>
           <v-divider></v-divider><br />
 
           <v-row>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Name of Institution</v-label>
               <selectInstitution v-model="form.nameOfInstitution" />
             </v-col>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Region</v-label>
               <selectRegion v-model="form.institutionRegion" />
             </v-col>
           </v-row>
           <v-row>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Name of Program</v-label>
               <v-text-field
                 label="Enter"
@@ -33,23 +33,23 @@
                 outlined
               ></v-text-field>
             </v-col>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Current level</v-label>
               <selectLevel v-model="form.level" />
             </v-col>
           </v-row>
           <v-row>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Start Date</v-label>
               <datePicker v-model="form.dateStart" />
             </v-col>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>End Date</v-label>
               <datePicker v-model="form.endDate" />
             </v-col>
           </v-row>
           <v-row>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Student Identification</v-label>
               <v-text-field
                 v-model="form.studentId"
@@ -57,7 +57,7 @@
                 outlined
               ></v-text-field>
             </v-col>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Department</v-label>
               <v-text-field
                 v-model="form.department"
@@ -95,6 +95,6 @@ export default {
         console.log({ error });
       }
     },
-  }
+  },
 };
 </script>

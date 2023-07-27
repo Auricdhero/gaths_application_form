@@ -7,34 +7,36 @@
 
     <div>
       <v-tabs vertical>
-        <v-tab
-          ><v-icon left>mdi-home</v-icon>
-          <h5 class="d-none d-xl-flex d-lg-flex">Welcome</h5>
-        </v-tab>
-        <v-tab>
-          <v-icon left>mdi-account</v-icon>
-          <h5 class="d-none d-xl-flex d-lg-flex">Biodata</h5>
-        </v-tab>
-        <v-tab>
-          <v-icon left>mdi-note</v-icon>
-          <h5 class="d-none d-xl-flex d-lg-flex">Institution</h5>
-        </v-tab>
-        <v-tab>
-          <v-icon left>mdi-account-group</v-icon>
-          <h5 class="d-none d-xl-flex d-lg-flex">Local</h5>
-        </v-tab>
-        <v-tab>
-          <v-icon left>mdi-image</v-icon>
-          <h5 class="d-none d-xl-flex d-lg-flex">Upload Passport Photo</h5>
-        </v-tab>
-        <v-tab>
-          <v-icon left>mdi-book-edit-outline</v-icon>
-          <h5 class="d-none d-xl-flex d-lg-flex">Summary</h5>
-        </v-tab>
-        <v-tab>
-          <v-icon left>mdi-cash-multiple</v-icon>
-          <h5 class="d-none d-xl-flex d-lg-flex">Pay Dues</h5>
-        </v-tab>
+        <div style="height: 100vh">
+          <v-tab
+            ><v-icon left>mdi-home</v-icon>
+            <h5 class="d-none d-xl-flex d-lg-flex">Welcome</h5>
+          </v-tab>
+          <v-tab>
+            <v-icon left>mdi-account</v-icon>
+            <h5 class="d-none d-xl-flex d-lg-flex">Biodata</h5>
+          </v-tab>
+          <v-tab>
+            <v-icon left>mdi-note</v-icon>
+            <h5 class="d-none d-xl-flex d-lg-flex">Institution</h5>
+          </v-tab>
+          <v-tab>
+            <v-icon left>mdi-account-group</v-icon>
+            <h5 class="d-none d-xl-flex d-lg-flex">Local</h5>
+          </v-tab>
+          <v-tab>
+            <v-icon left>mdi-image</v-icon>
+            <h5 class="d-none d-xl-flex d-lg-flex">Upload Passport Photo</h5>
+          </v-tab>
+          <v-tab>
+            <v-icon left>mdi-book-edit-outline</v-icon>
+            <h5 class="d-none d-xl-flex d-lg-flex">Summary</h5>
+          </v-tab>
+          <v-tab>
+            <v-icon left>mdi-cash-multiple</v-icon>
+            <h5 class="d-none d-xl-flex d-lg-flex">Pay Dues</h5>
+          </v-tab>
+        </div>
 
         <v-tab-item
           ><v-container><welcome /></v-container
@@ -118,7 +120,7 @@ export default {
   async asyncData({ store, params }) {
     try {
       return {
-        user: await store.dispatch('api/getUser', params.id),
+        user: await store.dispatch("api/getUser", params.id),
       };
     } catch (error) {
       console.log(`Error getting User ${params.id}:`, error);

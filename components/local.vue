@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-container style="height: 85vh">
+    <v-container>
       <v-card elevation="2" style="padding: 1rem" color="blue">
         <h3 style="color: white">Local Chapter</h3> </v-card
       ><br />
@@ -10,11 +10,12 @@
           <h3 class="text-center">
             Please Note: All fields marked with * are mandatory.
           </h3>
+          <br />
           <h4 class="text-uppercase">Details of local chapter</h4>
           <v-divider></v-divider><br />
 
           <v-row>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Name of Local Chapter</v-label>
               <v-text-field
                 v-model="form.localChapterName"
@@ -22,7 +23,7 @@
                 outlined
               ></v-text-field>
             </v-col>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Position in Chapter</v-label>
               <v-text-field
                 v-model="form.PositionsChapter"
@@ -32,11 +33,11 @@
             </v-col>
           </v-row>
           <v-row>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Year Joined</v-label>
               <datePicker v-model="form.dateJoined" />
             </v-col>
-            <v-col>
+            <v-col cols="auto" lg="6" sm="12">
               <v-label>Membership Number</v-label>
               <v-text-field
                 v-model="form.membershipNo"
@@ -72,6 +73,6 @@ export default {
         console.log({ error });
       }
     },
-  }
+  },
 };
 </script>

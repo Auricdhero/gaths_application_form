@@ -12,10 +12,10 @@
 
       <div style="padding: 1rem">
         <v-row>
-          <v-col cols="2">
+          <v-col cols="auto">
             <h4 elevation="1" style="padding: 1rem">Biodata</h4>
           </v-col>
-          <v-col cols="2">
+          <v-col cols="auto">
             <v-card
               v-if="bioDataSubmit == true"
               elevation="1"
@@ -60,10 +60,10 @@
       </div>
       <div style="padding: 1rem">
         <v-row>
-          <v-col cols="2">
+          <v-col cols="auto">
             <h4 elevation="1" style="padding: 1rem">Institution</h4>
           </v-col>
-          <v-col cols="2">
+          <v-col cols="auto">
             <v-card
               v-if="institutionSubmit == true"
               elevation="1"
@@ -103,10 +103,10 @@
       </div>
       <div style="padding: 1rem">
         <v-row>
-          <v-col cols="2">
+          <v-col cols="auto">
             <h4 elevation="1" style="padding: 1rem">Local Chapter</h4>
           </v-col>
-          <v-col cols="2">
+          <v-col cols="auto">
             <v-card
               v-if="localChapter == true"
               elevation="1"
