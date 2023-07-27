@@ -14,7 +14,7 @@
 
           <br />
 
-          <v-row>
+          <v-row class="d-xs-block">
             <v-col>
               <v-label>Title</v-label>
               <selectTitle v-model="form.title" />
@@ -31,7 +31,7 @@
             </v-col>
           </v-row>
 
-          <v-row>
+          <v-row class="d-xs-block">
             <v-col>
               <v-label>First Name</v-label>
               <v-text-field

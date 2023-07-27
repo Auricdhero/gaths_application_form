@@ -9,31 +9,31 @@
       <v-tabs vertical>
         <v-tab
           ><v-icon left>mdi-home</v-icon>
-          <!-- Welcome -->
+          <h5 class="d-none d-xl-flex d-lg-flex">Welcome</h5>
         </v-tab>
         <v-tab>
           <v-icon left>mdi-account</v-icon>
-          <!-- Biodata -->
+          <h5 class="d-none d-xl-flex d-lg-flex">Biodata</h5>
         </v-tab>
         <v-tab>
           <v-icon left>mdi-note</v-icon>
-          <!-- Institution -->
+          <h5 class="d-none d-xl-flex d-lg-flex">Institution</h5>
         </v-tab>
         <v-tab>
           <v-icon left>mdi-account-group</v-icon>
-          <!-- Local -->
+          <h5 class="d-none d-xl-flex d-lg-flex">Local</h5>
         </v-tab>
         <v-tab>
           <v-icon left>mdi-image</v-icon>
-          <!-- Upload Passport Photo -->
+          <h5 class="d-none d-xl-flex d-lg-flex">Upload Passport Photo</h5>
         </v-tab>
         <v-tab>
           <v-icon left>mdi-book-edit-outline</v-icon>
-          <!-- Summary -->
+          <h5 class="d-none d-xl-flex d-lg-flex">Summary</h5>
         </v-tab>
         <v-tab>
           <v-icon left>mdi-cash-multiple</v-icon>
-          <!-- Application Status -->
+          <h5 class="d-none d-xl-flex d-lg-flex">Pay Dues</h5>
         </v-tab>
 
         <v-tab-item
