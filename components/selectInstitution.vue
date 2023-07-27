@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-select label="Please select" :items="institution" outlined></v-select>
+    <v-select transition="slide-x-reverse-transition" label="Please select" :items="institution" outlined></v-select>
   </div>
 </template>
 <script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-select :items="level" label="Please Select" outlined></v-select>
+    <v-select transition="slide-x-reverse-transition" :items="level" label="Please Select" outlined></v-select>
   </div>
 </template>
 <script>
