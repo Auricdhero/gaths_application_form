@@ -7,13 +7,14 @@
       "mode": "AMAZON_COGNITO_USER_POOLS",
       "cognitoUserPoolId": "authgathsapplicationformf295c6a3"
     },
-    "conflictResolution": {},
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "OPTIMISTIC_CONCURRENCY"
+      }
+    },
     "additionalAuthTypes": [
       {
-        "mode": "API_KEY",
-        "expirationTime": 365,
-        "apiKeyExpirationDate": "2024-07-25T10:52:15.604Z",
-        "keyDescription": "gathsKey"
+        "mode": "AWS_IAM"
       }
     ]
   }
