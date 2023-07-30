@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app-bar color="deep-purple accent-4" style="height: 3.5em" dense dark>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      <!-- <v-app-bar-nav-icon></v-app-bar-nav-icon> -->
 
       <v-toolbar-title
         ><v-img :src="logo" height="60" width="60"></v-img

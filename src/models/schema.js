@@ -91,14 +91,14 @@ export const schema = {
                     "name": "addressLine2",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": false,
+                    "isRequired": true,
                     "attributes": []
                 },
                 "ghCardNo": {
                     "name": "ghCardNo",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": false,
+                    "isRequired": true,
                     "attributes": []
                 },
                 "phoneNo": {
@@ -245,5 +245,5 @@ export const schema = {
     "enums": {},
     "nonModels": {},
     "codegenVersion": "3.4.3",
-    "version": "9ab280d9caf60975947480660738dfca"
+    "version": "7a1eeecca79720ebb53c301d4a0a2427"
 };

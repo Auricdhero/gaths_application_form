@@ -1,4 +1,4 @@
-type user @model @auth(rules: [{allow: private}]) {
+type user @model @auth(rules: [{ allow: private }]) {
   id: ID!
   title: String!
   surname: String!
@@ -11,8 +11,8 @@ type user @model @auth(rules: [{allow: private}]) {
   hometown: String!
   region: String!
   addressLine1: String!
-  addressLine2: String
-  ghCardNo: String
+  addressLine2: String!
+  ghCardNo: String!
   phoneNo: String!
   email: String!
   nameOfInstitution: String!
@@ -28,4 +28,3 @@ type user @model @auth(rules: [{allow: private}]) {
   dateJoined: String!
   membershipNo: String!
 }
- 

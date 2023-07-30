@@ -37,6 +37,9 @@ export const createUser = /* GraphQL */ `
       membershipNo
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
@@ -76,6 +79,9 @@ export const updateUser = /* GraphQL */ `
       membershipNo
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
@@ -115,6 +121,9 @@ export const deleteUser = /* GraphQL */ `
       membershipNo
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;

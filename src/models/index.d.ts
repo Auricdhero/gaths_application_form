@@ -23,8 +23,8 @@ type Eageruser = {
   readonly hometown: string;
   readonly region: string;
   readonly addressLine1: string;
-  readonly addressLine2?: string | null;
-  readonly ghCardNo?: string | null;
+  readonly addressLine2: string;
+  readonly ghCardNo: string;
   readonly phoneNo: string;
   readonly email: string;
   readonly nameOfInstitution: string;
@@ -60,8 +60,8 @@ type Lazyuser = {
   readonly hometown: string;
   readonly region: string;
   readonly addressLine1: string;
-  readonly addressLine2?: string | null;
-  readonly ghCardNo?: string | null;
+  readonly addressLine2: string;
+  readonly ghCardNo: string;
   readonly phoneNo: string;
   readonly email: string;
   readonly nameOfInstitution: string;
