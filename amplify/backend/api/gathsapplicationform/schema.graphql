@@ -3,28 +3,28 @@ type user @model @auth(rules: [{ allow: private }]) {
   title: String!
   surname: String!
   firstname: String!
-  othername: String!
+  othername: String
   gender: String!
   dob: AWSDateTime!
-  country_of_birth: String!
-  nationality: String!
-  hometown: String!
-  region: String!
-  addressLine1: String!
-  addressLine2: String!
+  country_of_birth: String
+  nationality: String
+  hometown: String
+  region: String
+  addressLine1: String
+  addressLine2: String
   ghCardNo: String!
   phoneNo: String!
   email: String!
-  nameOfInstitution: String!
-  institutionRegion: String!
-  Prog: String!
-  level: String!
-  dateStart: AWSDateTime!
-  endDate: AWSDateTime!
-  studentId: String!
-  department: String!
-  localChapterName: String!
-  PositionsChapter: String!
-  dateJoined: String!
-  membershipNo: String!
+  nameOfInstitution: String
+  institutionRegion: String
+  Prog: String
+  level: String
+  dateStart: AWSDateTime
+  endDate: AWSDateTime
+  studentId: String
+  department: String
+  localChapterName: String
+  PositionsChapter: String
+  dateJoined: String
+  membershipNo: String
 }
