@@ -1,6 +1,126 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const onCreateLocalChapter = /* GraphQL */ `
+  subscription OnCreateLocalChapter(
+    $filter: ModelSubscriptionLocalChapterFilterInput
+  ) {
+    onCreateLocalChapter(filter: $filter) {
+      id
+      localChapterName
+      PositionsChapter
+      dateJoined
+      membershipNo
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onUpdateLocalChapter = /* GraphQL */ `
+  subscription OnUpdateLocalChapter(
+    $filter: ModelSubscriptionLocalChapterFilterInput
+  ) {
+    onUpdateLocalChapter(filter: $filter) {
+      id
+      localChapterName
+      PositionsChapter
+      dateJoined
+      membershipNo
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onDeleteLocalChapter = /* GraphQL */ `
+  subscription OnDeleteLocalChapter(
+    $filter: ModelSubscriptionLocalChapterFilterInput
+  ) {
+    onDeleteLocalChapter(filter: $filter) {
+      id
+      localChapterName
+      PositionsChapter
+      dateJoined
+      membershipNo
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onCreateInstitution = /* GraphQL */ `
+  subscription OnCreateInstitution(
+    $filter: ModelSubscriptionInstitutionFilterInput
+  ) {
+    onCreateInstitution(filter: $filter) {
+      id
+      nameOfInstitution
+      institutionRegion
+      dateStart
+      endDate
+      Prog
+      level
+      studentId
+      department
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onUpdateInstitution = /* GraphQL */ `
+  subscription OnUpdateInstitution(
+    $filter: ModelSubscriptionInstitutionFilterInput
+  ) {
+    onUpdateInstitution(filter: $filter) {
+      id
+      nameOfInstitution
+      institutionRegion
+      dateStart
+      endDate
+      Prog
+      level
+      studentId
+      department
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onDeleteInstitution = /* GraphQL */ `
+  subscription OnDeleteInstitution(
+    $filter: ModelSubscriptionInstitutionFilterInput
+  ) {
+    onDeleteInstitution(filter: $filter) {
+      id
+      nameOfInstitution
+      institutionRegion
+      dateStart
+      endDate
+      Prog
+      level
+      studentId
+      department
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
 export const onCreateUser = /* GraphQL */ `
   subscription OnCreateUser($filter: ModelSubscriptionUserFilterInput) {
     onCreateUser(filter: $filter) {
@@ -20,23 +140,41 @@ export const onCreateUser = /* GraphQL */ `
       ghCardNo
       phoneNo
       email
-      nameOfInstitution
-      institutionRegion
-      Prog
-      level
-      dateStart
-      endDate
-      studentId
-      department
-      localChapterName
-      PositionsChapter
-      dateJoined
-      membershipNo
+      Institution {
+        id
+        nameOfInstitution
+        institutionRegion
+        dateStart
+        endDate
+        Prog
+        level
+        studentId
+        department
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      LocalChapter {
+        id
+        localChapterName
+        PositionsChapter
+        dateJoined
+        membershipNo
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
       createdAt
       updatedAt
       _version
       _deleted
       _lastChangedAt
+      userInstitutionId
+      userLocalChapterId
     }
   }
 `;
@@ -59,23 +197,41 @@ export const onUpdateUser = /* GraphQL */ `
       ghCardNo
       phoneNo
       email
-      nameOfInstitution
-      institutionRegion
-      Prog
-      level
-      dateStart
-      endDate
-      studentId
-      department
-      localChapterName
-      PositionsChapter
-      dateJoined
-      membershipNo
+      Institution {
+        id
+        nameOfInstitution
+        institutionRegion
+        dateStart
+        endDate
+        Prog
+        level
+        studentId
+        department
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      LocalChapter {
+        id
+        localChapterName
+        PositionsChapter
+        dateJoined
+        membershipNo
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
       createdAt
       updatedAt
       _version
       _deleted
       _lastChangedAt
+      userInstitutionId
+      userLocalChapterId
     }
   }
 `;
@@ -98,23 +254,41 @@ export const onDeleteUser = /* GraphQL */ `
       ghCardNo
       phoneNo
       email
-      nameOfInstitution
-      institutionRegion
-      Prog
-      level
-      dateStart
-      endDate
-      studentId
-      department
-      localChapterName
-      PositionsChapter
-      dateJoined
-      membershipNo
+      Institution {
+        id
+        nameOfInstitution
+        institutionRegion
+        dateStart
+        endDate
+        Prog
+        level
+        studentId
+        department
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      LocalChapter {
+        id
+        localChapterName
+        PositionsChapter
+        dateJoined
+        membershipNo
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
       createdAt
       updatedAt
       _version
       _deleted
       _lastChangedAt
+      userInstitutionId
+      userLocalChapterId
     }
   }
 `;

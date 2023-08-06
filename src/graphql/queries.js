@@ -1,6 +1,158 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const getLocalChapter = /* GraphQL */ `
+  query GetLocalChapter($id: ID!) {
+    getLocalChapter(id: $id) {
+      id
+      localChapterName
+      PositionsChapter
+      dateJoined
+      membershipNo
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const listLocalChapters = /* GraphQL */ `
+  query ListLocalChapters(
+    $filter: ModelLocalChapterFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listLocalChapters(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        localChapterName
+        PositionsChapter
+        dateJoined
+        membershipNo
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const syncLocalChapters = /* GraphQL */ `
+  query SyncLocalChapters(
+    $filter: ModelLocalChapterFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncLocalChapters(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        localChapterName
+        PositionsChapter
+        dateJoined
+        membershipNo
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const getInstitution = /* GraphQL */ `
+  query GetInstitution($id: ID!) {
+    getInstitution(id: $id) {
+      id
+      nameOfInstitution
+      institutionRegion
+      dateStart
+      endDate
+      Prog
+      level
+      studentId
+      department
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const listInstitutions = /* GraphQL */ `
+  query ListInstitutions(
+    $filter: ModelInstitutionFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listInstitutions(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        nameOfInstitution
+        institutionRegion
+        dateStart
+        endDate
+        Prog
+        level
+        studentId
+        department
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const syncInstitutions = /* GraphQL */ `
+  query SyncInstitutions(
+    $filter: ModelInstitutionFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncInstitutions(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        nameOfInstitution
+        institutionRegion
+        dateStart
+        endDate
+        Prog
+        level
+        studentId
+        department
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
 export const getUser = /* GraphQL */ `
   query GetUser($id: ID!) {
     getUser(id: $id) {
@@ -20,23 +172,41 @@ export const getUser = /* GraphQL */ `
       ghCardNo
       phoneNo
       email
-      nameOfInstitution
-      institutionRegion
-      Prog
-      level
-      dateStart
-      endDate
-      studentId
-      department
-      localChapterName
-      PositionsChapter
-      dateJoined
-      membershipNo
+      Institution {
+        id
+        nameOfInstitution
+        institutionRegion
+        dateStart
+        endDate
+        Prog
+        level
+        studentId
+        department
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      LocalChapter {
+        id
+        localChapterName
+        PositionsChapter
+        dateJoined
+        membershipNo
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
       createdAt
       updatedAt
       _version
       _deleted
       _lastChangedAt
+      userInstitutionId
+      userLocalChapterId
     }
   }
 `;
@@ -64,23 +234,41 @@ export const listUsers = /* GraphQL */ `
         ghCardNo
         phoneNo
         email
-        nameOfInstitution
-        institutionRegion
-        Prog
-        level
-        dateStart
-        endDate
-        studentId
-        department
-        localChapterName
-        PositionsChapter
-        dateJoined
-        membershipNo
+        Institution {
+          id
+          nameOfInstitution
+          institutionRegion
+          dateStart
+          endDate
+          Prog
+          level
+          studentId
+          department
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        LocalChapter {
+          id
+          localChapterName
+          PositionsChapter
+          dateJoined
+          membershipNo
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
         createdAt
         updatedAt
         _version
         _deleted
         _lastChangedAt
+        userInstitutionId
+        userLocalChapterId
       }
       nextToken
       startedAt
@@ -117,23 +305,41 @@ export const syncUsers = /* GraphQL */ `
         ghCardNo
         phoneNo
         email
-        nameOfInstitution
-        institutionRegion
-        Prog
-        level
-        dateStart
-        endDate
-        studentId
-        department
-        localChapterName
-        PositionsChapter
-        dateJoined
-        membershipNo
+        Institution {
+          id
+          nameOfInstitution
+          institutionRegion
+          dateStart
+          endDate
+          Prog
+          level
+          studentId
+          department
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        LocalChapter {
+          id
+          localChapterName
+          PositionsChapter
+          dateJoined
+          membershipNo
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
         createdAt
         updatedAt
         _version
         _deleted
         _lastChangedAt
+        userInstitutionId
+        userLocalChapterId
       }
       nextToken
       startedAt

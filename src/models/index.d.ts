@@ -1,10 +1,86 @@
 import { ModelInit, MutableModel, __modelMeta__, ManagedIdentifier } from "@aws-amplify/datastore";
 // @ts-ignore
-import { LazyLoading, LazyLoadingDisabled } from "@aws-amplify/datastore";
+import { LazyLoading, LazyLoadingDisabled, AsyncItem } from "@aws-amplify/datastore";
 
 
 
 
+
+type EagerLocalChapter = {
+  readonly [__modelMeta__]: {
+    identifier: ManagedIdentifier<LocalChapter, 'id'>;
+    readOnlyFields: 'createdAt' | 'updatedAt';
+  };
+  readonly id: string;
+  readonly localChapterName?: string | null;
+  readonly PositionsChapter?: string | null;
+  readonly dateJoined?: string | null;
+  readonly membershipNo?: string | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+}
+
+type LazyLocalChapter = {
+  readonly [__modelMeta__]: {
+    identifier: ManagedIdentifier<LocalChapter, 'id'>;
+    readOnlyFields: 'createdAt' | 'updatedAt';
+  };
+  readonly id: string;
+  readonly localChapterName?: string | null;
+  readonly PositionsChapter?: string | null;
+  readonly dateJoined?: string | null;
+  readonly membershipNo?: string | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+}
+
+export declare type LocalChapter = LazyLoading extends LazyLoadingDisabled ? EagerLocalChapter : LazyLocalChapter
+
+export declare const LocalChapter: (new (init: ModelInit<LocalChapter>) => LocalChapter) & {
+  copyOf(source: LocalChapter, mutator: (draft: MutableModel<LocalChapter>) => MutableModel<LocalChapter> | void): LocalChapter;
+}
+
+type EagerInstitution = {
+  readonly [__modelMeta__]: {
+    identifier: ManagedIdentifier<Institution, 'id'>;
+    readOnlyFields: 'createdAt' | 'updatedAt';
+  };
+  readonly id: string;
+  readonly nameOfInstitution?: string | null;
+  readonly institutionRegion?: string | null;
+  readonly dateStart?: string | null;
+  readonly endDate?: string | null;
+  readonly Prog?: string | null;
+  readonly level?: string | null;
+  readonly studentId?: string | null;
+  readonly department?: string | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+}
+
+type LazyInstitution = {
+  readonly [__modelMeta__]: {
+    identifier: ManagedIdentifier<Institution, 'id'>;
+    readOnlyFields: 'createdAt' | 'updatedAt';
+  };
+  readonly id: string;
+  readonly nameOfInstitution?: string | null;
+  readonly institutionRegion?: string | null;
+  readonly dateStart?: string | null;
+  readonly endDate?: string | null;
+  readonly Prog?: string | null;
+  readonly level?: string | null;
+  readonly studentId?: string | null;
+  readonly department?: string | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+}
+
+export declare type Institution = LazyLoading extends LazyLoadingDisabled ? EagerInstitution : LazyInstitution
+
+export declare const Institution: (new (init: ModelInit<Institution>) => Institution) & {
+  copyOf(source: Institution, mutator: (draft: MutableModel<Institution>) => MutableModel<Institution> | void): Institution;
+}
 
 type Eageruser = {
   readonly [__modelMeta__]: {
@@ -27,20 +103,12 @@ type Eageruser = {
   readonly ghCardNo: string;
   readonly phoneNo: string;
   readonly email: string;
-  readonly nameOfInstitution?: string | null;
-  readonly institutionRegion?: string | null;
-  readonly Prog?: string | null;
-  readonly level?: string | null;
-  readonly dateStart?: string | null;
-  readonly endDate?: string | null;
-  readonly studentId?: string | null;
-  readonly department?: string | null;
-  readonly localChapterName?: string | null;
-  readonly PositionsChapter?: string | null;
-  readonly dateJoined?: string | null;
-  readonly membershipNo?: string | null;
+  readonly Institution?: Institution | null;
+  readonly LocalChapter?: LocalChapter | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
+  readonly userInstitutionId?: string | null;
+  readonly userLocalChapterId?: string | null;
 }
 
 type Lazyuser = {
@@ -64,20 +132,12 @@ type Lazyuser = {
   readonly ghCardNo: string;
   readonly phoneNo: string;
   readonly email: string;
-  readonly nameOfInstitution?: string | null;
-  readonly institutionRegion?: string | null;
-  readonly Prog?: string | null;
-  readonly level?: string | null;
-  readonly dateStart?: string | null;
-  readonly endDate?: string | null;
-  readonly studentId?: string | null;
-  readonly department?: string | null;
-  readonly localChapterName?: string | null;
-  readonly PositionsChapter?: string | null;
-  readonly dateJoined?: string | null;
-  readonly membershipNo?: string | null;
+  readonly Institution: AsyncItem<Institution | undefined>;
+  readonly LocalChapter: AsyncItem<LocalChapter | undefined>;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
+  readonly userInstitutionId?: string | null;
+  readonly userLocalChapterId?: string | null;
 }
 
 export declare type user = LazyLoading extends LazyLoadingDisabled ? Eageruser : Lazyuser

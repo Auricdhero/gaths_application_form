@@ -1,3 +1,23 @@
+type LocalChapter @model @auth(rules: [{ allow: private }]) {
+  id: ID!
+  localChapterName: String
+  PositionsChapter: String
+  dateJoined: String
+  membershipNo: String
+}
+
+type Institution @model @auth(rules: [{ allow: private }]) {
+  id: ID!
+  nameOfInstitution: String
+  institutionRegion: String
+  dateStart: String
+  endDate: String
+  Prog: String
+  level: String
+  studentId: String
+  department: String
+}
+
 type user @model @auth(rules: [{ allow: private }]) {
   id: ID!
   title: String!
@@ -15,16 +35,6 @@ type user @model @auth(rules: [{ allow: private }]) {
   ghCardNo: String!
   phoneNo: String!
   email: String!
-  nameOfInstitution: String
-  institutionRegion: String
-  Prog: String
-  level: String
-  dateStart: AWSDateTime
-  endDate: AWSDateTime
-  studentId: String
-  department: String
-  localChapterName: String
-  PositionsChapter: String
-  dateJoined: String
-  membershipNo: String
+  Institution: Institution @hasOne
+  LocalChapter: LocalChapter @hasOne
 }

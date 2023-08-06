@@ -1,6 +1,6 @@
 <template>
   <v-row align-content="center">
-    <v-col class="pa-16" style="background-color: blue; height: 48.5em"
+    <v-col class="pa-16" style="background-color: blue; height:100vh"
       ><br />
       <v-img
         class="mx-auto"

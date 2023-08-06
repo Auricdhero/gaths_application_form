@@ -4,6 +4,7 @@
       <h1 class="text-center">
         Welcome, <strong>{{ $auth.email }}</strong>
       </h1>
+      <!-- <h6>{{ $auth.id }}</h6> -->
       <h6 class="text-center">
         You have not completed your membership profile
       </h6>

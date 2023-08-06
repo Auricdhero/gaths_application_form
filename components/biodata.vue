@@ -185,13 +185,22 @@ export default {
   methods: {
     async create() {
       try {
-        const user = await this.$store.dispatch("api/createUser");
+        const user = await this.$store.dispatch(
+          "api/createUser",
+          this.getPayload()
+        );
         console.log("Submitted");
       } catch (error) {
         console.log({ error });
       }
     },
-    //
+    getPayload() {
+      return {
+        ...this.form,
+        // userId: this.$auth.id,
+        createdAt: Date.now() + "",
+      };
+    },
   },
 };
 </script>
