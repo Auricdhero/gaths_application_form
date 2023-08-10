@@ -67,10 +67,10 @@ export const createInstitution = /* GraphQL */ `
       id
       nameOfInstitution
       institutionRegion
-      dateStart
-      endDate
       Prog
       level
+      dateStart
+      endDate
       studentId
       department
       createdAt
@@ -90,10 +90,10 @@ export const updateInstitution = /* GraphQL */ `
       id
       nameOfInstitution
       institutionRegion
-      dateStart
-      endDate
       Prog
       level
+      dateStart
+      endDate
       studentId
       department
       createdAt
@@ -113,10 +113,10 @@ export const deleteInstitution = /* GraphQL */ `
       id
       nameOfInstitution
       institutionRegion
-      dateStart
-      endDate
       Prog
       level
+      dateStart
+      endDate
       studentId
       department
       createdAt
@@ -153,10 +153,10 @@ export const createUser = /* GraphQL */ `
         id
         nameOfInstitution
         institutionRegion
-        dateStart
-        endDate
         Prog
         level
+        dateStart
+        endDate
         studentId
         department
         createdAt
@@ -213,10 +213,10 @@ export const updateUser = /* GraphQL */ `
         id
         nameOfInstitution
         institutionRegion
-        dateStart
-        endDate
         Prog
         level
+        dateStart
+        endDate
         studentId
         department
         createdAt
@@ -273,10 +273,10 @@ export const deleteUser = /* GraphQL */ `
         id
         nameOfInstitution
         institutionRegion
-        dateStart
-        endDate
         Prog
         level
+        dateStart
+        endDate
         studentId
         department
         createdAt

@@ -104,20 +104,6 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "dateStart": {
-                    "name": "dateStart",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "endDate": {
-                    "name": "endDate",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
                 "Prog": {
                     "name": "Prog",
                     "isArray": false,
@@ -127,6 +113,20 @@ export const schema = {
                 },
                 "level": {
                     "name": "level",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "dateStart": {
+                    "name": "dateStart",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "endDate": {
+                    "name": "endDate",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
@@ -236,7 +236,7 @@ export const schema = {
                 "dob": {
                     "name": "dob",
                     "isArray": false,
-                    "type": "AWSDateTime",
+                    "type": "String",
                     "isRequired": true,
                     "attributes": []
                 },
@@ -399,5 +399,5 @@ export const schema = {
     "enums": {},
     "nonModels": {},
     "codegenVersion": "3.4.3",
-    "version": "af45e25178e1f9d268eb42bdf1b07513"
+    "version": "e463f3b75188418b46fa4a6e7a4c635b"
 };

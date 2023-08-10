@@ -87,14 +87,14 @@ export default {
     },
   }),
   methods: {
-    async create() {
-      try {
-        const user = await this.$store.dispatch("api/createUser");
-        console.log("Submitted");
-      } catch (error) {
-        console.log({ error });
-      }
-    },
+    // async create() {
+    //   try {
+    //     const user = await this.$store.dispatch("api/createUser");
+    //     console.log("Submitted");
+    //   } catch (error) {
+    //     console.log({ error });
+    //   }
+    // },
   },
 };
 </script>

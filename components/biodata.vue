@@ -2,8 +2,8 @@
   <div>
     <v-container>
       <v-card elevation="2" style="padding: 1rem" color="blue">
-        <h3 style="color: white">Biodata</h3> </v-card
-      ><br />
+        <h3 style="color: white">Biodata</h3>
+      </v-card><br />
       <v-card style="padding: 1rem">
         <h3 class="text-center">
           Please Note: All fields marked with * are mandatory.
@@ -23,32 +23,18 @@
 
             <v-col cols="auto" lg="6" sm="12">
               <v-label>Surname</v-label>
-              <v-text-field
-                label="Enter"
-                v-model="form.surname"
-                outlined
-                required
-              ></v-text-field>
+              <v-text-field label="Enter" v-model="form.surname" outlined required></v-text-field>
             </v-col>
           </v-row>
 
           <v-row>
             <v-col cols="auto" lg="6" sm="12">
               <v-label>First Name</v-label>
-              <v-text-field
-                label="Enter"
-                v-model="form.firstname"
-                required
-                outlined
-              ></v-text-field>
+              <v-text-field label="Enter" v-model="form.firstname" required outlined></v-text-field>
             </v-col>
             <v-col cols="auto" lg="6" sm="12">
               <v-label>Other Names</v-label>
-              <v-text-field
-                label="Enter"
-                v-model="form.othername"
-                outlined
-              ></v-text-field>
+              <v-text-field label="Enter" v-model="form.othername" outlined></v-text-field>
             </v-col>
           </v-row>
 
@@ -66,32 +52,17 @@
           <v-row>
             <v-col cols="auto" lg="6" sm="12">
               <v-label>Country of Birth</v-label>
-              <v-text-field
-                label="Country of Birth"
-                v-model="form.country_of_birth"
-                outlined
-                required
-              ></v-text-field>
+              <v-text-field label="Country of Birth" v-model="form.country_of_birth" outlined required></v-text-field>
             </v-col>
             <v-col cols="auto" lg="6" sm="12">
               <v-label>Nationality</v-label>
-              <v-text-field
-                label="Nationality"
-                v-model="form.nationality"
-                required
-                outlined
-              ></v-text-field>
+              <v-text-field label="Nationality" v-model="form.nationality" required outlined></v-text-field>
             </v-col>
           </v-row>
           <v-row>
             <v-col cols="auto" lg="6" sm="12">
               <v-label>Hometown</v-label>
-              <v-text-field
-                label="Enter"
-                v-model="form.hometown"
-                outlined
-                required
-              ></v-text-field>
+              <v-text-field label="Enter" v-model="form.hometown" outlined required></v-text-field>
             </v-col>
             <v-col cols="auto" lg="6" sm="12">
               <v-label>Region</v-label>
@@ -106,51 +77,27 @@
           <v-row>
             <v-col cols="auto" lg="6" sm="12">
               <v-label>Address Line 1</v-label>
-              <v-text-field
-                label="Enter"
-                v-model="form.addressLine1"
-                outlined
-                required
-              ></v-text-field>
+              <v-text-field label="Enter" v-model="form.addressLine1" outlined required></v-text-field>
             </v-col>
             <v-col cols="auto" lg="6" sm="12">
               <v-label>Address Line 2</v-label>
-              <v-text-field
-                label="Enter"
-                v-model="form.addressLine2"
-                outlined
-              ></v-text-field>
+              <v-text-field label="Enter" v-model="form.addressLine2" outlined></v-text-field>
             </v-col>
           </v-row>
           <v-row>
             <v-col cols="auto" lg="6" sm="12">
               <v-label>Ghana Card Number (If available)</v-label>
-              <v-text-field
-                label="Enter"
-                v-model="form.ghCardNo"
-                required
-                outlined
-              ></v-text-field>
+              <v-text-field label="Enter" v-model="form.ghCardNo" required outlined></v-text-field>
             </v-col>
             <v-col cols="auto" lg="6" sm="12">
               <v-label>Phone Number</v-label>
-              <v-text-field
-                label="Enter"
-                v-model="form.phoneNo"
-                required
-                outlined
-              ></v-text-field>
+              <v-text-field label="Enter" v-model="form.phoneNo" required outlined></v-text-field>
             </v-col>
           </v-row>
           <v-row>
             <v-col cols="auto" lg="6" sm="12">
               <v-label>Email</v-label>
-              <v-text-field
-                label="Enter"
-                v-model="form.email"
-                outlined
-                required
-              ></v-text-field>
+              <v-text-field label="Enter" v-model="form.email" outlined required></v-text-field>
             </v-col>
           </v-row>
 
@@ -197,7 +144,7 @@ export default {
     getPayload() {
       return {
         ...this.form,
-        // userId: this.$auth.id,
+        userId: this.$auth.id,
         createdAt: Date.now() + "",
       };
     },

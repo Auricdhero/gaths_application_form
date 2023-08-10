@@ -5,7 +5,7 @@ import * as gqlMutations from '~/src/graphql/mutations';
 
 export const state = () => ({
     users: [],
-    user: null
+    user: ''
 })
 
 export const getters = {
@@ -29,6 +29,9 @@ export const actions = {
 
     async createUser({ dispatch }, input) {
         return dispatch('mutate', { key: 'user', mutation: 'createUser', input })
+    },
+    async createInstitution({ dispatch }, input) {
+        return dispatch('mutate', { key: 'user', mutation: 'createInstitution', input })
     },
 
     async updateUser({ dispatch }, input) {

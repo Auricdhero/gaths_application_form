@@ -10,10 +10,10 @@ type Institution @model @auth(rules: [{ allow: private }]) {
   id: ID!
   nameOfInstitution: String
   institutionRegion: String
-  dateStart: String
-  endDate: String
   Prog: String
   level: String
+  dateStart: String
+  endDate: String
   studentId: String
   department: String
 }
@@ -25,7 +25,7 @@ type user @model @auth(rules: [{ allow: private }]) {
   firstname: String!
   othername: String
   gender: String!
-  dob: AWSDateTime!
+  dob: String!
   country_of_birth: String
   nationality: String
   hometown: String

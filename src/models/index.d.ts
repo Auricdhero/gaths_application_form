@@ -48,10 +48,10 @@ type EagerInstitution = {
   readonly id: string;
   readonly nameOfInstitution?: string | null;
   readonly institutionRegion?: string | null;
-  readonly dateStart?: string | null;
-  readonly endDate?: string | null;
   readonly Prog?: string | null;
   readonly level?: string | null;
+  readonly dateStart?: string | null;
+  readonly endDate?: string | null;
   readonly studentId?: string | null;
   readonly department?: string | null;
   readonly createdAt?: string | null;
@@ -66,10 +66,10 @@ type LazyInstitution = {
   readonly id: string;
   readonly nameOfInstitution?: string | null;
   readonly institutionRegion?: string | null;
-  readonly dateStart?: string | null;
-  readonly endDate?: string | null;
   readonly Prog?: string | null;
   readonly level?: string | null;
+  readonly dateStart?: string | null;
+  readonly endDate?: string | null;
   readonly studentId?: string | null;
   readonly department?: string | null;
   readonly createdAt?: string | null;

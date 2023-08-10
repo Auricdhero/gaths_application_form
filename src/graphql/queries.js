@@ -77,10 +77,10 @@ export const getInstitution = /* GraphQL */ `
       id
       nameOfInstitution
       institutionRegion
-      dateStart
-      endDate
       Prog
       level
+      dateStart
+      endDate
       studentId
       department
       createdAt
@@ -102,10 +102,10 @@ export const listInstitutions = /* GraphQL */ `
         id
         nameOfInstitution
         institutionRegion
-        dateStart
-        endDate
         Prog
         level
+        dateStart
+        endDate
         studentId
         department
         createdAt
@@ -136,10 +136,10 @@ export const syncInstitutions = /* GraphQL */ `
         id
         nameOfInstitution
         institutionRegion
-        dateStart
-        endDate
         Prog
         level
+        dateStart
+        endDate
         studentId
         department
         createdAt
@@ -176,10 +176,10 @@ export const getUser = /* GraphQL */ `
         id
         nameOfInstitution
         institutionRegion
-        dateStart
-        endDate
         Prog
         level
+        dateStart
+        endDate
         studentId
         department
         createdAt
@@ -238,10 +238,10 @@ export const listUsers = /* GraphQL */ `
           id
           nameOfInstitution
           institutionRegion
-          dateStart
-          endDate
           Prog
           level
+          dateStart
+          endDate
           studentId
           department
           createdAt
@@ -309,10 +309,10 @@ export const syncUsers = /* GraphQL */ `
           id
           nameOfInstitution
           institutionRegion
-          dateStart
-          endDate
           Prog
           level
+          dateStart
+          endDate
           studentId
           department
           createdAt
