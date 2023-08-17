@@ -16,22 +16,10 @@
             <h4 elevation="1" style="padding: 1rem">Biodata</h4>
           </v-col>
           <v-col cols="auto">
-            <v-card
-              v-if="bioDataSubmit == true"
-              elevation="1"
-              color="success"
-              style="padding: 1rem; color: white"
-              class="text-center"
-              >Submitted</v-card
-            >
-            <v-card
-              v-else
-              elevation="1"
-              color="error"
-              style="padding: 1rem; color: white"
-              class="text-center"
-              >Not Submited</v-card
-            >
+            <v-card v-if="bioDataSubmit == true" elevation="1" color="success" style="padding: 1rem; color: white"
+              class="text-center">Submitted</v-card>
+            <v-card v-else elevation="1" color="error" style="padding: 1rem; color: white" class="text-center">Not
+              Submited</v-card>
           </v-col>
         </v-row>
 
@@ -39,13 +27,10 @@
         <v-divider></v-divider><br />
 
         <v-sheet>
-          <div
-            style="border: 1px solid #dbdbdb; background: #fafbfc"
-            class="bioSummary"
-          >
+          <div style="border: 1px solid #dbdbdb; background: #fafbfc" class="bioSummary">
             <div style="padding: 3%">
-              <p>Title:</p>
-              <p>Surname:</p>
+              <p>Title:{{ user.title }} </p>
+              <p>Surname:{{ user.surname }} </p>
               <p>First Name:</p>
               <p>Other Names:</p>
               <p>Date of Birth:</p>
@@ -64,22 +49,10 @@
             <h4 elevation="1" style="padding: 1rem">Institution</h4>
           </v-col>
           <v-col cols="auto">
-            <v-card
-              v-if="institutionSubmit == true"
-              elevation="1"
-              color="success"
-              style="padding: 1rem; color: white"
-              class="text-center"
-              >Submitted</v-card
-            >
-            <v-card
-              v-else
-              elevation="1"
-              color="error"
-              style="padding: 1rem; color: white"
-              class="text-center"
-              >Not Submited</v-card
-            >
+            <v-card v-if="institutionSubmit == true" elevation="1" color="success" style="padding: 1rem; color: white"
+              class="text-center">Submitted</v-card>
+            <v-card v-else elevation="1" color="error" style="padding: 1rem; color: white" class="text-center">Not
+              Submited</v-card>
           </v-col>
         </v-row>
 
@@ -87,10 +60,7 @@
         <v-divider></v-divider><br />
 
         <v-sheet>
-          <div
-            style="border: 1px solid #dbdbdb; background: #fafbfc"
-            class="bioSummary"
-          >
+          <div style="border: 1px solid #dbdbdb; background: #fafbfc" class="bioSummary">
             <div style="padding: 3%">
               <p>Institution:</p>
               <p>Program:</p>
@@ -107,22 +77,10 @@
             <h4 elevation="1" style="padding: 1rem">Local Chapter</h4>
           </v-col>
           <v-col cols="auto">
-            <v-card
-              v-if="localChapter == true"
-              elevation="1"
-              color="success"
-              style="padding: 1rem; color: white"
-              class="text-center"
-              >Submitted</v-card
-            >
-            <v-card
-              v-else
-              elevation="1"
-              color="error"
-              style="padding: 1rem; color: white"
-              class="text-center"
-              >Not Submited</v-card
-            >
+            <v-card v-if="localChapter == true" elevation="1" color="success" style="padding: 1rem; color: white"
+              class="text-center">Submitted</v-card>
+            <v-card v-else elevation="1" color="error" style="padding: 1rem; color: white" class="text-center">Not
+              Submited</v-card>
           </v-col>
         </v-row>
 
@@ -130,10 +88,7 @@
         <v-divider></v-divider><br />
 
         <v-sheet>
-          <div
-            style="border: 1px solid #dbdbdb; background: #fafbfc"
-            class="bioSummary"
-          >
+          <div style="border: 1px solid #dbdbdb; background: #fafbfc" class="bioSummary">
             <div style="padding: 3%">
               <p>Local Chapter:</p>
               <p>Position:</p>
@@ -148,5 +103,14 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  async asyncData({ store, params }) {
+    return {
+      user: await store.dispatch('api/getUser', params.id)
+    }
+  },
+  // methods: {
+   
+  // }
+};
 </script>

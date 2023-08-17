@@ -202,21 +202,21 @@ export const schema = {
                     "name": "title",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": true,
+                    "isRequired": false,
                     "attributes": []
                 },
                 "surname": {
                     "name": "surname",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": true,
+                    "isRequired": false,
                     "attributes": []
                 },
                 "firstname": {
                     "name": "firstname",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": true,
+                    "isRequired": false,
                     "attributes": []
                 },
                 "othername": {
@@ -230,14 +230,14 @@ export const schema = {
                     "name": "gender",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": true,
+                    "isRequired": false,
                     "attributes": []
                 },
                 "dob": {
                     "name": "dob",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": true,
+                    "isRequired": false,
                     "attributes": []
                 },
                 "country_of_birth": {
@@ -286,21 +286,21 @@ export const schema = {
                     "name": "ghCardNo",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": true,
+                    "isRequired": false,
                     "attributes": []
                 },
                 "phoneNo": {
                     "name": "phoneNo",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": true,
+                    "isRequired": false,
                     "attributes": []
                 },
                 "email": {
                     "name": "email",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": true,
+                    "isRequired": false,
                     "attributes": []
                 },
                 "Institution": {
@@ -399,5 +399,5 @@ export const schema = {
     "enums": {},
     "nonModels": {},
     "codegenVersion": "3.4.3",
-    "version": "e463f3b75188418b46fa4a6e7a4c635b"
+    "version": "473f53391c18053f9318d242406fb557"
 };

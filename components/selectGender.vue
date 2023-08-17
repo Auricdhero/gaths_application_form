@@ -6,7 +6,7 @@
 <script>
 export default {
     data: () => ({
-        gender: ["Male", "Female", "Rather not say"]
+        gender: ["Male", "Female"]
     })
 }
 </script>

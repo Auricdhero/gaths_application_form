@@ -31,7 +31,7 @@ export const actions = {
         return dispatch('createUser', {
             id: username,
             email: attributes.email,
-            createdAt: Date.now() + ''
+            // createdAt: Date.now() + ''
         })
     }
 }

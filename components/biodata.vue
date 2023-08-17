@@ -8,7 +8,7 @@
         <h3 class="text-center">
           Please Note: All fields marked with * are mandatory.
         </h3>
-        <v-form @submit.prevent="create" class="form">
+        <v-form v-if="isCreate === true" @submit.prevent="create">
           <br />
           <h3>Basic Information</h3>
           <v-divider></v-divider>
@@ -80,7 +80,7 @@
               <v-text-field label="Enter" v-model="form.addressLine1" outlined required></v-text-field>
             </v-col>
             <v-col cols="auto" lg="6" sm="12">
-              <v-label>Address Line 2</v-label>
+              <v-label>Address Line 2</v-label>``
               <v-text-field label="Enter" v-model="form.addressLine2" outlined></v-text-field>
             </v-col>
           </v-row>
@@ -103,13 +103,112 @@
 
           <buttonSuccess />
         </v-form>
+        <v-form v-else @submit.prevent="update">
+          <br />
+          <h3>Basic Information</h3>
+          <v-divider></v-divider>
+
+          <br />
+
+          <v-row>
+            <v-col cols="auto" lg="6" sm="12">
+              <v-label>Title</v-label>
+              <selectTitle v-model="form.title" />
+            </v-col>
+
+            <v-col cols="auto" lg="6" sm="12">
+              <v-label>Surname</v-label>
+              <v-text-field label="Enter" v-model="form.surname" outlined required></v-text-field>
+            </v-col>
+          </v-row>
+
+          <v-row>
+            <v-col cols="auto" lg="6" sm="12">
+              <v-label>First Name</v-label>
+              <v-text-field label="Enter" v-model="form.firstname" required outlined></v-text-field>
+            </v-col>
+            <v-col cols="auto" lg="6" sm="12">
+              <v-label>Other Names</v-label>
+              <v-text-field label="Enter" v-model="form.othername" outlined></v-text-field>
+            </v-col>
+          </v-row>
+
+          <!-- </v-col> -->
+          <v-row>
+            <v-col cols="auto" lg="6" sm="12">
+              <v-label>Gender</v-label>
+              <selectGender v-model="form.gender" />
+            </v-col>
+            <v-col cols="auto" lg="6" sm="12">
+              <v-label>Date of Birth</v-label>
+              <datePicker v-model="form.dob" required />
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col cols="auto" lg="6" sm="12">
+              <v-label>Country of Birth</v-label>
+              <v-text-field label="Country of Birth" v-model="form.country_of_birth" outlined required></v-text-field>
+            </v-col>
+            <v-col cols="auto" lg="6" sm="12">
+              <v-label>Nationality</v-label>
+              <v-text-field label="Nationality" v-model="form.nationality" required outlined></v-text-field>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col cols="auto" lg="6" sm="12">
+              <v-label>Hometown</v-label>
+              <v-text-field label="Enter" v-model="form.hometown" outlined required></v-text-field>
+            </v-col>
+            <v-col cols="auto" lg="6" sm="12">
+              <v-label>Region</v-label>
+              <selectRegion v-model="form.region" />
+            </v-col>
+          </v-row>
+
+          <br />
+
+          <h3 class="text-left">ADDRESS OF APPLICANT</h3>
+          <v-divider></v-divider><br />
+          <v-row>
+            <v-col cols="auto" lg="6" sm="12">
+              <v-label>Address Line 1</v-label>
+              <v-text-field label="Enter" v-model="form.addressLine1" outlined required></v-text-field>
+            </v-col>
+            <v-col cols="auto" lg="6" sm="12">
+              <v-label>Address Line 2</v-label>``
+              <v-text-field label="Enter" v-model="form.addressLine2" outlined></v-text-field>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col cols="auto" lg="6" sm="12">
+              <v-label>Ghana Card Number (If available)</v-label>
+              <v-text-field label="Enter" v-model="form.ghCardNo" required outlined></v-text-field>
+            </v-col>
+            <v-col cols="auto" lg="6" sm="12">
+              <v-label>Phone Number</v-label>
+              <v-text-field label="Enter" v-model="form.phoneNo" required outlined></v-text-field>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col cols="auto" lg="6" sm="12">
+              <v-label>Email</v-label>
+              <v-text-field label="Enter" v-model="form.email" outlined required></v-text-field>
+            </v-col>
+          </v-row>
+
+          <btnUpdate />
+        </v-form>
       </v-card>
     </v-container>
   </div>
 </template>
 <script>
 export default {
+  async asyncData({store, params}) {
+    return {user: await store.dispatch('api/getUser', params.id) }
+  },
   data: () => ({
+    // title:["Mr", "Ms", "Mrs.", "Dr.", "Prof"],
     form: {
       title: "",
       surname: "",
@@ -128,24 +227,46 @@ export default {
       phoneNo: "",
       email: "",
     },
+
   }),
+  computed: {
+    isCreate() {
+      return this.$route.name === 'create';
+    }
+  },
   methods: {
     async create() {
       try {
         const user = await this.$store.dispatch(
           "api/createUser",
-          this.getPayload()
+          this.getCreatePayload()
         );
         console.log("Submitted");
       } catch (error) {
         console.log({ error });
       }
     },
-    getPayload() {
+    getCreatePayload() {
       return {
         ...this.form,
         userId: this.$auth.id,
-        createdAt: Date.now() + "",
+        // createdAt: Date.now() + "",
+      };
+    },
+
+    async update() {
+      try {
+        const user = await this.$store.dispatch('api/updateUser',
+          this.getUpdatePayload()
+        );
+      } catch (error) {
+        console.log({ error });
+      }
+    },
+    getUpdatePayload() {
+      return {
+        ...this.form,
+        id: this.user.id
       };
     },
   },

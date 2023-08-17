@@ -9,7 +9,7 @@ export const state = () => ({
 })
 
 export const getters = {
-    authMode: (state, getters, rootState) => rootState.auth.isAuthenticated ? 'AMAZON_COGNITO_USER_POOLS' : 'API_KEY'
+    authMode: (state, getters, rootState) => rootState.auth.isAuthenticated ? 'AMAZON_COGNITO_USER_POOLS' : 'AMAZON_COGNITO_USER_POOLS'
 }
 
 export const mutations = {
