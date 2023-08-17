@@ -16,17 +16,17 @@
 
           <v-row>
             <v-col cols="auto" lg="6" sm="12">
-              <v-label>Name of Institution</v-label>
+              <v-label>Name of Institution<sup style="color: red;">*</sup></v-label>
               <selectInstitution v-model="form.nameOfInstitution" />
             </v-col>
             <v-col cols="auto" lg="6" sm="12">
-              <v-label>Region</v-label>
+              <v-label>Region<sup style="color: red;">*</sup></v-label>
               <selectRegion v-model="form.institutionRegion" />
             </v-col>
           </v-row>
           <v-row>
             <v-col cols="auto" lg="6" sm="12">
-              <v-label>Name of Program</v-label>
+              <v-label>Name of Program<sup style="color: red;">*</sup></v-label>
               <v-text-field
                 label="Enter"
                 v-model="form.prog"
@@ -34,23 +34,23 @@
               ></v-text-field>
             </v-col>
             <v-col cols="auto" lg="6" sm="12">
-              <v-label>Current level</v-label>
+              <v-label>Current level<sup style="color: red;">*</sup></v-label>
               <selectLevel v-model="form.level" />
             </v-col>
           </v-row>
           <v-row>
             <v-col cols="auto" lg="6" sm="12">
-              <v-label>Start Date</v-label>
+              <v-label>Start Date<sup style="color: red;">*</sup></v-label>
               <datePicker v-model="form.dateStart" />
             </v-col>
             <v-col cols="auto" lg="6" sm="12">
-              <v-label>End Date</v-label>
+              <v-label>End Date<sup style="color: red;">*</sup></v-label>
               <datePicker v-model="form.endDate" />
             </v-col>
           </v-row>
           <v-row>
             <v-col cols="auto" lg="6" sm="12">
-              <v-label>Student Identification</v-label>
+              <v-label>Student Identification<sup style="color: red;">*</sup></v-label>
               <v-text-field
                 v-model="form.studentId"
                 label="Please Enter"
@@ -58,7 +58,7 @@
               ></v-text-field>
             </v-col>
             <v-col cols="auto" lg="6" sm="12">
-              <v-label>Department</v-label>
+              <v-label>Department<sup style="color: red;">*</sup></v-label>
               <v-text-field
                 v-model="form.department"
                 label="Please Enter"

@@ -16,7 +16,7 @@
 
           <v-row>
             <v-col cols="auto" lg="6" sm="12">
-              <v-label>Name of Local Chapter</v-label>
+              <v-label>Name of Local Chapter<sup style="color: red;">*</sup></v-label>
               <v-text-field
                 v-model="form.localChapterName"
                 label="Please Select"
@@ -24,7 +24,7 @@
               ></v-text-field>
             </v-col>
             <v-col cols="auto" lg="6" sm="12">
-              <v-label>Position in Chapter</v-label>
+              <v-label>Position in Chapter<sup style="color: red;">*</sup></v-label>
               <v-text-field
                 v-model="form.PositionsChapter"
                 label="Please Enter"
@@ -34,7 +34,7 @@
           </v-row>
           <v-row>
             <v-col cols="auto" lg="6" sm="12">
-              <v-label>Year Joined</v-label>
+              <v-label>Year Joined<sup style="color: red;">*</sup></v-label>
               <datePicker v-model="form.dateJoined" />
             </v-col>
             <v-col cols="auto" lg="6" sm="12">
