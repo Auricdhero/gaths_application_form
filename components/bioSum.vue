@@ -29,8 +29,8 @@
         <v-sheet>
           <div style="border: 1px solid #dbdbdb; background: #fafbfc" class="bioSummary">
             <div style="padding: 3%">
-              <p>Title:{{ user.title }} </p>
-              <p>Surname:{{ user.surname }} </p>
+              <p>Title: </p>
+              <p>Surname: </p>
               <p>First Name:</p>
               <p>Other Names:</p>
               <p>Date of Birth:</p>
@@ -106,9 +106,14 @@
 export default {
   async asyncData({ store, params }) {
     return {
-      user: await store.dispatch('api/getUser', params.id)
+      user: await store.dispatch('user/getUser', params.id)
     }
   },
+  data:()=> {
+    return {
+      // user
+    }
+  }
   // methods: {
    
   // }
